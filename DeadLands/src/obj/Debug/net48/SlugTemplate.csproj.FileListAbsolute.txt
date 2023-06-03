@@ -1,0 +1,36 @@
+D:\rainworld mods\SlugTemplate-master (1)\SlugTemplate-master\src\bin\Debug\net48\SlugTemplate.dll
+D:\rainworld mods\SlugTemplate-master (1)\SlugTemplate-master\src\bin\Debug\net48\SlugTemplate.pdb
+D:\rainworld mods\SlugTemplate-master (1)\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.csproj.AssemblyReference.cache
+D:\rainworld mods\SlugTemplate-master (1)\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.GeneratedMSBuildEditorConfig.editorconfig
+D:\rainworld mods\SlugTemplate-master (1)\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.AssemblyInfoInputs.cache
+D:\rainworld mods\SlugTemplate-master (1)\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.AssemblyInfo.cs
+D:\rainworld mods\SlugTemplate-master (1)\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.csproj.CoreCompileInputs.cache
+D:\rainworld mods\SlugTemplate-master (1)\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.dll
+D:\rainworld mods\SlugTemplate-master (1)\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.pdb
+D:\rainworld mods\deadlands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.csproj.AssemblyReference.cache
+D:\rainworld mods\deadlands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.GeneratedMSBuildEditorConfig.editorconfig
+D:\rainworld mods\deadlands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.AssemblyInfoInputs.cache
+D:\rainworld mods\deadlands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.AssemblyInfo.cs
+D:\rainworld mods\deadlands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.csproj.CoreCompileInputs.cache
+D:\rainworld mods\deadlands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.dll
+D:\rainworld mods\deadlands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.pdb
+D:\rainworld mods\deadlands\SlugTemplate-master\src\bin\Debug\net48\SlugTemplate.dll
+D:\rainworld mods\deadlands\SlugTemplate-master\src\bin\Debug\net48\SlugTemplate.pdb
+C:\rainwrold mods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.dll
+C:\rainwrold mods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.pdb
+C:\rainwrold mods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.csproj.AssemblyReference.cache
+C:\rainwrold mods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.GeneratedMSBuildEditorConfig.editorconfig
+C:\rainwrold mods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.AssemblyInfoInputs.cache
+C:\rainwrold mods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.AssemblyInfo.cs
+C:\rainwrold mods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.csproj.CoreCompileInputs.cache
+C:\rainwrold mods\dead lands\SlugTemplate-master\src\bin\Debug\net48\SlugTemplate.dll
+C:\rainwrold mods\dead lands\SlugTemplate-master\src\bin\Debug\net48\SlugTemplate.pdb
+C:\rainwroldMods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.csproj.AssemblyReference.cache
+C:\rainwroldMods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.GeneratedMSBuildEditorConfig.editorconfig
+C:\rainwroldMods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.AssemblyInfoInputs.cache
+C:\rainwroldMods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.AssemblyInfo.cs
+C:\rainwroldMods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.csproj.CoreCompileInputs.cache
+C:\rainwroldMods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.dll
+C:\rainwroldMods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.pdb
+C:\rainwroldMods\dead lands\SlugTemplate-master\src\bin\Debug\net48\SlugTemplate.dll
+C:\rainwroldMods\dead lands\SlugTemplate-master\src\bin\Debug\net48\SlugTemplate.pdb
