@@ -1,0 +1,59 @@
+{
+  "id": "Nomad",
+  "name": "The Nomad",
+  "description": "a slug cat adaptad to the desert that can also glide(extreme wip)",
+  "features": {
+    "select_menu_scene": "Slugcat_Prototype",
+    "select_menu_scene_ascended": "Slugcat_Prototype",
+    "sleep_scene": "Sleep_Nomad",
+    "color": "e9c69a",
+		"custom_colors": 
+		[
+			{ "name": "Body", "story": "e9c69a", "arena": ["F0F0FF","FFFF73","FF7373","1E112E"] },
+			{ "name": "Eyes", "story": "000000", "arena": ["E05656","E05656","E05656","E05656"] }
+		],
+
+    "world_state": "spear",
+    
+    "loudness": [ 0.5, 0.3 ],
+    "tunnel_speed": [1.45, 1.1],
+		"climb_speed": [1.45, 1.2],
+		"walk_speed": [1.2, 1.1],
+		"crouch_stealth": [0.9, 0.7],
+		"throw_skill": [0, 1],
+		"lung_capacity": [0.9, 0.7],
+    "weight": [ 0.5, 0.25 ],
+    "food_min": 4,
+    "food_max": 6,
+
+    "diet": {
+      "base": "White",
+      "corpses": 0.25,
+      "plants": 0.75,
+      "overrides": {
+        "SeedCob": 2,
+
+        "DangleFruit": 1,
+        "JellyFish": 1,
+        "SmallCentipede": 1,
+        "LillyPuck": 1,
+
+        "Fly": 0.75,
+        "GooieDuck": 0.75,
+        "Edible": 0.75,
+
+        "SlimeMold": 0.5,
+        "WaterNut": 0.5,
+        "SmallNeedleWorm": 0.5,
+
+        "Scavenger": 0.25,
+        "OracleSwarmer": 0.25,
+        "EggBug": 0.25,
+        "VultureGrub": 0.25,
+        "Hazer": 0,
+        "GlowWeed": 0.25
+
+      }
+    }
+  }
+}
