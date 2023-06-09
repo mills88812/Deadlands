@@ -1,0 +1,8 @@
+Template: NONE
+Clouds: 0
+Grime: 0.7608696
+WaterReflectionAlpha: 1
+Palette: 18
+EffectColorB: 5
+PlacedObjects: LanternOnStick><253.0528><211.4665><-36~-32, LanternOnStick><832.4504><525.1938><22~-24, CustomDecal><470.562><412.0682><34~242~211~238~238~0~0~0~0~1~0~SauerCats_scav_1_arbiter~1~0~1~0~1~0~1~0, CustomDecal><363.1908><377.8099><-9~116~99~134~102~3~0~0~0~1~0~InkKebab_scav_2_arbiter~1~0~1~0~1~0~1~0, CustomDecal><437.6112><214.3338><-30~266~336~288~305~-17~0~0~0.1304348~1~0~SauerCats_scav_5_chief~1~0~1~0~1~0~1~0, LightBeam><440.858><110.9183><83~567~269~558~121~-24~0~0~1~0~0~1~None~0~0, 
+FadePalette: 2, 0.2173913

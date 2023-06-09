@@ -1,0 +1,7 @@
+Template: NONE
+DangerType: Rain
+CeilingDrips: 0
+Clouds: 0.4782609
+Palette: 2
+Effects: DayNight-1--1000--1000, SkyBloom-1-20-20, 
+PlacedObjects: WallSteamer><-69.57797><590.6478><0~100, 

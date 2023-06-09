@@ -1,0 +1,2 @@
+Template: DL_SettingsTemplate_Conurbation
+FadePalette: 2, 0.6, 0.6, 0.6
