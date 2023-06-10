@@ -1,0 +1,9 @@
+Template: NONE
+RandomItemDensity: 0.5108696
+Palette: 18
+EffectColorA: 9
+EffectColorB: 21
+Effects: SunBlock-0-20-20, Contrast-0.07608695-30-30, DarkenLights-0-20-20, Darkness-0.423913-20-20, Bloom-0.4130435-40-40, 
+PlacedObjects: LightSource><270.8893><1230.143><1~Environment~57~-85~50~86.60254~1~0~None~0~0, LightSource><248.6213><1248.909><1~Environment~33~62~50~86.60254~1~1~None~0~0, LightBeam><68.35031><940.1174><178~328~759~126~523~-190~-45~-255~0.008695851~0.5434784~0.05434782~1~None~0~0, LightSource><258.181><1238.915><1~Environment~-35~109~50~86.60254~1~0~None~0~0, LightSource><248.8185><1090.166><1~Environment~0~100~50~86.60254~1~0~None~0~0, LightSource><226.1978><1084.193><1~Environment~-3~47~50~86.60254~1~0~None~0.1630435~0, LightSource><263.5684><968.0839><1~Environment~10~75~50~86.60254~1~0~None~0~0, LightSource><377.8077><1206.195><1~Environment~8~71~50~86.60254~1~0~None~0~0, LanternOnStick><-151.6097><958.8328><-19~102, LanternOnStick><-151.9476><1221.719><0~100, FairyParticleSettings><109.3036><915.8073><5~8.660254~0~1~1~0~1~4~60~180~40~100~5~30~0~360~0.5~0.7~1~1~0.5~1~0.5~0.75~4~Circle~SIN_IO~SIN_IO~80~0.5~0, 
+AmbientSounds: OMNI><AM_ENV-SubTerr.ogg><749.6753><444.8145><0.5><1, 
+FadePalette: 3, 0.3913043, 0.3913043

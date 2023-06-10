@@ -1,0 +1,9 @@
+Template: NONE
+DangerType: None
+WaveSpeed: 0.5
+WaveLength: 0.75
+WaveAmplitude: 0.04676946
+SecondWaveLength: 0.1666667
+SecondWaveAmplitude: 0
+Palette: 2
+FadePalette: 10, 0.1521739, 0.1521739, 0.1521739, 0.1521739, 0.1521739, 0.1521739, 0.1521739, 0.1521739, 0.1521739, 0.1521739, 0.1521739, 0.1521739

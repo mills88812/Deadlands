@@ -1,0 +1,4 @@
+Template: NONE
+Palette: 2
+PlacedObjects: CustomDecal><448.8671><-69.58784><-221~223~209~649~435~401~0~0~0~1~0~notocorda_publi2~0.5~1~0.5~1~0.5~1~0.5~1, DayNightSettings><280.1884><252.433><5~8.660254~23~10, CustomDecal><1182.033><897.5528><-25~498~751~503~739~-2~0~0~0~1~0~notocorda_df~1~0.423913~1~0.423913~1~0.423913~1~0.423913, 
+RoomSpecificScriptActive: ON

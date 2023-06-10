@@ -1,0 +1,12 @@
+Palette: 18
+overseersSpawnChance: 0.0
+overseersMin: 0
+overseersMax: 4
+playerGuideOverseerSpawnChance: 0.0
+Subregion: Conurbation
+Subregion: Dustbowl
+Room Setting Templates: Conurbation, DustBowl
+Room_Attr: DL_A03: WhiteLizard-Avoid,
+Room_Attr: DL_C05: WhiteLizard-Like,CyanLizard-Like,
+Room_Attr: DL_B06: WhiteLizard-Like,CyanLizard-Like,
+Room_Attr: DL_A07: CyanLizard-Like,
