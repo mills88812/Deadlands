@@ -1,2 +1,2 @@
-Template: DL_SettingsTemplate_Conurbation
+PlacedObjects: DandelionPeach><354.1999><1281.429><0~0~2~3, DandelionPeach><374.3418><1249.214><0~0~2~3, DandelionPeach><168.9163><1055.817><0~0~2~3, 
 FadePalette: 2, 0.6, 0.6

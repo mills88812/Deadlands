@@ -1,2 +1,2 @@
-Template: DL_SettingsTemplate_Conurbation
+PlacedObjects: DangleFruit><726.6968><1618.8><0~0~2~3, DangleFruit><700.4042><1626.938><0~0~2~3, DangleFruit><718.8671><1570.933><0~0~2~3, 
 FadePalette: 2, 0.6, 0.6, 0.6, 0.6

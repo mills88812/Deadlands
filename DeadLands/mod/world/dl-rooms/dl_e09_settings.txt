@@ -1,2 +1,4 @@
 Template: DL_SettingsTemplate_DustBowl
+EffectColorB: 21
+PlacedObjects: FirecrackerPlant><2352.504><392.7><22~58~2~3, DandelionPeach><3990.734><1084.699><-219~106~2~3, DandelionPeach><4021.813><1085.44><-240~175~2~3, 
 FadePalette: 2, 0.15, 0.15, 0.15, 0.15, 0.15
