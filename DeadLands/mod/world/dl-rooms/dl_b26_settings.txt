@@ -1,3 +1,3 @@
 Template: DL_SettingsTemplate_DustBowl
-PlacedObjects: DangleFruit><746.0078><457.8355><10~-108~2~3, DangleFruit><779.0137><484.468><-13~-166~2~3, 
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, DandelionPeach><1138.885><657.739><0~0~2~3, DandelionPeach><1170.367><623.81><0~0~2~3, 
 FadePalette: 2, 0.15, 0.15

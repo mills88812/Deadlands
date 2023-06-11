@@ -1,6 +1,6 @@
 ROOMS
 GATE_SU_DL : DL_D01, DISCONNECTED : GATE
-GATE_DL_AL : DISCONNECTED, DL_22 : GATE
+GATE_DL_AL : DL_22, DISCONNECTED : GATE
 DL_D01 : DL_A03, DL_C02, GATE_SU_DL, DISCONNECTED
 DL_C02 : DL_J08, DL_S02, DL_D01
 DL_S02 : DL_C02 : SHELTER
@@ -8,7 +8,7 @@ DL_A03 : DL_D04, DL_D01 : SWARMROOM
 DL_D04 : DL_C05, DL_A03
 DL_C05 : DL_B06, DL_A07, DL_D04, DL_E10
 DL_B06 : DL_D23, DL_C05, DL_A07
-DL_A07 : DL_C05, DL_B26, DL_B06
+DL_A07 : DL_B06, DL_C05, DL_B26
 DL_J08 : DL_C02, DL_E09, DISCONNECTED
 DL_E09 : DL_J08, DL_A14
 DL_E10 : DL_F12, DL_C05, DL_11
@@ -37,10 +37,10 @@ DL_A29 : DL_L20, DL_19 : SWARMROOM
 END ROOMS
 
 CREATURES
-DL_A15 : 6-CicadaB, 5-RedLizard
-DL_F12 : 3-GreenLizard, 4-PoleMimic
-DL_J08 : 8-BlueLizard, 4-CicadaA, 5-PoleMimic, 6-Centipede
-DL_C05 : 5-WhiteLizard-2, 4-WhiteLizard, 6-CyanLizard
 DL_D01 : 5-PoleMimic, 4-SmallCentipede
+DL_C05 : 5-WhiteLizard-2, 4-WhiteLizard, 6-CyanLizard
+DL_J08 : 8-BlueLizard, 4-CicadaA, 5-PoleMimic, 6-Centipede
+DL_F12 : 3-GreenLizard, 4-PoleMimic
+DL_A15 : 6-CicadaB, 5-RedLizard
 OFFSCREEN : 0-Vulture-2, 0-Scavenger-4
 END CREATURES

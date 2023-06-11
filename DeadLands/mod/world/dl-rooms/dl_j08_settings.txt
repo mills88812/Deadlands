@@ -1,8 +1,5 @@
-Template: NONE
-Clouds: 0.1304348
-Palette: 2
-EffectColorB: 21
+Template: DL_SettingsTemplate_DustBowl
 Effects: SkyBloom-0.5652174-20-20, Dustpuffs-0.05434782-20-69, GreenSparks-0-19-117, HeatWave-0.1847826-269-21, Ant-0.1521739-269-68, RockFlea-0.02173913-268-117, SandPuffs-0.25-268-167, 
-PlacedObjects: DeadSeedCob><221.9953><1098.614><, DeadSeedCob><215.7101><1188.837><, PuffBall><3930.761><111.3175><13.5177~49.77777~2~3, PuffBall><4340.969><77.116><13.5177~54.04446~2~3, SeedCob><203.1848><1142.071><0~0~7~10, 
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, DeadSeedCob><221.9953><1098.614><, DeadSeedCob><215.7101><1188.837><, PuffBall><3930.761><111.3175><13.5177~49.77777~2~3, PuffBall><4340.969><77.116><13.5177~54.04446~2~3, SeedCob><203.1848><1142.071><0~0~7~10, 
 FadePalette: 191, 0.3043478, 0.3043478, 0.3043478, 0.3043478, 0.3043478, 0.3043478, 0.3043478, 0.3043478, 0.3043478, 0.3043478, 0.4565217
-RoomSpecificScriptActive: ON
+FadePalette: 2, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15

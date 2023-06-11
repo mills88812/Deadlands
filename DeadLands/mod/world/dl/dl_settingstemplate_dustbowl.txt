@@ -11,6 +11,5 @@ RandomItemSpearChance: 0.1
 WaterReflectionAlpha: 1
 Palette: 18
 EffectColorA: 15
-EffectColorB: 6
-Effects: HeatWave-0.2-20-20, SkyBloom-0.6-20-70, Beetle-0.05-270-20, RockFlea-0.02-270-70, DustPuffs-0.5-20-120, DayNight-0.8-270-120, 
-PlacedObjects: DayNightSettings><500><500><-100~20~2~33, 
+EffectColorB: 21
+Effects: HeatWave-0.2-20-20, SkyBloom-0.6-20-70, Beetle-0.05-270-20, RockFlea-0.02-270-70, DustPuffs-0.5-20-120, DayNight-1.0-270-120, 

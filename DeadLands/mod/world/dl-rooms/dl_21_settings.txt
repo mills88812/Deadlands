@@ -1,3 +1,4 @@
 Template: DL_SettingsTemplate_DustBowl
-PlacedObjects: FirecrackerPlant><4967.342><126.2706><-73.99167~100.2667~2~3, 
+PlacedObjects: FirecrackerPlant><4964.496><80.04838><-73.99167~100.2667~2~3, 
 FadePalette: 2, 0.15, 0.15, 0.15, 0.15, 0.15
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, 

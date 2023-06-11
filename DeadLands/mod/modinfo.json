@@ -1,10 +1,10 @@
 ﻿{
 	"id": "Deadlands",
 	"name": "Deadlands",
-	"version": "0.2.6",
+	"version": "0.2.7",
 	"authors": "DEADLANDS TEAM",
-	"description": "a mod based off of a daszombes reghion concept, please note this only contains a very early version of the nomad character nothing else just its glide feature.",
+	"description": "A community project based off Daszombes' region concept \"The Deadlands\". It is a work in progress.",
 	"requirements": [ "slime-cubed.slugbase", "dressmyslugcat" ],
 	"requirements_names": [ "SlugBase", "dress my slugcat" ],
-	"tags": [ " Campaigns", "Cosmetics", "Regions", "Items", "Arenas"]
+	"tags": [ "Slugcats", "Cosmetics", "Regions", "Items", "Arenas"]
 }
