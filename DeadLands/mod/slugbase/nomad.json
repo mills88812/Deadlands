@@ -18,11 +18,11 @@
     
     "loudness": 0.5,
     "tunnel_speed": 1.35,
-		"climb_speed": 1.35,
-		"walk_speed": 1.0,
-		"crouch_stealth": 0.5,
-		"throw_skill": 0,
-		"lung_capacity": 0.9,
+	"climb_speed": 1.35,
+	"walk_speed": 1.0,
+	"crouch_stealth": 0.5,
+	"throw_skill": 0,
+	"lung_capacity": 0.9,
     "weight": 0.95,
     "food_min": 5,
     "food_max": 7,
@@ -33,7 +33,14 @@
 		"Nomad/Nomad": true,
 
     "diet": {
-      "base": "White"
+      "base": "White",
+      "corpses": 0.00,
+      "plants": 0.75,
+	  "meats": 1.25,
+      "overrides": {
+        "DangleFruit": 1.25,
+        "Fly": 1.0
+      }
     }
   }
 }
