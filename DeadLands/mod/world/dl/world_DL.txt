@@ -1,63 +1,62 @@
 ROOMS
-GATE_SU_DL : DL_D01, DISCONNECTED : GATE
+GATE_SU_DL : DL_01, DISCONNECTED : GATE
 GATE_DL_AL : DISCONNECTED, DL_22
-DL_D01 : DL_A03, DL_C02, GATE_SU_DL, DISCONNECTED
-DL_C02 : DL_J08, DL_S02, DL_D01
-DL_S02 : DL_C02 : SHELTER
-DL_A03 : DL_D04, DL_D01 : SWARMROOM
-DL_D04 : DL_C05, DL_A03
-DL_C05 : DL_B06, DL_A07, DL_D04, DL_E10
-DL_B06 : DL_D23, DL_C05, DL_A07
-DL_A07 : DL_B06, DL_C05, DL_B26
-DL_J08 : DL_C02, DL_E09, DISCONNECTED
-DL_E09 : DL_J08, DL_A14
-DL_E10 : DL_F12, DL_C05, DL_11
-DL_11 : DL_E10, DL_F12, DL_25
-DL_F12 : DL_D13, DL_E10, DL_11
-DL_S12 : DISCONNECTED : SHELTER
-DL_D13 : DL_A15, DL_A14, DL_F12
-DL_A14 : DL_D13, DL_19, DL_E09, DL_B16
-DL_A15 : DL_28, DL_D13, DL_19 : SWARMROOM
-DL_B16 : DL_A14, DL_A24, DL_A18, DL_17
-DL_17 : DL_B16
-DL_A18 : DL_21, DL_B16
-DL_19 : DL_A15, DL_L20, DL_A29, DL_A14
-DL_L20 : DL_A29, DL_22, DL_19
-DL_21 : DL_A18, DL_22
-DL_22 : DL_L20, DL_21, DL_S22, GATE_DL_AL
+DL_01 : DL_03, DL_02, GATE_SU_DL, DISCONNECTED
+DL_02 : DL_08, DL_S02, DL_01
+DL_S02 : DL_02 : SHELTER
+DL_03 : DL_04, DL_01 : SWARMROOM
+DL_04 : DL_05, DL_03
+DL_05 : DL_06, DL_07, DL_04, DL_10
+DL_06 : DL_23, DL_05, DL_07
+DL_07 : DL_06, DL_05, DL_26
+DL_08 : DL_02, DL_09, DISCONNECTED
+DL_09 : DL_08, DL_14
+DL_10 : DL_12, DL_05, DL_11
+DL_11 : DL_10, DL_12, DL_25
+DL_12 : DL_13, DL_10, DL_11
+DL_13 : DL_15, DL_14, DL_12
+DL_14 : DL_13, DL_19, DL_09, DL_16
+DL_15 : DL_28, DL_13, DL_19 : SWARMROOM
+DL_16 : DL_14, DL_24, DL_18, DL_17
+DL_17 : DL_16
+DL_18 : DL_21, DL_16
+DL_19 : DL_15, DL_20, DL_29, DL_14
+DL_20 : DL_29, DL_22, DL_19
+DL_21 : DL_18, DL_22
+DL_22 : DL_20, DL_21, DL_S22, GATE_DL_AL
 DL_S22 : DL_22 : SHELTER
-DL_D23 : DL_B06
-DL_A24 : DL_B16, DL_25
-DL_25 : DL_A24, DL_11 : SWARMROOM
-DL_B26 : DL_A07, DL_S26, DL_27
-DL_S26 : DL_B26 : SHELTER
-DL_27 : DL_B26, DL_28
-DL_28 : DL_A15, DL_27
-DL_A29 : DL_L20, DL_19 : SWARMROOM
+DL_23 : DL_06
+DL_24 : DL_16, DL_25
+DL_25 : DL_24, DL_11 : SWARMROOM
+DL_26 : DL_07, DL_S26, DL_27
+DL_S26 : DL_26 : SHELTER
+DL_27 : DL_26, DL_28
+DL_28 : DL_15, DL_27
+DL_29 : DL_20, DL_19 : SWARMROOM
 END ROOMS
 
 CREATURES
 //all
-DL_A29 : 2-CicadaW
-DL_B16 : 4-BigSpider, 4-Dropwig
-DL_B26 : 3-BigSpider
+DL_29 : 2-CicadaW
+DL_16 : 4-BigSpider, 4-Dropwig
+DL_26 : 3-BigSpider
 DL_28 : 2-GreenLizard-2
 DL_25 : 3-GreenLizard
-DL_E10 : 6-Centipede-2
-DL_D23 : 1-Mimic-{8}, 2-Mimic-{15}
+DL_10 : 6-Centipede-2
+DL_23 : 1-Mimic-{8}, 2-Mimic-{15}
 DL_21 : 4-GreenLizard, 5-GreenLizard
-DL_L20 : 3-YellowLizard, 5-YellowLizard, 6-YellowLizard, 4-YellowLizard-{0.7}, 8-SmallCentipede-2, 9-YellowLizard-2
-DL_A18 : 2-WhiteLizard
-DL_A15 : 6-CicadaB, 5-CyanLizard
-DL_B14 : 4-BigSpider
-DL_F12 : 3-BigNeedleWorm, 3-SmallNeedleWorm-3, 3-CicadaB, 4-Mimic-{6}
-DL_E09 : 6-BlueLizard
-DL_J08 : 8-RedLizard, 4-CicadaB, 6-CicadaB
-DL_A07 : 3-WhiteLizard, 4-SmallCentipede
-DL_C05 : 5-WhiteLizard, 4-WhiteLizard, 6-CyanLizard
-DL_C02 : 5-BigSpider, 3-Dropwig
-DL_D01 : 5-PoleMimic-{10}, 4-SmallCentipede-3
+DL_20 : 3-YellowLizard, 5-YellowLizard, 6-YellowLizard, 4-YellowLizard-{0.7}, 8-SmallCentipede-2, 9-YellowLizard-2
+DL_18 : 2-WhiteLizard
+DL_15 : 6-CicadaB, 5-CyanLizard
+DL_14 : 4-BigSpider
+DL_12 : 3-BigNeedleWorm, 3-SmallNeedleWorm-3, 3-CicadaB, 4-Mimic-{6}
+DL_09 : 6-BlueLizard
+DL_08 : 8-RedLizard, 4-CicadaB, 6-CicadaB
+DL_07 : 3-WhiteLizard, 4-SmallCentipede
+DL_05 : 5-WhiteLizard, 4-WhiteLizard, 6-CyanLizard
+DL_02 : 5-BigSpider, 3-Dropwig
+DL_01 : 5-PoleMimic-{10}, 4-SmallCentipede-3
 OFFSCREEN : 0-Vulture-2, 0-Scavenger-12, 0-Leviathan-{1}
-LINEAGE : LF_F12 : 3 : Cyan-0.2
-LINEAGE : DL_A29 : 2 : Tentacle Plant-0.3
+LINEAGE : DL_12 : 3 : Cyan-0.2
+LINEAGE : DL_29 : 2 : Tentacle Plant-0.3
 END CREATURES

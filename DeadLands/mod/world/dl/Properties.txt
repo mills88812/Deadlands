@@ -6,7 +6,7 @@ playerGuideOverseerSpawnChance: 0.0
 Subregion: Conurbation
 Subregion: Dustbowl
 Room Setting Templates: Conurbation, DustBowl
-Room_Attr: DL_A03: WhiteLizard-Avoid,
-Room_Attr: DL_C05: WhiteLizard-Like,CyanLizard-Like,
-Room_Attr: DL_B06: WhiteLizard-Like,CyanLizard-Like,
-Room_Attr: DL_A07: CyanLizard-Like,
+Room_Attr: DL_03: WhiteLizard-Avoid,
+Room_Attr: DL_05: WhiteLizard-Like,CyanLizard-Like,
+Room_Attr: DL_06: WhiteLizard-Like,CyanLizard-Like,
+Room_Attr: DL_07: CyanLizard-Like,
