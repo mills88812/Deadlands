@@ -1,0 +1,3 @@
+Template: DL_SettingsTemplate_DustBowl
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FirecrackerPlant><2240.662><135.2497><0~0~2~3, SporePlant><1072.521><676.1348><0~0~7~10, 
+FadePalette: 2, 0.15, 0.15, 0.15
