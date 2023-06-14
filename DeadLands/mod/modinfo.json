@@ -1,10 +1,10 @@
 ﻿{
 	"id": "mills888.DeadLands",
-	"name": "Deadlands",
+	"name": "DeadLands",
 	"version": "0.0.3",
 	"authors": "mills888",
-	"description": "a mod based off of a daszombes reghion concept, please note this only contains a very early version of the nomad character nothing else just its glide feature.",
-	"requirements": [ "slime-cubed.slugbase", "dressmyslugcat", "improved-input-config" ],
-	"requirements_names": [ "SlugBase", "dress my slugcat", "improved input config" ],
+	"description": "A mod based off of the daszombes region concept, Deadlands, currently only implements an early iteration of The Nomad.",
+	"requirements": [ "slime-cubed.slugbase", "dressmyslugcat", "improved-input-config", "fisobs" ],
+	"requirements_names": [ "SlugBase", "dress my slugcat", "improved input config", "Fisobs" ],
 	"tags": [ " Campaigns", "Cosmetics", "Regions", "Items", "Arenas"]
 }

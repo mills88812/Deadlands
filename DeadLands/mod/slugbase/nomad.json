@@ -1,7 +1,7 @@
 {
   "id": "DeadLands",
-  "name": "The nomad",
-  "description": "a slug cat adaptad to the desert that can also glide(extreme wip)",
+  "name": "The Nomad",
+  "description": "A slugcat adapted to the desert that can also glide (wip)",
   "features": {
     "color": "FFFFFF",
     "dead/glide": true,
@@ -41,6 +41,6 @@
     "weight": [ 0.5, 0.25 ],
     "food_min": 4,
     "food_max": 6,
-    "world_state": "Saint"
+    "world_state": "spear"
   }
 }
