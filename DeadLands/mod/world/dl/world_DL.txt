@@ -33,31 +33,33 @@ DL_S26 : DL_26 : SHELTER
 DL_27 : DL_26, DL_28
 DL_28 : DL_15, DL_27
 DL_29 : DL_20, DL_19 : SWARMROOM
-DL_32 : DL_05, DL_10, DISCONNECTED
+DL_32 : DL_10, DL_05, DISCONNECTED
 END ROOMS
 
 CREATURES
 //all
-DL_29 : 2-CicadaW
-DL_16 : 4-BigSpider, 4-Dropwig
+DL_01 : 5-PoleMimic-{10}, 4-SmallCentipede-3
+DL_02 : 5-BigSpider, 3-Dropwig
+DL_05 : 4-WhiteLizard, 5-WhiteLizard, 6-Dropwig
+DL_07 : 3-WhiteLizard, 4-SmallCentipede
+DL_08 : 8-RedLizard, 4-Centiwing, 5-CicadaB, 6-CicadaB
+DL_09 : 2-PoleMimic-{8}, 4-SpitterSpider, 6-BigSpider
+DL_10 : 6-Centipede-2
+DL_12 : 3-BigNeedleWorm, 3-SmallNeedleWorm-3, 3-CicadaB, 4-Mimic-{6}
+DL_14 : 4-SpitterSpider
+DL_15 : 6-CicadaB, 5-SpitterSpider
+DL_16 : 4-BigSpider, 4-SpitterSpider, 4-Dropwig
+DL_18 : 2-WhiteLizard
+DL_19 : 4-Centiwing, 6-Centiwing, 9-PoleMimic-{6}, 10-Centipede, 11-GreenLizard, 12-GreenLizard
+DL_20 : 3-YellowLizard, 4-YellowLizard-{0.7}, 5-YellowLizard, 6-YellowLizard, 8-SmallCentipede-2, 9-YellowLizard-2
+DL_21 : 4-GreenLizard-2, 5-PoleMimic-{14}
+DL_23 : 1-Mimic-{8}, 2-Mimic-{15}
+DL_25 : 3-GreenLizard, 2-SpitterSpider
 DL_26 : 3-BigSpider
 DL_28 : 2-GreenLizard-2
-DL_25 : 3-GreenLizard
-DL_10 : 6-Centipede-2
-DL_23 : 1-Mimic-{8}, 2-Mimic-{15}
-DL_21 : 4-GreenLizard, 5-GreenLizard
-DL_20 : 3-YellowLizard, 5-YellowLizard, 6-YellowLizard, 4-YellowLizard-{0.7}, 8-SmallCentipede-2, 9-YellowLizard-2
-DL_18 : 2-WhiteLizard
-DL_15 : 6-CicadaB, 5-CyanLizard
-DL_14 : 4-BigSpider
-DL_12 : 3-BigNeedleWorm, 3-SmallNeedleWorm-3, 3-CicadaB, 4-Mimic-{6}
-DL_09 : 6-BlueLizard
-DL_08 : 8-RedLizard, 4-CicadaB, 6-CicadaB
-DL_07 : 3-WhiteLizard, 4-SmallCentipede
-DL_05 : 5-WhiteLizard, 4-WhiteLizard, 6-CyanLizard
-DL_02 : 5-BigSpider, 3-Dropwig
-DL_01 : 5-PoleMimic-{10}, 4-SmallCentipede-3
+DL_29 : 2-CicadaW
+DL_32 : 2-Centiwing, 2-CicadaA, 2-CicadaB
 OFFSCREEN : 0-Vulture-2, 0-Scavenger-12, 0-Leviathan-{1}
-LINEAGE : DL_12 : 3 : Cyan-0.2
+LINEAGE : DL_12 : 3 : SpitterSpider-0.2
 LINEAGE : DL_29 : 2 : Tentacle Plant-0.3
 END CREATURES
