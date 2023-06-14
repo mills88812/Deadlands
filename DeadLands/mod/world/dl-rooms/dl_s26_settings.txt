@@ -1,5 +1,6 @@
-Template: DL_SettingsTemplate_Conurbation
+Template: DL_SettingsTemplate_DustBowl
 Clouds: 1
-AmbientSounds: SPOT><Basic Mech.wav><523.95><262.5025><0.2065217><0.8630434><431.95><477.5024><67.64465><-132.3553><0><0.1652175, 
-FadePalette: 2, 0.15
-PlacedObjects: DayNightSettings><500><500><-100~20~2~33, 
+Effects: FairyParticles-1-12.29166-130.2667, 
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><106.4552><118.8067><-254.25~101.1047~0~1~1~0~1~1.448696~60~495.2173~40~100~5~30~0~360~0~0.1999999~0.1521739~0.2282609~0.05434782~0.1413043~1~0.1195652~7.790894~Pixel~SIN_IO~SIN_IO~0~0~0, 
+AmbientSounds: SPOT><AM_ENV-WinterHum.ogg><734.2256><400.8938><0.6462867><1><443.5589><427.8271><-89.89697><-100.7776><0><0.1, 
+FadePalette: 2, 0.6

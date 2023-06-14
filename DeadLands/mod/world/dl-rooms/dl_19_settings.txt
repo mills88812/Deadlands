@@ -1,0 +1,3 @@
+Template: DL_SettingsTemplate_DustBowl
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, 
+FadePalette: 2, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15
