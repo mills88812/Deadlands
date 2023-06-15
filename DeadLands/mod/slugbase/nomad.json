@@ -34,11 +34,11 @@
 
     "diet": {
       "base": "White",
-      "corpses": 0.00,
-      "plants": 0.75,
-	  "meats": 1.25,
+      "corpses": 0.25,
+      "plants": 0.50,
+	  "meats": 1.0,
       "overrides": {
-        "DangleFruit": 1.25,
+        "DangleFruit": 1.0,
         "Fly": 1.0
       }
     }

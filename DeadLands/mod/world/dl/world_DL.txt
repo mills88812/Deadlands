@@ -44,7 +44,7 @@ DL_02 : 5-BigSpider, 3-Dropwig
 DL_05 : 4-WhiteLizard, 5-WhiteLizard, 6-Dropwig
 DL_07 : 3-WhiteLizard, 4-SmallCentipede
 DL_08 : 8-RedLizard, 4-Centiwing, 5-CicadaB, 6-CicadaB
-DL_09 : 2-PoleMimic-{8}, 4-SpitterSpider, 6-BigSpider
+DL_09 : 2-PoleMimic-{8}, 4-Dropwig, 6-BigSpider
 DL_10 : 6-Centipede-2
 DL_12 : 3-BigNeedleWorm, 3-SmallNeedleWorm-3, 3-CicadaB, 4-Mimic-{6}
 DL_14 : 4-SpitterSpider

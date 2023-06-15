@@ -1,5 +1,2 @@
-Template: NONE
-Clouds: 0.1304348
-Palette: 2
-Effects: SkyBloom-0.5652174-20-20, Dustpuffs-0.05434782-20-69, GreenSparks-0.173913-19-117, HeatWave-0.1847826-269-21, Ant-0.1521739-269-68, RockFlea-0.02173913-268-117, SandPuffs-0.01086957-268-167, 
-FadePalette: 29, 0.3043478
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, 
+FadePalette: 2, 0.4021739
