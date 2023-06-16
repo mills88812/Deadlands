@@ -1,7 +1,7 @@
 ROOMS
 GATE_SU_DL : DL_01, DISCONNECTED : GATE
 GATE_DL_AL : DISCONNECTED, DL_22
-DL_01 : DL_03, DL_02, GATE_SU_DL, DISCONNECTED
+DL_01 : DL_03, GATE_SU_DL, DL_02
 DL_02 : DL_08, DL_S02, DL_01
 DL_S02 : DL_02 : SHELTER
 DL_03 : DL_04, DL_01 : SWARMROOM
@@ -39,7 +39,7 @@ END ROOMS
 
 CREATURES
 //all
-DL_01 : 5-PoleMimic-{10}, 4-ScavengerElite-3, 4-RedCentipede-{Night}
+DL_01 : 3-ScavengerElite-3, 3-SmallCentipede-2-{Ignorecycle}, 3-RedCentipede-{Night}
 DL_02 : 5-BigSpider-{Ignorecycle}, 3-Dropwig-{Ignorecycle}
 DL_05 : 4-WhiteLizard, 5-WhiteLizard, 6-Dropwig-{Ignorecycle}, 4-Dropwig-{Night}, 5-Spider-6-{Night}
 DL_07 : 3-WhiteLizard, 4-SmallCentipede-{Ignorecycle}, 3-BigSpider-{Night}

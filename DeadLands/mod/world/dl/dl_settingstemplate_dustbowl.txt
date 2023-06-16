@@ -12,4 +12,4 @@ WaterReflectionAlpha: 1
 Palette: 18
 EffectColorA: 15
 EffectColorB: 21
-Effects: HeatWave-0.2-20-20, SkyBloom-0.6-20-70, Beetle-0.05-270-20, RockFlea-0.02-270-70, DustPuffs-0.5-20-120, DayNight-1.0-270-120, 
+Effects: HeatWave-0.2-20-20, SkyBloom-0.6-20-70, Beetle-0.05-270-20, RockFlea-0.02-270-70, DustPuffs-0.5-20-120, DayNight-1.0-270-120, FairyParticles-1-270-170, 
