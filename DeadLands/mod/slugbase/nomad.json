@@ -15,7 +15,7 @@
 		],
 
     "the_mark": true, 
-    "world_state": "spear",
+    "world_state": "Spear",
     "cycle_length_min": 3.0,
     "cycle_length_max": 6.0,
 
