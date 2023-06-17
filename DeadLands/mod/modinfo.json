@@ -4,7 +4,7 @@
 	"version": "0.2.20",
 	"authors": "DEADLANDS TEAM",
 	"description": "A community project based off Daszombes' region concept \"The Deadlands\". It is a work in progress.",
-	"requirements": [ "moreslugcats", "regionkit", "slime-cubed.slugbase", "dressmyslugcat" ],
-	"requirements_names": [ "More Slugcats", "RegionKit", "SlugBase", "dress my slugcat" ],
+	"requirements": [ "moreslugcats", "regionkit", "slime-cubed.slugbase", "dressmyslugcat", "fisobs" ],
+	"requirements_names": [ "More Slugcats", "RegionKit", "SlugBase", "dress my slugcat", "Fisobs" ],
 	"tags": [ "Slugcats", "Cosmetics", "Regions", "Items", "Arenas"]
 }

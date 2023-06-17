@@ -16,10 +16,12 @@ namespace Deadlands
 
         public static ConditionalWeakTable<Player, NomadEX> SlideData = new();
 
-        public static void OnInit()
+        public static ConditionalWeakTable<Player, NomadEX> OnInit()
         {
             On.Player.ctor += Player_ctor;
             On.Player.UpdateMSC += Player_UpdateMSC;
+
+            return SlideData;
         }
 
         private static void Player_ctor(On.Player.orig_ctor orig, Player self, AbstractCreature abstractCreature, World world)
