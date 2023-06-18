@@ -51,7 +51,9 @@ namespace Deadlands
                 //Sounds enums
                 NomadEnums.RegisterValues();
                 //Fly Logic
-                NomadFly.OnInit();
+                var SlideData = NomadFly.OnInit();
+
+                NomadGraphics.OnInit(SlideData);
 
                 //DMS compatibility
                 if (ModManager.ActiveMods.Any(mod => mod.id == "dressmyslugcat"))

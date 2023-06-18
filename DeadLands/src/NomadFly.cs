@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 namespace Deadlands
 {
     internal class NomadFly
-    { 
+    {
         public static float speed;
         public static bool LimitSpeed = true;
 

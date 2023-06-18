@@ -22,13 +22,19 @@ class HelperFuncs
         bool output = false;
 
         if (
+            player.canJump <= 0 &&
             player.bodyMode != Player.BodyModeIndex.Crawl &&
-            player.bodyMode != Player.BodyModeIndex.WallClimb &&
             player.bodyMode != Player.BodyModeIndex.CorridorClimb &&
-            player.bodyMode != Player.BodyModeIndex.ClimbingOnBeam &&
             player.bodyMode != Player.BodyModeIndex.ClimbIntoShortCut &&
-            player.bodyMode != Player.BodyModeIndex.ZeroG &&
-            player.bodyMode != Player.BodyModeIndex.Swimming
+            player.bodyMode != Player.BodyModeIndex.WallClimb &&
+            player.bodyMode != Player.BodyModeIndex.Swimming &&
+            player.animation != Player.AnimationIndex.HangFromBeam &&
+            player.animation != Player.AnimationIndex.ClimbOnBeam &&
+            player.animation != Player.AnimationIndex.AntlerClimb &&
+            player.animation != Player.AnimationIndex.VineGrab &&
+            player.animation != Player.AnimationIndex.ZeroGPoleGrab &&
+            player.Consious &&
+            !player.Stunned
         )
             output = true;
 

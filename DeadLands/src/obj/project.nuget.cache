@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NBGHHqadIswwOcgopPpwkrRaiV+r8wIuve7nudB9FmmlfaJr9GNSQyZ8BhWq61Mnb7as53m1UNQpBftGUZeeew==",
+  "dgSpecHash": "ObFKDCqwfYWweomiFW9D1NDrV+MmI3gCGlXGK3d/+jQS5Z82VpO8fJjRepQ1mnxTtN9bu+1ikvGQb9FfQcAN+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\KnobbyTacks\\Desktop\\Deadlands-1.2\\DeadLands\\src\\Deadlands.csproj",
+  "projectFilePath": "C:\\temp\\Deadlands\\DeadLands\\src\\Deadlands.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

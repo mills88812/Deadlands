@@ -16,3 +16,12 @@ C:\Users\KnobbyTacks\Desktop\Deadlands-1.2\DeadLands\src\obj\Debug\net48\Deadlan
 C:\Users\KnobbyTacks\Desktop\Deadlands-1.2\DeadLands\src\obj\Debug\net48\Deadlands.csproj.CoreCompileInputs.cache
 C:\Users\KnobbyTacks\Desktop\Deadlands-1.2\DeadLands\src\obj\Debug\net48\Deadlands.dll
 C:\Users\KnobbyTacks\Desktop\Deadlands-1.2\DeadLands\src\obj\Debug\net48\Deadlands.pdb
+C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\Deadlands.csproj.AssemblyReference.cache
+C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\Deadlands.GeneratedMSBuildEditorConfig.editorconfig
+C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\Deadlands.AssemblyInfoInputs.cache
+C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\Deadlands.AssemblyInfo.cs
+C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\Deadlands.csproj.CoreCompileInputs.cache
+C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\Deadlands.dll
+C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\Deadlands.pdb
+C:\temp\Deadlands\DeadLands\src\bin\Debug\net48\Deadlands.dll
+C:\temp\Deadlands\DeadLands\src\bin\Debug\net48\Deadlands.pdb
