@@ -1,7 +1,7 @@
 {
   "id": "Nomad",
   "name": "The Nomad",
-  "description": "A gentle glider who lost its home long ago.<LINE>Now, you must find a treasure in exchange for your freedom.",
+  "description": "A gentle glider who lost its home long ago.<LINE>Now, you must find a treasure to exchange for your freedom.",
   "features": {
     "start_room": "DL_36",
     "select_menu_scene": "Slugcat_nomad",
