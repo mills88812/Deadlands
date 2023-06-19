@@ -129,13 +129,14 @@ sealed class Wing : PhysicalObject, IDrawable
 
     public void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer? newContainer)
     {
-        newContainer ??= rCam.ReturnFContainer("Items");
+        newContainer ??= rCam.ReturnFContainer("Midground");
 
-        foreach (FSprite fsprite in sLeaser.sprites) {
-            fsprite.RemoveFromContainer();
-            newContainer.AddChild(fsprite);
 
-            newContainer.MoveToBack();
-        }
+        sLeaser.sprites[0].RemoveFromContainer();
+        newContainer.AddChild(sLeaser.sprites[0]);
+
+        
+
+        //newContainer.MoveToBack(); // Makes all pole plants invisible...?
     }
 }
