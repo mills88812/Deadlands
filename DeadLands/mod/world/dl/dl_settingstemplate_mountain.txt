@@ -1,0 +1,15 @@
+DangerType: None
+CeilingDrips: 0
+RainIntensity: 0
+RumbleIntensity: 0
+Clouds: 0.3
+Grime: 0.2
+BkgDroneVolume: 0.2
+BkgDroneNoThreatVolume: 1
+RandomItemDensity: 0.3
+RandomItemSpearChance: 0.5
+WaterReflectionAlpha: 1
+Palette: 5
+EffectColorA: 15
+EffectColorB: 13
+Effects: HeatWave-0.1-20-20, SkyBloom-0.3-20-70, Wasp-0.05-270-20, FireFlies-0.05-270-70, DayNight-1-270-120, Dustpuffs-0.1-20-120, FairyParticles-1-270-170, AboveCloudsView-0.05-270-220, 

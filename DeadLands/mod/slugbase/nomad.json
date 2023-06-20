@@ -3,7 +3,7 @@
   "name": "The Nomad",
   "description": "A gentle glider who lost its home long ago.<LINE>Now, you must find a treasure to exchange for your freedom.",
   "features": {
-    "start_room": "DL_36",
+    "start_room": "DL_START",
     "select_menu_scene": "Slugcat_nomad",
     "select_menu_scene_ascended": "Slugcat_nomad",
     "sleep_scene": "Sleep_Nomad",
@@ -16,8 +16,8 @@
 
     "the_mark": true, 
     "world_state": "Spear",
-    "cycle_length_min": 3.0,
-    "cycle_length_max": 6.0,
+    "cycle_length_min": 3.5,
+    "cycle_length_max": 7.0,
 
     "loudness": 0.5,
     "tunnel_speed": 1.35,

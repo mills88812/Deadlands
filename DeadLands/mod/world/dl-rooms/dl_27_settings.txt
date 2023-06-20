@@ -1,3 +1,3 @@
 Template: DL_SettingsTemplate_DustBowl
-PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, 
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, CustomDecal><244.9843><224.6573><-12.75~116.0889~83.91666~101.8667~85.33334~-0.7110901~275.5417~41.95557~0~1~0~27~1~0~1~0~1~0~1~0, 
 FadePalette: 2, 0.15
