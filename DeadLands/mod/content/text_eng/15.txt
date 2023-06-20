@@ -1,0 +1,11 @@
+incognito
+ENomadD
+
+sprite11
+
+The End
+END
+Restart
+start.txt
+
+FADE

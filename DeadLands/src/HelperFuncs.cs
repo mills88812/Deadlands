@@ -1,7 +1,7 @@
 ﻿using System;
 using BepInEx;
 using UnityEngine;
-using ImprovedInput;
+//using ImprovedInput;
 using SlugBase.Features;
 using static SlugBase.Features.FeatureTypes;
 using System.Xml.Schema;
@@ -13,26 +13,32 @@ using System.Collections.Generic;
 using SlugBase;
 using Fisobs.Core;
 
-namespace SlugTemplate
+namespace Deadlands;
+
+class HelperFuncs
 {
-    class HelperFuncs
+    public static bool CanGlide(Player player)
     {
-        public static bool CanGlide(Player player)
-        {
-            bool output = false;
+        bool output = false;
 
-            if (
-                player.bodyMode != Player.BodyModeIndex.Crawl &&
-                player.bodyMode != Player.BodyModeIndex.WallClimb &&
-                player.bodyMode != Player.BodyModeIndex.CorridorClimb &&
-                player.bodyMode != Player.BodyModeIndex.ClimbingOnBeam &&
-                player.bodyMode != Player.BodyModeIndex.ClimbIntoShortCut &&
-                player.bodyMode != Player.BodyModeIndex.ZeroG &&
-                player.bodyMode != Player.BodyModeIndex.Swimming
-            )
-                output = true;
+        if (
+            player.canJump <= 0 &&
+            player.bodyMode != Player.BodyModeIndex.Crawl &&
+            player.bodyMode != Player.BodyModeIndex.CorridorClimb &&
+            player.bodyMode != Player.BodyModeIndex.ClimbIntoShortCut &&
+            player.bodyMode != Player.BodyModeIndex.WallClimb &&
+            player.bodyMode != Player.BodyModeIndex.Swimming &&
+            player.animation != Player.AnimationIndex.HangFromBeam &&
+            player.animation != Player.AnimationIndex.ClimbOnBeam &&
+            player.animation != Player.AnimationIndex.AntlerClimb &&
+            player.animation != Player.AnimationIndex.VineGrab &&
+            player.animation != Player.AnimationIndex.ZeroGPoleGrab &&
+            player.Consious &&
+            !player.Stunned
+        )
+            output = true;
 
-            return output;
-        }
+        return output;
     }
 }
+

@@ -1,0 +1,37 @@
+incognito
+ENomadI
+
+Testing sprites be like:
+
+sprite1
+1.txt
+sprite2
+2.txt
+sprite3
+3.txt
+sprite4
+4.txt
+sprite5
+5.txt
+sprite6
+6.txt
+sprite7
+7.txt
+sprite8
+8.txt
+sprite9
+9.txt
+sprite10
+10.txt
+sprite11
+11.txt
+sprite12
+12.txt
+sprite13
+13.txt
+sprite14
+14.txt
+sprite15
+15.txt
+
+RW_42 - Kayava

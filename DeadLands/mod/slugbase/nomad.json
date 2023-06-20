@@ -1,46 +1,63 @@
 {
-  "id": "DeadLands",
+  "id": "Nomad",
   "name": "The Nomad",
-  "description": "A slugcat adapted to the desert that can also glide (wip)",
+  "description": "A gentle glider who lost its home long ago.<LINE>Now, you must find a treasure to exchange for your freedom.",
   "features": {
+    "start_room": "DL_START",
+    "select_menu_scene": "Slugcat_nomad",
+    "select_menu_scene_ascended": "Slugcat_nomad",
+    "sleep_scene": "Sleep_Nomad",
     "color": "FFFFFF",
-    "dead/glide": true,
+		"custom_colors": 
+		[
+			{ "name": "Body", "story": "FFFFFF", "arena": ["F0F0FF","FFFF73","FF7373","1E112E"] },
+			{ "name": "Eyes", "story": "FFFFFF", "arena": ["E05656","E05656","E05656","E05656"] }
+		],
+
+    "the_mark": true, 
+    "world_state": "Spear",
+    "cycle_length_min": 3.5,
+    "cycle_length_max": 7.0,
+
+    "loudness": 0.5,
+    "tunnel_speed": 1.35,
+	"climb_speed": 1.35,
+	"walk_speed": 1.0,
+	"crouch_stealth": 0.5,
+	"throw_skill": 0,
+	"lung_capacity": 0.9,
+    "weight": 0.95,
+    "food_min": 5,
+    "food_max": 7,
+    
+    "Nomad/SlideStamina": 2000,
+    "Nomad/SlideRecovery": 1,
+    "Nomad/SlideSpeed": 3,
+    "Nomad/Nomad": true,
+
     "diet": {
       "base": "White",
-      "corpses": 0.25,
-      "plants": 0.75,
+      "corpses": 0.0,
+      "plants": 0.5,
+      "meats": 1.0,
       "overrides": {
-        "SeedCob": 2,
-
-        "DangleFruit": 1,
-        "JellyFish": 1,
-        "SmallCentipede": 1,
-        "LillyPuck": 1,
-
-        "Fly": 0.75,
-        "GooieDuck": 0.75,
-        "Edible": 0.75,
-
-        "SlimeMold": 0.5,
-        "WaterNut": 0.5,
+        "DangleFruit": 1.0,
+        "Fly": 1.0,
+        "Spider": 0.5,
+        "DropBug": 0.5,
+        "BigSpider": 0.5,
+        "SpitterSpider": 0.5,
+        "Aquapede": 0.5,
+        "MotherSpider": 0.5,
+        "FireBug": 0.5,
+        "Snail": 0.5,
+        "CicadaA": 0.5,
+        "CicadaB": 0.5,
+        "BigNeedleWorm": 0.5,
         "SmallNeedleWorm": 0.5,
-
-        "Scavenger": 0.25,
-        "OracleSwarmer": 0.25,
-        "EggBug": 0.25,
-        "VultureGrub": 0.25,
-        "Hazer": 0,
-        "GlowWeed": 0.25
-
+        "Centiwing": 0.5,
+        "TubeWorm": 0.5
       }
-    },
-    "loudness": [ 0.5, 0.3 ],
-    "select_menu_scene": "Slugcat_Prototype",
-    "select_menu_scene_ascended": "Slugcat_Prototype",
-    "sleep_scene": "Sleep_Nomad",
-    "weight": [ 0.5, 0.25 ],
-    "food_min": 4,
-    "food_max": 6,
-    "world_state": "spear"
+    }
   }
 }

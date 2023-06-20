@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <LangVersion>11</LangVersion>
+		<PublishSingleFile>true</PublishSingleFile>
+    </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<Optimize>False</Optimize>
+		<DebugType>portable</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DebugType>embedded</DebugType>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+      <None Include="..\.editorconfig" Link=".editorconfig" />
+    </ItemGroup>
+    
+    <Target Name="GenerateMod" AfterTargets="PostBuildEvent">
+		<ItemGroup>
+			<RemovePlugins Include="../mod/plugins/*.dll" />
+		</ItemGroup>
+		<ItemGroup>
+			<CopyPlugins Include="$(TargetPath)" />
+		</ItemGroup>
+		
+        <Delete Files="@(RemovePlugins)" />
+        <Copy SourceFiles="@(CopyPlugins)" DestinationFolder="../mod/plugins/" />
+    </Target>
+
+	<ItemGroup>
+		<Reference Include="../lib/*.dll">
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
+    
+</Project>

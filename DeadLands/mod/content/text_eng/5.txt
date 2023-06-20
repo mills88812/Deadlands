@@ -1,0 +1,9 @@
+incognito
+ENomadSr
+
+sprite5
+
+Next
+6.txt
+Restart
+start.txt

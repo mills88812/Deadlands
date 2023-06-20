@@ -34,12 +34,12 @@ C:\rainwroldMods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate
 C:\rainwroldMods\dead lands\SlugTemplate-master\src\obj\Debug\net48\SlugTemplate.pdb
 C:\rainwroldMods\dead lands\SlugTemplate-master\src\bin\Debug\net48\SlugTemplate.dll
 C:\rainwroldMods\dead lands\SlugTemplate-master\src\bin\Debug\net48\SlugTemplate.pdb
-C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\SlugTemplate.csproj.AssemblyReference.cache
-C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\SlugTemplate.GeneratedMSBuildEditorConfig.editorconfig
-C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\SlugTemplate.AssemblyInfoInputs.cache
-C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\SlugTemplate.AssemblyInfo.cs
-C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\SlugTemplate.csproj.CoreCompileInputs.cache
-C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\SlugTemplate.dll
-C:\temp\Deadlands\DeadLands\src\obj\Debug\net48\SlugTemplate.pdb
-C:\temp\Deadlands\DeadLands\src\bin\Debug\net48\SlugTemplate.dll
-C:\temp\Deadlands\DeadLands\src\bin\Debug\net48\SlugTemplate.pdb
+C:\Users\KnobbyTacks\Desktop\Deadlands-main\DeadLands\src\bin\Debug\net48\SlugTemplate.dll
+C:\Users\KnobbyTacks\Desktop\Deadlands-main\DeadLands\src\bin\Debug\net48\SlugTemplate.pdb
+C:\Users\KnobbyTacks\Desktop\Deadlands-main\DeadLands\src\obj\Debug\net48\SlugTemplate.csproj.AssemblyReference.cache
+C:\Users\KnobbyTacks\Desktop\Deadlands-main\DeadLands\src\obj\Debug\net48\SlugTemplate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KnobbyTacks\Desktop\Deadlands-main\DeadLands\src\obj\Debug\net48\SlugTemplate.AssemblyInfoInputs.cache
+C:\Users\KnobbyTacks\Desktop\Deadlands-main\DeadLands\src\obj\Debug\net48\SlugTemplate.AssemblyInfo.cs
+C:\Users\KnobbyTacks\Desktop\Deadlands-main\DeadLands\src\obj\Debug\net48\SlugTemplate.csproj.CoreCompileInputs.cache
+C:\Users\KnobbyTacks\Desktop\Deadlands-main\DeadLands\src\obj\Debug\net48\SlugTemplate.dll
+C:\Users\KnobbyTacks\Desktop\Deadlands-main\DeadLands\src\obj\Debug\net48\SlugTemplate.pdb

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0khG2tdZSqInM+Jdotz8qMdG7wfQJry2FOMcbWzdxsb79VfeES7LbsyscazLXPoCV5dGY6CmGDd5N2UG0aiL1w==",
+  "dgSpecHash": "ObFKDCqwfYWweomiFW9D1NDrV+MmI3gCGlXGK3d/+jQS5Z82VpO8fJjRepQ1mnxTtN9bu+1ikvGQb9FfQcAN+w==",
   "success": true,
-  "projectFilePath": "C:\\temp\\Deadlands\\DeadLands\\src\\SlugTemplate.csproj",
+  "projectFilePath": "C:\\temp\\Deadlands\\DeadLands\\src\\Deadlands.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

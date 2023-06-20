@@ -1,3 +1,7 @@
+This is the Bensone Branch of Mills' Deadland's mod. The glide logic is different. Rooms are largely up to date, connected correctly, map made, and there's template rooms. 
+
+--
+
 Use this template on GitHub or [download the code](https://github.com/SlimeCubed/ExampleSlugBaseMod/archive/refs/heads/master.zip), whichever is easiest.
 
 Links:

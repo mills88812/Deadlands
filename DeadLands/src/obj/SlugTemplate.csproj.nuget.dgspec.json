@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\temp\\Deadlands\\DeadLands\\src\\SlugTemplate.csproj": {}
+    "C:\\Users\\KnobbyTacks\\Desktop\\Deadlands-main\\DeadLands\\src\\SlugTemplate.csproj": {}
   },
   "projects": {
-    "C:\\temp\\Deadlands\\DeadLands\\src\\SlugTemplate.csproj": {
+    "C:\\Users\\KnobbyTacks\\Desktop\\Deadlands-main\\DeadLands\\src\\SlugTemplate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\temp\\Deadlands\\DeadLands\\src\\SlugTemplate.csproj",
+        "projectUniqueName": "C:\\Users\\KnobbyTacks\\Desktop\\Deadlands-main\\DeadLands\\src\\SlugTemplate.csproj",
         "projectName": "SlugTemplate",
-        "projectPath": "C:\\temp\\Deadlands\\DeadLands\\src\\SlugTemplate.csproj",
-        "packagesPath": "C:\\Users\\knigh\\.nuget\\packages\\",
-        "outputPath": "C:\\temp\\Deadlands\\DeadLands\\src\\obj\\",
+        "projectPath": "C:\\Users\\KnobbyTacks\\Desktop\\Deadlands-main\\DeadLands\\src\\SlugTemplate.csproj",
+        "packagesPath": "C:\\Users\\KnobbyTacks\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\KnobbyTacks\\Desktop\\Deadlands-main\\DeadLands\\src\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Users\\knigh\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\knigh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Users\\knigh\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
+          "C:\\Users\\KnobbyTacks\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,7 +39,7 @@
       "frameworks": {
         "net48": {
           "targetAlias": "net48",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

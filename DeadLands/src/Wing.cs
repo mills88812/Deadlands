@@ -10,6 +10,9 @@ sealed class Wing : PhysicalObject, IDrawable
 
     public Color wingColor;
 
+    public float size = 0.12f;
+    public float pointiness = 0.7f; // Ranges from 0 - 1, one being max, zero being none at all
+
 
     public WingAbstract Abstr { get; }
 
@@ -17,7 +20,7 @@ sealed class Wing : PhysicalObject, IDrawable
     {
         Abstr = abstr;
 
-        base.bodyChunks = new[] { new BodyChunk(this, 0, pos + vel, 0, 0.35f) { goThroughFloors = true } };
+        base.bodyChunks = new[] { new BodyChunk(this, 0, pos + vel, 0, 1) { goThroughFloors = true } };
         base.bodyChunks[0].lastPos = base.bodyChunks[0].pos;
         base.bodyChunks[0].vel = vel;
 
@@ -38,14 +41,15 @@ sealed class Wing : PhysicalObject, IDrawable
     public void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
     {
         sLeaser.sprites = new FSprite[1];
-        //sLeaser.sprites[0] = new FSprite("CentipedeBackShell", true);
-        //sLeaser.sprites[1] = new FSprite("CentipedeBackShell", true);
 
+        // Visualize this as triangles being created from the vertices from left to right (on the left wing)
+        // All triangles are realized clock-wise (Probably doesn't matter cause it's a 2D game, but I did it anyways)
         TriangleMesh.Triangle[] tris = new TriangleMesh.Triangle[]
         {
-            new TriangleMesh.Triangle(0, 1, 2),
-            new TriangleMesh.Triangle(3, 4, 5),
-            new TriangleMesh.Triangle(6, 7, 8)
+            new TriangleMesh.Triangle(0, 2, 1),
+            new TriangleMesh.Triangle(1, 2, 3),
+            new TriangleMesh.Triangle(2, 4, 3),
+            new TriangleMesh.Triangle(3, 4, 5)
         };
 
         TriangleMesh triangleMesh = new TriangleMesh("Futile_White", tris, false, false);
@@ -57,43 +61,57 @@ sealed class Wing : PhysicalObject, IDrawable
 
     public void DrawSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos)
     {
+        /////////////////////////////////////
+        // Base points
+        /////////////////////////////////////
+
         Vector2 shoulder = Vector2.Lerp(player.bodyChunks[0].lastPos, player.bodyChunks[0].pos, timeStacker);
-        Vector2 hips = Vector2.Lerp(player.bodyChunks[1].lastPos, player.bodyChunks[1].pos, timeStacker);
+        Vector2 hip = Vector2.Lerp(player.bodyChunks[1].lastPos, player.bodyChunks[1].pos, timeStacker);
 
         Vector2 hand = Vector2.Lerp(player.BodyPartByIndex(index).lastPos, player.BodyPartByIndex(index).pos, timeStacker)
-            + 1.5f * (shoulder - hips).normalized;
+            + 1.5f * (shoulder - hip).normalized;
 
-        // (Not a vertice)
-        var hand_shoulder_dist = Mathf.Min(Vector2.Distance(hand, shoulder), 1);
+        // (All Vector2s initalized with "var" are not vertices)
+        var hand_shoulder_dist = 0.1f * Vector2.Distance(hand, shoulder);
 
-        // Inbetween vertices
+        /////////////////////////////////////
+        // Inbetween points
+        /////////////////////////////////////
 
-        Vector2 hand_to_shoulder =
-            Vector2.Lerp(hand, shoulder, 0.5f);
+        var hand_shoulder_diff = index == 0 ? hand - shoulder : shoulder - hand;
+
+        // Potential division by zero so we have to do silly branching stuff :spearboowomp:
+        Vector2 hand_shoulder_inbetween = (
+            Vector2.Lerp(shoulder, hand, 0.5f)
+        );
         
+
         shoulder += 3 * Vector2.up;
 
         
-        var hand_hips_diff = index == 0 ? hips - hand : hand - hips;
+        var hand_hips_diff = index == 0 ? hip - hand : hand - hip;
 
-        Vector2 hand_to_hips = hand_shoulder_dist *
-            0.1f * new Vector2(hand_hips_diff.y, -hand_hips_diff.x) +
-            Vector2.Lerp(hips, hand, 0.5f);
+        var hand_hips_inbetween = (
 
-        // Visualize this as triangles being created from the vertices from left to right (on the left wing)
-        // All triangles are realized clock-wise (doesn't matter since it's a 2D game, but I did it anyways)
+            size * hand_shoulder_dist * new Vector2(hand_hips_diff.y, -hand_hips_diff.x) +
+
+            Vector2.Lerp(hip, hand, 0.5f)
+        );
+
+        Vector2 hand_to_inbetween = Vector2.Lerp(hand, hand_hips_inbetween, pointiness);
+        Vector2 hips_to_inbetween = Vector2.Lerp(hip, hand_hips_inbetween, pointiness);
+
+        /////////////////////////////////////
+        // Vertex assignment
+        /////////////////////////////////////
 
         ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(0, hand - camPos);
-        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(1, hand_to_shoulder - camPos);   // Triangle 1
-        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(2, hand_to_hips - camPos);
+        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(1, hand_to_inbetween - camPos);
+        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(2, hand_shoulder_inbetween - camPos);
 
-        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(3, hand_to_hips - camPos);
-        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(4, hand_to_shoulder - camPos);   // Triangle 2
-        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(5, hips - camPos);
-
-        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(6, hand_to_shoulder - camPos);
-        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(7, shoulder - camPos);           // Triangle 3
-        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(8, hips - camPos);
+        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(3, hips_to_inbetween - camPos);
+        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(4, shoulder - camPos);
+        ((TriangleMesh)sLeaser.sprites[0]).MoveVertice(5, hip - camPos);
 
 
         sLeaser.sprites[0].color = wingColor;
@@ -111,13 +129,14 @@ sealed class Wing : PhysicalObject, IDrawable
 
     public void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer? newContainer)
     {
-        newContainer ??= rCam.ReturnFContainer("Items");
+        newContainer ??= rCam.ReturnFContainer("Midground");
 
-        foreach (FSprite fsprite in sLeaser.sprites) {
-            fsprite.RemoveFromContainer();
-            newContainer.AddChild(fsprite);
 
-            newContainer.MoveToBack();
-        }
+        sLeaser.sprites[0].RemoveFromContainer();
+        newContainer.AddChild(sLeaser.sprites[0]);
+
+        
+
+        //newContainer.MoveToBack(); // Makes all pole plants invisible...?
     }
 }

@@ -15,8 +15,6 @@ sealed class WingAbstract : AbstractPhysicalObject
             realizedObject = new Wing(this, Room.realizedRoom.MiddleOfTile(pos.Tile), Vector2.zero);
     }
 
-    
-
     public override string ToString()
     {
         return this.SaveToString($"");

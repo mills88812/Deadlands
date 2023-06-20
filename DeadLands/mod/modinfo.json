@@ -1,10 +1,10 @@
 ﻿{
-	"id": "mills888.DeadLands",
-	"name": "DeadLands",
-	"version": "0.0.3",
-	"authors": "mills888",
-	"description": "A mod based off of the daszombes region concept, Deadlands, currently only implements an early iteration of The Nomad.",
-	"requirements": [ "slime-cubed.slugbase", "dressmyslugcat", "improved-input-config", "fisobs" ],
-	"requirements_names": [ "SlugBase", "dress my slugcat", "improved input config", "Fisobs" ],
-	"tags": [ " Campaigns", "Cosmetics", "Regions", "Items", "Arenas"]
+	"id": "Deadlands",
+	"name": "Deadlands",
+	"version": "0.2.26",
+	"authors": "DEADLANDS TEAM",
+	"description": "A community project based off Daszombes' region concept \"The Deadlands\". It is a work in progress.",
+	"requirements": [ "moreslugcats", "regionkit", "slime-cubed.slugbase", "dressmyslugcat", "fisobs" ],
+	"requirements_names": [ "More Slugcats", "RegionKit", "SlugBase", "Dress My Slugcat", "Fisobs" ],
+	"tags": [ "Slugcats", "Cosmetics", "Regions", "Items", "Arenas"]
 }

@@ -1,0 +1,5 @@
+Template: DL_SettingsTemplate_DustBowl
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, CustomDecal><660.3219><881.0911><-6~187~390~194~415~10~-544~-32~0~1~0~Perle_graf_1_DL30~1~0~1~0~1~0~1~0, CustomDecal><1420.679><864.6605><-13~381~367~399~333~14~-300~22~0~1~0~inkkebab_graf_3_sad~0.3369565~0.08695652~0.3369565~0~0.3369565~0~0.3369565~0, LightSource><1013.593><897.627><1~Environment~-5~266~50~86.60254~1~0~None~0.2173913~1, LightSource><749.9489><896.7288><1~Environment~15~265~50~86.60254~1~0~None~0~1, FirecrackerPlant><991.0449><619.2641><0~0~2~3, FirecrackerPlant><1020.887><616.9773><0~0~2~3, FlyLure><974.8065><607.4302><0~0~4~9, DangleFruit><832.2726><394.5484><0~0~2~3, DangleFruit><740.7599><425.0906><0~0~2~3, DangleFruit><790.5534><439.4681><0~0~2~3, 
+FadePalette: 2, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15
+BackgroundOffset: -1308.879,1770.832
+BackgroundType: atc_dune
