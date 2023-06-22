@@ -1,4 +1,4 @@
-Template: DL_SettingsTemplate_DustBowl
+Template: DL_SettingsTemplate_Underground
 EffectColorA: 9
 EffectColorB: 21
 Effects: SunBlock-0-20-20, Contrast-0.07608695-30-30, DarkenLights-0-20-20, Darkness-0.423913-20-20, Bloom-0.4130435-40-40, 

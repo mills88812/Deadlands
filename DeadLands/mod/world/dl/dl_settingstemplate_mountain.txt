@@ -8,7 +8,8 @@ BkgDroneVolume: 0.2
 BkgDroneNoThreatVolume: 1
 RandomItemDensity: 0.3
 RandomItemSpearChance: 0.5
-WaterReflectionAlpha: 1
+WaveSpeed: 0.5
+WaterReflectionAlpha: 0.3
 Palette: 5
 EffectColorA: 15
 EffectColorB: 13

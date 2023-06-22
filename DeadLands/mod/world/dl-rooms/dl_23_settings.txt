@@ -1,3 +1,4 @@
+Template: DL_SettingsTemplate_Conurbation
 PlacedObjects: FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, DangleFruit><726.6968><1618.8><0~0~2~3, DangleFruit><700.4042><1626.938><0~0~2~3, DangleFruit><718.8671><1570.933><0~0~2~3, DayNightSettings><500><500><-100~20~2~33, EEGhostSpot><820.402><2888.645><, Lantern><820.6179><2466.008><0~0~4~9, 
 FadePalette: 2, 0.6, 0.6, 0.6, 0.6
 BackgroundOffset: 2540.761,307.9718

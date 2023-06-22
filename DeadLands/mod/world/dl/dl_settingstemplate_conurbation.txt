@@ -7,6 +7,8 @@ Grime: 0.2
 BkgDroneVolume: 0.2
 RandomItemDensity: 0.3
 RandomItemSpearChance: 0.5
+WaveSpeed: 0.5
+WaterReflectionAlpha: 0.3
 Palette: 18
 EffectColorA: 15
 EffectColorB: 13

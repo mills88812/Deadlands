@@ -1,3 +1,4 @@
+Template: DL_SettingsTemplate_Conurbation
 PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, CustomDecal><867.5878><2101.266><-12.80621~64.88889~113.2802~158.0445~149.5646~0.7110901~-280.3165~-213.3333~0~0.2344088~0~serser_scav_1_echo~1~0.04639933~1~0.04639933~1~0.04639933~1~0.04639933, 
 FadePalette: 2, 0.6, 0.6, 0.6
 BackgroundOffset: 0,1878.695

@@ -1,3 +1,4 @@
+Template: DL_SettingsTemplate_Conurbation
 Palette: 3
 EffectColorA: 18
 EffectColorB: 6
