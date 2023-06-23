@@ -1,12 +1,13 @@
+
 Palette: 2
 overseersSpawnChance: 0.0
 overseersMin: 0
 overseersMax: 4
 playerGuideOverseerSpawnChance: 0.0
+Room Setting Templates: Conurbation, DustBowl, Mountain, Underground
 Subregion: The Pass
 Subregion: Conurbation
 Subregion: Dustbowl
-Room Setting Templates: Conurbation, DustBowl, Mountain, Underground
 Room_Attr: DL_03: WhiteLizard-Avoid,
 Room_Attr: DL_05: WhiteLizard-Like,
 Room_Attr: DL_06: WhiteLizard-Like,

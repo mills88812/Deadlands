@@ -1,0 +1,8 @@
+Palette: 18
+overseersSpawnChance: 0.0
+overseersMin: 0
+overseersMax: 4
+playerGuideOverseerSpawnChance: 0.0
+Subregion: Salt Flats
+Subregion: The Conduit
+Room Setting Templates: Outside, Inside, Conduit
