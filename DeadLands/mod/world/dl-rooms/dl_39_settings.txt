@@ -1,3 +1,5 @@
 Template: DL_SettingsTemplate_DustBowl
-PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, CustomDecal><302.342><252.3224><10~93~123~73~112~-18~-107~118~0~1~0~39~1~0~1~0~1~0~1~0, CustomDecal><431.3634><224.6461><0~40~40~40~40~0~151~11~0~1~0~broken_connection~1~0~1~0~1~0~1~0, CustomDecal><489.7028><226.1555><0~40~40~40~40~0~0~0~0~1~0~broken_connection~1~0~1~0~1~0~1~0, 
-FadePalette: 2, 0.15
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, DangleFruit><384.379><1340.144><0~0~2~3, DangleFruit><366.9149><1317.33><0~0~2~3, 
+FadePalette: 2, 0.15, 0.15
+BackgroundOffset: 0,618.664
+BackgroundType: atc_dune
