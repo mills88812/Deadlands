@@ -1,4 +1,5 @@
 Template: DL_SettingsTemplate_DustBowl
 PlacedObjects: DayNightSettings><500><500><-100~20~2~33, DeadSeedCob><221.9953><1098.614><, DeadSeedCob><215.7101><1188.837><, PuffBall><3930.761><111.3175><13.5177~49.77777~2~3, PuffBall><4340.969><77.116><13.5177~54.04446~2~3, SeedCob><203.1848><1142.071><0~0~7~10, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, 
 FadePalette: 2, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15
+BackgroundOffset: -463.9965,1546.651
 BackgroundType: atc_dune

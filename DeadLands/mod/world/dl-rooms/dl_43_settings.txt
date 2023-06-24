@@ -1,0 +1,7 @@
+Template: NONE
+DangerType: None
+Palette: 18
+EffectColorA: 15
+EffectColorB: 14
+Effects: Darkness-0.4021739-294-246, Contrast-0.05434782-285-168, 
+FadePalette: 2, 0.8043478, 0.8043478, 0.8043478, 0.8043478
