@@ -8,6 +8,15 @@ Room Setting Templates: Conurbation, DustBowl, Mountain, Underground
 Subregion: The Pass
 Subregion: Conurbation
 Subregion: Dustbowl
+Room_Attr: DL_01: Scavenger-Like,
 Room_Attr: DL_03: WhiteLizard-Avoid,
 Room_Attr: DL_05: WhiteLizard-Like,
 Room_Attr: DL_06: WhiteLizard-Like,
+Room_Attr: DL_11: Scavenger-Like,
+Room_Attr: DL_17: Scavenger-Like,
+Room_Attr: DL_31: Scavenger-Like,
+Room_Attr: DL_33: Scavenger-Like,
+Room_Attr: DL_34: Scavenger-Like,
+Room_Attr: DL_36: Scavenger-Like,
+Room_Attr: DL_41: Scavenger-Like,
+Room_Attr: DL_42: Scavenger-Like,

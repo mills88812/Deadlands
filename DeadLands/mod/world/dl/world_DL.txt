@@ -1,7 +1,7 @@
 ROOMS
 
-DL_START : DL_35
-GATE_OE_DL : DL_36, DISCONNECTED : GATE
+DL_START : DL_36
+GATE_OE_DL : DL_35, DISCONNECTED : GATE
 GATE_DL_AL : DISCONNECTED, DL_22 : GATE
 DL_01 : DL_42, DL_33, DL_41
 DL_02 : DL_08, DL_S02, DL_31, DL_40
@@ -17,7 +17,7 @@ DL_10 : DL_12, DL_39, DL_32, DL_11
 DL_11 : DL_10, DL_12, DL_25 : SCAVTRADER
 DL_12 : DL_13, DL_10, DL_11
 DL_13 : DL_15, DL_14, DL_12
-DL_14 : DL_13, DL_19, DL_09, DL_16
+DL_14 : DL_09, DL_19, DL_13, DL_16
 DL_15 : DL_28, DL_13, DL_19 : SWARMROOM
 DL_16 : DL_14, DL_24, DL_38, DL_17
 DL_17 : DL_16
@@ -37,11 +37,11 @@ DL_28 : DL_15, DL_27
 DL_29 : DL_20, DL_19 : SWARMROOM
 DL_30 : DL_20, DL_22
 DL_31 : DL_05, DL_42, DL_02, DL_41, DL_37, DL_43
-DL_32 : DL_10, DL_08, DL_05
+DL_32 : DL_08, DL_10, DL_05
 DL_33 : DL_34, DL_01
 DL_34 : DL_35, DL_33
-DL_35 : DL_36, DL_START, DL_34
-DL_36 : DL_35, GATE_OE_DL : SCAVTOLL
+DL_35 : GATE_OE_DL, DL_36, DL_34
+DL_36 : DL_35, DL_START : SCAVTOLL
 DL_37 : DL_24, DL_31, DL_25
 DL_38 : DL_16, DL_18
 DL_39 : DL_27, DL_10
@@ -88,7 +88,6 @@ LINEAGE : DL_31 : 6 : Centipede-{Ignorecycle}-0.1, RedCentipede-{Ignorecycle}-0
 LINEAGE : DL_31 : 9 : Scavenger-0.5, ScavengerElite-{Ignorecycle}-0
 DL_32 : 3-Centiwing-{Ignorecycle}, 3-CicadaA, 3-CicadaB, 3-SpitterSpider-{Night}
 DL_35 : 4-GreenLizard, 12-GarbageWorm-2, 5-DropBug
-DL_37 : 9-PoleMimic-{18}, 3-WhiteLizard, 8-Spider-{Night}-18
 DL_40 : 2-Centipede-{IgnoreCycle}
 OFFSCREEN : 0-Vulture-2, 0-Scavenger-9
 LINEAGE : OFFSCREEN : 0 : Scavenger-0.2, ScavengerElite-{Ignorecycle}-0
@@ -99,4 +98,5 @@ LINEAGE : DL_43 : 3 : SpitLizard-0.5, RedLizard-0
 LINEAGE : DL_43 : 10 : BigSpider-{Night}-0.3, SpitterSpider-{Night}-0
 DL_39 : 2-WhiteLizard, 3-Centipede-{Ignorecycle}
 DL_27 : 3-SpitLizard
+DL_36 : 4-Scavenger
 END CREATURES
