@@ -1,5 +1,5 @@
 Template: DL_SettingsTemplate_DustBowl
-PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, FirecrackerPlant><4964.496><80.04838><-73.99167~100.2667~2~3, 
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, FirecrackerPlant><4964.496><80.04838><-73.99167~100.2667~2~3, BlueToken><1946.916><513.9733><9~65~97~-10.99792~1~BrownLizard~~0~0~0~0, DeadTokenStalk><1968.542><552.4558><10~25, DeadTokenStalk><1899.317><511.7643><-6~47, 
 FadePalette: 2, 0.15, 0.15, 0.15, 0.15, 0.15
 BackgroundOffset: -434,1304
 BackgroundType: atc_dune
