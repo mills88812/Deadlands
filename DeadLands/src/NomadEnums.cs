@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Deadlands
+﻿namespace Deadlands
 {
     internal class NomadEnums
     {
@@ -14,12 +8,11 @@ namespace Deadlands
         {
             wind = new SoundID("wind", true);
         }
-        //DO NOT
-        public static void UnregisterValues()
-        {
-            Unregister(wind);
-        }
-        //Do...
+        /*
+        // this function was (i assume) from some tutorial with the comment //DO NOT... therefore i removed it 
+        // (keeping it commented just in case its needed)
+        public static void UnregisterValues(){Unregister(wind);}
+        */
         private static void Unregister<T>(ExtEnum<T> extEnum) where T : ExtEnum<T>
         {
             extEnum?.Unregister();
