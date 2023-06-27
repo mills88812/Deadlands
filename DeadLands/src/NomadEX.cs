@@ -1,36 +1,38 @@
 ﻿using SlugBase;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Deadlands
 {
     internal class NomadEX
     {
-        public float SlideRecovery => UnlockedExtraStamina ? SlideStaminaRecoveryBase * 1.2f : SlideStaminaRecoveryBase;
-        public float MinimumSlideStamina => SlideStaminaMax * 0.1f;
+        private readonly float _slideStaminaRecoveryBase;
+        private float _slideSpeed;
+        private readonly int _slideStaminaMaxBase;
+        private bool _unlockedExtraStamina = false;
 
-        public readonly float SlideStaminaRecoveryBase;
+        public float SlideRecovery =>
+            _unlockedExtraStamina ? _slideStaminaRecoveryBase * 1.2f : _slideStaminaRecoveryBase;
+
+        public float MinimumSlideStamina =>
+            SlideStaminaMax * 0.1f;
+
         public float SlideStamina;
-        public float SlideSpeed;
 
-        public int SlideStaminaMax => UnlockedExtraStamina ? (int)(SlideStaminaMaxBase * 1.6f) : SlideStaminaMaxBase;
+        public int SlideStaminaMax =>
+            _unlockedExtraStamina ? (int)(_slideStaminaMaxBase * 1.6f) : _slideStaminaMaxBase;
+        
+        public bool CanSlide => SlideStaminaMax > 0 && _slideSpeed > 0;
 
-        public readonly int SlideStaminaMaxBase;
         public int slideStaminaRecoveryCooldown;
         public int slideDuration;
         public int timeSinceLastSlide;
         public int preventSlide;
         public int preventGrabs;
 
-        public bool CanSlide => SlideStaminaMax > 0 && SlideSpeed > 0;
 
         public readonly bool Nomad;
         public readonly bool isNomad;
         public bool isSliding;
-        public bool UnlockedExtraStamina = false;
         public bool UnlockedVerticalFlight = false;
 
         public readonly SlugcatStats.Name Name;
@@ -42,9 +44,9 @@ namespace Deadlands
         public NomadEX(Player player)
         {
             isNomad =
-                NomadPlugin.slideStamina.TryGet(player, out SlideStaminaMaxBase) &&
-                NomadPlugin.SlideRecovery.TryGet(player, out SlideStaminaRecoveryBase) &&
-                NomadPlugin.SlideSpeed.TryGet(player, out SlideSpeed) &&
+                NomadPlugin.slideStamina.TryGet(player, out _slideStaminaMaxBase) &&
+                NomadPlugin.SlideRecovery.TryGet(player, out _slideStaminaRecoveryBase) &&
+                NomadPlugin.SlideSpeed.TryGet(player, out _slideSpeed) &&
                 NomadPlugin.Nomad.TryGet(player, out Nomad);
 
             NomadRef = new WeakReference<Player>(player);
@@ -75,6 +77,7 @@ namespace Deadlands
             {
                 return;
             }
+
             player.bodyMode = Player.BodyModeIndex.Default;
             player.animation = Player.AnimationIndex.None;
             player.wantToJump = 0;
@@ -83,13 +86,27 @@ namespace Deadlands
             isSliding = true;
         }
 
-        public bool CanSustainFlight()
+        public bool CanSustainFlight
         {
-            if (!NomadRef.TryGetTarget(out var player))
+            get
             {
-                return false;
+                if (!NomadRef.TryGetTarget(out var player))
+                {
+                    return false;
+                }
+
+                return SlideStamina > 0 && preventSlide == 0 && player.canJump <= 0 &&
+                       player.bodyMode != Player.BodyModeIndex.Crawl &&
+                       player.bodyMode != Player.BodyModeIndex.CorridorClimb &&
+                       player.bodyMode != Player.BodyModeIndex.ClimbIntoShortCut &&
+                       player.animation != Player.AnimationIndex.HangFromBeam &&
+                       player.animation != Player.AnimationIndex.ClimbOnBeam &&
+                       player.bodyMode != Player.BodyModeIndex.WallClimb &&
+                       player.bodyMode != Player.BodyModeIndex.Swimming && player.Consious && !player.Stunned &&
+                       player.animation != Player.AnimationIndex.AntlerClimb &&
+                       player.animation != Player.AnimationIndex.VineGrab &&
+                       player.animation != Player.AnimationIndex.ZeroGPoleGrab;
             }
-            return SlideStamina > 0 && preventSlide == 0 && player.canJump <= 0 && player.bodyMode != Player.BodyModeIndex.Crawl && player.bodyMode != Player.BodyModeIndex.CorridorClimb && player.bodyMode != Player.BodyModeIndex.ClimbIntoShortCut && player.animation != Player.AnimationIndex.HangFromBeam && player.animation != Player.AnimationIndex.ClimbOnBeam && player.bodyMode != Player.BodyModeIndex.WallClimb && player.bodyMode != Player.BodyModeIndex.Swimming && player.Consious && !player.Stunned && player.animation != Player.AnimationIndex.AntlerClimb && player.animation != Player.AnimationIndex.VineGrab && player.animation != Player.AnimationIndex.ZeroGPoleGrab;
         }
     }
 }

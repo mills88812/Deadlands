@@ -1,9 +1,5 @@
 ﻿using DressMySlugcat;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Deadlands
@@ -15,7 +11,7 @@ namespace Deadlands
             SetupDMSSprites();
         }
 
-        public static void SetupDMSSprites()
+        private static void SetupDMSSprites()
         {
             for (int i = 0; i < 4; i++)
             {
@@ -25,12 +21,12 @@ namespace Deadlands
                     PlayerNumber = i,
                     CustomSprites = new List<CustomSprite>
                     {
-                        new CustomSprite() { Sprite = "HEAD", SpriteSheetID = "Perle_gel.Nomad" },
-                        new CustomSprite() { Sprite = "FACE", SpriteSheetID = "Perle_gel.Nomad", Color = Color.black },
-                        new CustomSprite() { Sprite = "BODY", SpriteSheetID = "Perle_gel.Nomad" },
-                        new CustomSprite() { Sprite = "ARMS", SpriteSheetID = "Perle_gel.Nomad" },
-                        new CustomSprite() { Sprite = "HIPS", SpriteSheetID = "Perle_gel.Nomad" },
-                        new CustomSprite() { Sprite = "TAIL", SpriteSheetID = "Perle_gel.Nomad" }
+                        new() { Sprite = "HEAD", SpriteSheetID = "Perle_gel.Nomad" },
+                        new() { Sprite = "FACE", SpriteSheetID = "Perle_gel.Nomad", Color = Color.black },
+                        new() { Sprite = "BODY", SpriteSheetID = "Perle_gel.Nomad" },
+                        new() { Sprite = "ARMS", SpriteSheetID = "Perle_gel.Nomad" },
+                        new() { Sprite = "HIPS", SpriteSheetID = "Perle_gel.Nomad" },
+                        new() { Sprite = "TAIL", SpriteSheetID = "Perle_gel.Nomad" }
                     }
                 });
             }
