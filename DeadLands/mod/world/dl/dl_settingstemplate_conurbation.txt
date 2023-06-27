@@ -13,4 +13,4 @@ Palette: 18
 EffectColorA: 15
 EffectColorB: 13
 Effects: HeatWave-0.1-20-20, SkyBloom-0.3-20-70, Wasp-0.05-270-20, FireFlies-0.05-270-70, DayNight-1.0-270-120, Dustpuffs-0.1-20-120, AboveCloudsView-0.05-270-220, FairyParticles-1-270-170, 
-AmbientSounds: OMNI><AM_ENV-CityTone.ogg><754.1801><560.3835><0.3922106><0.6812496, DIR><Noise Wind.wav><754.7001><178.2724><0.2844205><0.6951091><-66.28819><0.2078804,
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><754.1801><560.3835><0.3922106><0.6812496, OMNI><Noise Wind.wav><754.1801><560.3835><0.3922106><0.6812496,
