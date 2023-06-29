@@ -95,7 +95,7 @@ DL_42 : 4-Centipede-{Ignorecycle}, 5-TubeWorm, 6-TubeWorm
 DL_43 : 8-SmallCentipede-2, 9-Centipede-{Ignorecycle}
 LINEAGE : DL_43 : 3 : GlowLizard-0.5, RedLizard-0
 LINEAGE : DL_43 : 10 : BigSpider-{Night}-0.3, SpitterSpider-{Night}-0
-DL_44 : 16-PoleMimic-{12}, 5-BigSpider-{Night}, 13-Centipede-{Ignorecycle}, 13-SmallCentipede-{Ignorecycle}, 12-PoleMimic-{6}, 6-PoleMimic-{11}, 8-GlowLizard-{Ignorecycle}, 7-LanternMouse-{Ignorecycle}-3
+DL_44 : 16-PoleMimic-{12}, 5-BigSpider-{Night}, 13-Centipede-{Ignorecycle}, 13-SmallCentipede-{Ignorecycle}, 12-PoleMimic-{6}, 6-PoleMimic-{7}, 8-GlowLizard-{Ignorecycle}, 7-LanternMouse-{Ignorecycle}-3
 OFFSCREEN : 0-Vulture-2, 0-Scavenger-9
 LINEAGE : OFFSCREEN : 0 : Scavenger-0.7, ScavengerElite-{Ignorecycle}-0
 LINEAGE : OFFSCREEN : 0 : Scavenger-0.7, ScavengerElite-{Ignorecycle}-0

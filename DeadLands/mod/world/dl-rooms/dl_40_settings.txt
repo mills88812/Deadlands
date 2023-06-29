@@ -1,4 +1,10 @@
 Template: DL_SettingsTemplate_Underground
+WaveSpeed: 0.5180027
+WaveAmplitude: 0
+SecondWaveAmplitude: 0
+Clouds: 0.3015963
+Grime: 0.3530685
+WaterReflectionAlpha: 0.5050722
 Effects: AboveCloudsView-1-771.3-546.4792, FireFlies-0.4098619-773.4343-495.9656, WaterDepth-0.03093288-773.4344-445.4521, 
 PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, LanternOnStick><730.8444><435.1196><-24.90106~-74.30728, LanternOnStick><815.5869><540.3024><59.05103~-28.06256, LanternOnStick><202.6601><562.0898><-101.027~43.08337, 
 FadePalette: 2, 0.1546649
