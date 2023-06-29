@@ -1,3 +1,8 @@
-Template: DL_SettingsTemplate_Mountain
-PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, 
-FadePalette: 2, 0.6
+Template: DL_SettingsTemplate_Underground
+Clouds: 0
+Palette: 10
+EffectColorA: 19
+Effects: Darkness-0.02309783-42.75-71.24444, Contrast-0.02309783-45.66669-127.4667, 
+PlacedObjects: DayNightSettings><500><500><-100~20~3~33, FairyParticleSettings><100><100><-218.8333~100.7111~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, WallSteamer><765.6894><339.1195><148.75~1.155548, LightSource><583.7641><276.6771><1~EffectColor1~0~100~112.3334~208.2025~1~0~Fade~0~0, LightSource><576.7145><380.2711><1~EffectColor1~0~100~212.2084~68.8248~1~0~Fade~0~0, LightSource><573.7788><481.6795><1~EffectColor1~0~100~458.7083~135.6692~1~0~Fade~0~0, LightFixture><686.0479><547.6344><RedLight~235.4872~-41.28888~10, 
+AmbientSounds: SPOT><AM_IND-ElectricHum01.ogg><321.797><422.7596><0.5><1><670.2971><545.8706><-19.06366><-53.84424><0><0.08469225, 
+FadePalette: 5, 0.2535326
