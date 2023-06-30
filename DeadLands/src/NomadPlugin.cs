@@ -55,6 +55,8 @@ namespace Deadlands
 
                 NomadGraphics.OnInit(SlideData);
 
+               HydrationLogic.SetupHydration();
+                
                 //DMS compatibility
                 if (ModManager.ActiveMods.Any(mod => mod.id == "dressmyslugcat"))
                 {
