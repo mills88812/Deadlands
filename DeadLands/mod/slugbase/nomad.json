@@ -16,8 +16,8 @@
 
     "the_mark": true, 
     "world_state": "Spear",
-    "cycle_length_min": 4.0,
-    "cycle_length_max": 7.0,
+    "cycle_length_min": 5.0,
+    "cycle_length_max": 8.0,
 
     "loudness": 0.5,
     "tunnel_speed": 1.35,

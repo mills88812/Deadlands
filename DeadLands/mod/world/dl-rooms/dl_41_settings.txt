@@ -1,2 +1,5 @@
-PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, CustomDecal><328.5336><260.0675><9.916656~69.86667~107.2917~64.88889~85.33334~-14.93335~459.7084~45.51111~0~1~0~41~1~0~1~0~1~0~1~0, ExitSymbolHidden><454.2281><227.1626><, 
-FadePalette: 2, 0.6
+Template: DL_SettingsTemplate_Conurbation
+EffectColorA: 19
+Effects: LightBurn-0.1195652-20-20, 
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, LightSource><475.813><654.0709><1~EffectColor1~-187~216~50~86.60254~0~0~Flash~0.3369565~0, LightSource><68.61987><103.4101><1~EffectColor1~-13~160~50~86.60254~0~0~None~0~0, LightBeam><514.8053><345.5457><82~319~431~256~331~-197~0~0~0.8239123~0.4891304~0.4130435~0~None~0~0, 
+FadePalette: 2, 0.3695652

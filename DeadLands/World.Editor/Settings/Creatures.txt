@@ -56,5 +56,6 @@ JungleLeech,:Leech:19B219:Water,Downpour
 FireBug,Firebug,HellBug,Hellbug,:FireBug:FF7878:Downpour
 Inspector,:Inspector:72E6C4:Misc,Downpour
 Yeek,:Yeek:E5E5E5:Neutral,Downpour
-BrownLizard,:LizardGeneric:964b00:hostile,deadlands
-IguanaLizard,:LizardGeneric:368717:hostile,deadlands
+BrownLizard,:LizardGeneric:964B00:Deadlands
+IguanaLizard,:LizardGeneric:368717:Deadlands
+GlowLizard,:LizardGeneric:FF4A1D:Deadlands
