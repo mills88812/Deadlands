@@ -12,6 +12,6 @@ WaveSpeed: 0.5
 WaterReflectionAlpha: 0.3
 Palette: 18
 EffectColorA: 15
-EffectColorB: 21
+EffectColorB: 6
 Effects: HeatWave-0.2-20-20, SkyBloom-0.6-20-70, Beetle-0.05-270-20, RockFlea-0.02-270-70, DustPuffs-0.5-20-120, DayNight-1.0-270-120, FairyParticles-1-270-170, AboveCloudsView-0.05-270-220, 
 AmbientSounds: OMNI><AM_ENV-LightWind.ogg><718.1632><518.0652><0.3075183><1, OMNI><AM_ENV-SubTerr.ogg><695.8682><447.2668><0.646286><0.611957, 
