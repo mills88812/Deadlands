@@ -4,7 +4,7 @@ using UnityEngine;
 using ImprovedInput;
 using SlugBase.Features;
 using static SlugBase.Features.FeatureTypes;
-using DressMySlugcat;
+//using DressMySlugcat;
 using System.Linq;
 using System.Collections.Generic;
 using System.Security.Permissions;
@@ -21,7 +21,7 @@ namespace Deadlands
     [BepInPlugin("DeadLands", "DeadLands", "0.1.2")]
     class NomadPlugin : BaseUnityPlugin
     {
-        private DeadlandsOptionsMenu optionsMenuInstance;
+        private DeadlandsOptions options;
         bool _initialized;
 
         private void LogInfo(object ex) => Logger.LogInfo(ex);
@@ -32,11 +32,28 @@ namespace Deadlands
         public static readonly PlayerFeature<float> SlideSpeed = PlayerFloat("Nomad/SlideSpeed");
         public static readonly PlayerFeature<bool> Nomad = PlayerBool("Nomad/Nomad");
 
+
+
+        public NomadPlugin()
+        {
+            try
+            {
+                options = new DeadlandsOptions();
+            } 
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                throw;
+            }
+        }
+
+
         public void OnEnable()
         {
             LogInfo("DeadLans is working or skill issue?, wortking");
             On.RainWorld.OnModsInit += RainWorld_OnModsInit;
         }
+
 
         private void RainWorld_OnModsInit(On.RainWorld.orig_OnModsInit orig, RainWorld self)
         {
@@ -62,11 +79,11 @@ namespace Deadlands
                 }
                 
                 //Remix Menu
-                MachineConnector.SetRegisteredOI("DeadLands", optionsMenuInstance = new DeadlandsOptionsMenu());
+                MachineConnector.SetRegisteredOI("DeadLands", options);
             }
             catch (Exception ex)
             {
-                Debug.Log($"Remix Menu: Hook_OnModsInit options failed init error {optionsMenuInstance}{ex}");
+                Debug.Log($"Remix Menu: Hook_OnModsInit options failed init error {options}{ex}");
                 Logger.LogError(ex);
                 Logger.LogMessage("WHOOPS something go wrong");
             }
