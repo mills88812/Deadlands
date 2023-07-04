@@ -39,7 +39,7 @@ sealed class Wings
                 new TriangleMesh.Triangle(3, 4, 5)
             };
 
-            //Debug.Log(startSprite + i);
+            Debug.Log(startSprite + i);
             sLeaser.sprites[startSprite + i] = new TriangleMesh("Futile_White", tris, false, false);
         }
     }
