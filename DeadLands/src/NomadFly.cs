@@ -16,11 +16,10 @@ internal class NomadFly
 
     public static ConditionalWeakTable<Player, NomadEX> SlideData = new();
 
-
-        public static ConditionalWeakTable<Player, NomadEX> OnInit()
-        {
-            On.Player.ctor += Player_ctor;
-            On.Player.UpdateMSC += Player_UpdateMSC;
+    public static ConditionalWeakTable<Player, NomadEX> OnInit()
+    {
+        On.Player.ctor += Player_ctor;
+        On.Player.UpdateMSC += Player_UpdateMSC;
 
         return SlideData;
     }
@@ -34,7 +33,6 @@ internal class NomadFly
     private static void Player_UpdateMSC(On.Player.orig_UpdateMSC orig, Player self)
     {
         orig(self);
-
         //Fly values
         if (!SlideData.TryGetValue(self, out var player) || !player.isNomad)
         {

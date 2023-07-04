@@ -1,5 +1,4 @@
-﻿//using DressMySlugcat;
-using System;
+﻿using DressMySlugcat;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,10 +8,10 @@ namespace Deadlands
     {
         public static void OnInit()
         {
-            //SetupDMSSprites();
+            SetupDMSSprites();
         }
 
-        /*private static void SetupDMSSprites()
+        private static void SetupDMSSprites()
         {
             for (int i = 0; i < 4; i++)
             {
@@ -31,6 +30,6 @@ namespace Deadlands
                     }
                 });
             }
-        }*/
+        }
     }
 }

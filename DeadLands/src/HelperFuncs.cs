@@ -1,19 +1,4 @@
-﻿using System;
-using BepInEx;
-using UnityEngine;
-//using ImprovedInput;
-using SlugBase.Features;
-using static SlugBase.Features.FeatureTypes;
-using System.Xml.Schema;
-//using DressMySlugcat;
-using IL;
-using System.Linq;
-using On;
-using System.Collections.Generic;
-using SlugBase;
-using Fisobs.Core;
-
-namespace Deadlands;
+﻿namespace Deadlands;
 
 static class HelperFuncs
 {

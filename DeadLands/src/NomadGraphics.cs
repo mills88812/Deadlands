@@ -7,101 +7,60 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.NetworkInformation;
-using IL.MoreSlugcats;
-using System.Reflection;
-using UnityEngine.UI;
-using System.Drawing.Printing;
 
 namespace Deadlands;
 
 internal class NomadGraphics
 {
     public static ConditionalWeakTable<Player, NomadEX> SlideData = new();
-    public static Wings wings;
-
-    public static Color nomadColor = new Color(1f, 196f / 255f, 120f / 255f, 1);
-
-    private static bool initializing = false;
-
 
     public static void OnInit(ConditionalWeakTable<Player, NomadEX> slideData)
     {
-        On.Player.InitiateGraphicsModule += (orig, self) =>
-        {
-            orig(self);
-
-            if (!SlideData.TryGetValue(self, out var playerData) || !playerData.isNomad) return;
-
-            wings = new Wings(self.graphicsModule as PlayerGraphics, 13);
-        };
-
-        On.PlayerGraphics.InitiateSprites += InititateSprites;
-
-        On.PlayerGraphics.DrawSprites += DrawSprites;
-        On.PlayerGraphics.ApplyPalette += ApplyPalette;
-        On.PlayerGraphics.AddToContainer += AddToContainer;
-
+        On.Player.InitiateGraphicsModule += Player_Init;
         On.SlugcatHand.EngageInMovement += SlugcatHandOnEngageInMovement;
-
 
         SlideData = slideData;
     }
 
-
-    private static void InititateSprites(On.PlayerGraphics.orig_InitiateSprites orig, PlayerGraphics self, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
+    private static void Player_Init(On.Player.orig_InitiateGraphicsModule orig, Player self)
     {
-        initializing = true;
-        orig(self, sLeaser, rCam);
-        initializing = false;
+        orig(self);
 
-        if (!SlideData.TryGetValue(self.owner as Player, out var playerData) || !playerData.isNomad) return;
+        if (!SlideData.TryGetValue(self, out var playerData) || !playerData.isNomad) return;
+
+        for (int i = 0; i < 2; i++)
+        {
+            WingAbstract wing = new WingAbstract(
+                self.room.world,
+                self.abstractCreature.pos,
+                self.room.game.GetNewID()
+            );
 
 
-        Array.Resize<FSprite>(ref sLeaser.sprites, 15);
-        wings.InitiateSprites(sLeaser, rCam);
+            wing.pos.Tile = new(0, 0);
 
-        self.AddToContainer(sLeaser, rCam, null);
+            wing.RealizeInRoom();
+            wing.realizedObject.PlaceInRoom(self.room);
+
+            (wing.realizedObject as Wing).player = self;
+            (wing.realizedObject as Wing).index = i;
+
+            (wing.realizedObject as Wing).wingColor = new Color(1f, 196f / 255f, 120f / 255f, 1);
+        }
+
+        /*WhiskerAbstract whisker = new WhiskerAbstract(
+            self.room.world,
+            self.abstractCreature.pos,
+            self.room.game.GetNewID()
+        );
+
+        whisker.RealizeInRoom();
+        whisker.realizedObject.PlaceInRoom(self.room);
+
+        (whisker.realizedObject as Whisker).player = self;
+
+        (whisker.realizedObject as Whisker).whiskerColor = Color.white;*/
     }
-
-    private static void DrawSprites(On.PlayerGraphics.orig_DrawSprites orig, PlayerGraphics self, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos)
-    {
-        orig(self, sLeaser, rCam, timeStacker, camPos);
-
-        if (!SlideData.TryGetValue(self.owner as Player, out var playerData) || !playerData.isNomad) return;
-
-
-        if (self.player.room == null) return;
-
-
-        //foreach (var item in sLeaser.sprites) item.color = nomadColor;
-        //sLeaser.sprites[9].color = Color.green; // Setting the face color
-
-        wings.DrawSprites(sLeaser, rCam, timeStacker, camPos);
-    }
-
-    private static void ApplyPalette(On.PlayerGraphics.orig_ApplyPalette orig, PlayerGraphics self, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, RoomPalette palette)
-    {
-        orig(self, sLeaser, rCam, palette);
-
-        if (!SlideData.TryGetValue(self.owner as Player, out var playerData) || !playerData.isNomad) return;
-
-
-        wings.ApplyPalette(sLeaser, rCam, palette);
-    }
-
-    private static void AddToContainer(On.PlayerGraphics.orig_AddToContainer orig, PlayerGraphics self, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)
-    {
-        orig(self, sLeaser, rCam, newContainer);
-
-        if (!SlideData.TryGetValue(self.owner as Player, out var playerData) || !playerData.isNomad) return;
-
-
-        if (initializing) return;
-
-        wings.AddToContainer(sLeaser, rCam, rCam.ReturnFContainer("Midground"));
-    }
-
-
 
     private static bool SlugcatHandOnEngageInMovement(On.SlugcatHand.orig_EngageInMovement orig, SlugcatHand self)
     {
@@ -149,11 +108,13 @@ internal class NomadGraphics
         Vector2 targetPos = 52 * (self.limbNumber - 0.5f) *
             new Vector2(player_orientation.y, -player_orientation.x).normalized;
 
-        targetPos += (standing ? 7f : 0f) * player_orientation.normalized;
+        targetPos += (standing ? 7f : 3f) * player_orientation.normalized;
 
         // Assignment
         self.relativeHuntPos = targetPos;
         self.pos = Vector2.Lerp(self.pos, player.firstChunk.pos + targetPos, 60f * Time.deltaTime);
+
+
         return orig(self);
     }
 }
