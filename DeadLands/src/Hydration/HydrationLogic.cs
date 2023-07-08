@@ -1,21 +1,19 @@
 using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Steamworks;
 using UnityEngine;
 
 namespace Deadlands;
 
 public static class HydrationLogic
 {
-    private const float MaxHydration = 20f;
+    private const int MaxHydration = 15; //TODO make max hydration different for each slugs + add possibility for modded slugs to add their hydration as well
 
-    private static ConditionalWeakTable<Player, StrongBox<float>> HydrationData = new();
+    private static ConditionalWeakTable<Player, StrongBox<int>> HydrationData = new();
 
-    public static float GetHydration(this Player player) =>
+    public static int GetHydration(this Player player) =>
         HydrationData.TryGetValue(player, out var strongBox) ? strongBox.Value : MaxHydration;
 
-    public static void AddHydration(this Player player, float value)
+    public static void AddHydration(this Player player, int value)
     {
         if (HydrationData.TryGetValue(player, out var strongBox))
         {
@@ -26,6 +24,8 @@ public static class HydrationLogic
 
     public static void SetupHydration()
     {
+        HydrationMeter.AddToHud(MaxHydration);
+        
         On.Player.ThrowObject += (orig, self, grasp, eu) =>
         {
             orig(self, grasp, eu);
@@ -36,13 +36,13 @@ public static class HydrationLogic
         {
             orig(self, creature, world);
 
-            HydrationData.Add(self, new StrongBox<float>());
+            HydrationData.Add(self, new (MaxHydration));
         };
 
         On.Player.Jump += (orig, self) =>
         {
             orig(self);
-            self.AddHydration(self.GetHydration()-5);
+            self.AddHydration(-1);
         };
 
         On.Player.ObjectEaten += (orig, self, edible) =>
@@ -50,7 +50,7 @@ public static class HydrationLogic
             orig(self, edible);
             Type edibletype = edible.GetType();
             Debug.Log($"Ate {edibletype.Name}");
-            self.AddHydration(WaterValues.GetFoodValue(edibletype).BaseWater);
+            //self.AddHydration(WaterValues.GetFoodValue(edibletype).BaseWater);
         };
     }
 }
