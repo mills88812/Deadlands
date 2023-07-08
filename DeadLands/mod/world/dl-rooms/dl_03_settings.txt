@@ -1,5 +1,5 @@
+Template: DL_SettingsTemplate_Conurbation
 PlacedObjects: WallSteamer><-69.57797><590.6478><0~100, DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, 
-Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>New Architecture<eA>vol<eB>0.3<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>5<eA>fadeIn<eB>55.43515<eA>oneSongPerCycle<eB>0<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>887.6699<tB>453.8043<tA>fireChance<tB>1<tA>entrance<tB>1<tA>karma<tB>0<tA>slugcats<tB><tA>pos<tB>564.4617<tB>372.7821<tA>handlePos<tB>-101.9387<tB>-91.53311, 
 FadePalette: 2, 0.6
 BackgroundOffset: 0,1539.854
 BackgroundType: atc_dune

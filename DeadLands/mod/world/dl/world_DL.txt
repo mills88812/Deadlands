@@ -31,29 +31,31 @@ DL_S22 : DL_22 : SHELTER
 DL_23 : DL_06
 DL_24 : DL_16, DL_37, DL_S24
 DL_S24 : DL_24 : SHELTER
-DL_25 : DL_11, DL_40, DL_44 : SWARMROOM
+DL_25 : DL_40, DL_11, DL_44
 DL_26 : DL_07, DL_S26, DL_27
 DL_S26 : DL_26 : SHELTER
 DL_27 : DL_28, DL_26, DL_39
 DL_28 : DL_15, DL_27
 DL_29 : DL_20, DL_19 : SWARMROOM
 DL_30 : DL_20, DL_22
-DL_31 : DL_05, DL_42, DL_02, DL_41, DL_44, DL_43
+DL_31 : DL_05, DL_42, DL_02, DL_41, DL_44, DL_47
 DL_32 : DL_08, DL_10, DL_05
 DL_33 : DL_34, DL_S33, DL_01
 DL_S33 : DL_33 : SHELTER
 DL_34 : DL_35, DL_33
 DL_35 : GATE_OE_DL, DL_36, DL_34
 DL_36 : DL_35, DL_START
-DL_37 : DL_24, DL_44, DISCONNECTED
+DL_37 : DL_24, DL_44, DL_46
 DL_38 : DL_16, DL_18
 DL_39 : DL_27, DL_10
 DL_40 : DL_02, DL_25
 DL_41 : DL_42, DL_31, DL_01 : SCAVTRADER
 DL_42 : DL_03, DL_01, DL_41, DL_31
-DL_43 : DL_44, DL_31, DISCONNECTED
-DL_44 : DL_25, DL_31, DL_37, DL_45, DL_43
+DL_43 : DL_46, DL_47, DISCONNECTED
+DL_44 : DL_25, DL_31, DL_37, DL_45, DL_46
 DL_45 : DL_44
+DL_46 : DL_37, DL_44, DL_43
+DL_47 : DL_31, DL_43
 END ROOMS
 CREATURES
 
@@ -72,7 +74,7 @@ LINEAGE : DL_12 : 3 : CicadaA-0.2, MotherSpider-{Ignorecycle}-0
 DL_14 : 4-BigSpider-{Ignorecycle}
 LINEAGE : DL_14 : 4 : BigSpider-{Ignorecycle}-0.3, SpitterSpider-{Ignorecycle}-0
 DL_15 : 3-CicadaB, 6-SpitterSpider-{Night}
-DL_16 : 4-BigSpider-{Ignorecycle}, 4-SpitterSpider-{Night}, 4-Dropwig-{Ignorecycle}
+DL_16 : 4-SpitterSpider-{Night}, 4-Dropwig-{Ignorecycle}
 DL_18 : 4-Dropwig-{Night}-2, 2-LanternMouse-{Night}-2, 5-GlowLizard-{Ignorecycle}
 DL_19 : 6-Centiwing-{Ignorecycle}, 6-Centiwing-{Ignorecycle}, 8-PoleMimic-{11}, 10-Centipede-{Ignorecycle}, 4-SpitterSpider-{Night}, 5-BrownLizard, 11-BrownLizard
 DL_20 : 5-SmallCentipede-{Ignorecycle}, 5-MotherSpider-{Night}, 4-BigSpider-{Night}, 3-GlowLizard-{Ignorecycle}-2
@@ -85,7 +87,7 @@ DL_26 : 3-BigSpider-{Night}
 DL_28 : 2-BigSpider-{Night}-2, 3-BrownLizard
 DL_29 : 2-CicadaA, 2-SpitterSpider-{Night}
 DL_30 : 4-PoleMimic-{9}, 3-BrownLizard
-DL_31 : 6-Centipede-{Ignorecycle}, 10-BigSpider-{Night}, 13-BigSpider-2-{Ignorecycle}
+DL_31 : 6-Centipede-{Ignorecycle}, 10-BigSpider-{Night}, 13-BigSpider-{Night}-2
 LINEAGE : DL_31 : 6 : Centipede-{Ignorecycle}-0.1, RedCentipede-{Ignorecycle}-0
 LINEAGE : DL_31 : 9 : Scavenger-0.7, ScavengerElite-{Ignorecycle}-0
 DL_32 : 3-SpitterSpider-{Night}, 3-Centiwing-{Ignorecycle}, 3-CicadaA, 3-CicadaB
@@ -94,10 +96,10 @@ DL_37 : 9-PoleMimic-{12}, 8-Spider-{Night}-9, 7-Spider-{Night}-9, 5-GlowLizard-{
 DL_39 : 3-Centipede-{Ignorecycle}, 2-IguanaLizard
 DL_40 : 2-Centipede-{IgnoreCycle}, 2-LanternMouse-{Night}-2
 DL_42 : 4-Centipede-{Ignorecycle}, 5-TubeWorm, 6-TubeWorm
-DL_43 : 8-SmallCentipede-2, 9-Centipede-{Ignorecycle}
+DL_43 : 8-SmallCentipede-2, 9-Centipede-{Ignorecycle}, 11-Spider-{Night}-8
 LINEAGE : DL_43 : 3 : GlowLizard-0.5, RedLizard-0
 LINEAGE : DL_43 : 10 : BigSpider-{Night}-0.3, SpitterSpider-{Night}-0
-DL_44 : 16-PoleMimic-{12}, 5-BigSpider-{Night}, 13-Centipede-{Ignorecycle}, 13-SmallCentipede-{Ignorecycle}, 12-PoleMimic-{6}, 6-PoleMimic-{7}, 8-GlowLizard-{Ignorecycle}, 7-LanternMouse-{Night}-3
+DL_44 : 16-PoleMimic-{12}, 5-BigSpider-{Night}, 13-Centipede-{Ignorecycle}, 13-SmallCentipede-{Ignorecycle}, 12-PoleMimic-{6}, 6-PoleMimic-{6}, 8-GlowLizard-{Ignorecycle}, 7-LanternMouse-{Night}-3, 14-LanternMouse-{Night}-2, 17-Spider-{Night}
 OFFSCREEN : 0-Vulture-4, 0-Scavenger-9
 LINEAGE : OFFSCREEN : 0 : Scavenger-0.7, ScavengerElite-{Ignorecycle}-0
 LINEAGE : OFFSCREEN : 0 : Scavenger-0.7, ScavengerElite-{Ignorecycle}-0
@@ -107,4 +109,7 @@ DL_34 : 2-Scavenger
 DL_02 : 5-Scavenger
 DL_27 : 4-BrownLizard
 DL_35 : 5-IguanaLizard, 4-BigSpider-{Night}
+DL_46 : 6-GlowLizard-{Ignorecycle}, 8-PoleMimic-{9}, 4-DropBug-{Night}, 7-GlowLizard-{Night}
+DL_47 : 4-GlowLizard-{Ignorecycle}, 3-Centipede-{Ignorecycle}, 3-SmallCentipede-{Ignorecycle}, 2-MotherSpider-{Night}
+DL_38 : 2-BigSpider-{Ignorecycle}
 END CREATURES
