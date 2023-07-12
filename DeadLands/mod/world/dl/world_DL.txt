@@ -3,6 +3,7 @@ ROOMS
 DL_START : DL_36
 GATE_OE_DL : DL_35, DISCONNECTED : GATE
 GATE_DL_AL : DISCONNECTED, DL_22 : GATE
+GATE_DL_AU : DL_43, DISCONNECTED : GATE
 DL_01 : DL_42, DL_33, DL_41
 DL_02 : DL_08, DL_S02, DL_31, DL_40
 DL_S02 : DL_02 : SHELTER
@@ -11,8 +12,8 @@ DL_04 : DL_05, DL_03
 DL_05 : DL_06, DL_07, DL_04, DL_32, DL_31
 DL_06 : DL_23, DL_05, DL_07
 DL_07 : DL_06, DL_05, DL_26
-DL_08 : DL_02, DL_09, DL_32
-DL_09 : DL_08, DL_14
+DL_08 : DL_02, DISCONNECTED, DL_32
+DL_09 : DISCONNECTED, DL_14
 DL_10 : DL_12, DL_32, DL_11, DL_39
 DL_11 : DL_10, DL_12, DL_25 : SCAVTRADER
 DL_12 : DL_13, DL_10, DL_11
@@ -23,7 +24,7 @@ DL_15 : DL_28, DL_13, DL_19 : SWARMROOM
 DL_16 : DL_14, DL_24, DL_38, DL_17
 DL_17 : DL_16
 DL_18 : DL_21, DL_38
-DL_19 : DL_15, DL_29, DL_20, DL_14
+DL_19 : DL_15, DL_29, DL_20
 DL_20 : DL_29, DL_30, DL_19
 DL_21 : DL_18, DL_22
 DL_22 : DL_30, DL_S22, DL_21, GATE_DL_AL
@@ -51,7 +52,7 @@ DL_39 : DL_27, DL_10
 DL_40 : DL_02, DL_25
 DL_41 : DL_42, DL_31, DL_01 : SCAVTRADER
 DL_42 : DL_03, DL_01, DL_41, DL_31
-DL_43 : DL_46, DL_47, DISCONNECTED
+DL_43 : DL_46, DL_47, GATE_DL_AU
 DL_44 : DL_25, DL_31, DL_37, DL_45, DL_46
 DL_45 : DL_44
 DL_46 : DL_37, DL_44, DL_43
@@ -76,7 +77,7 @@ LINEAGE : DL_14 : 4 : BigSpider-{Ignorecycle}-0.3, SpitterSpider-{Ignorecycle}-0
 DL_15 : 3-CicadaB, 6-SpitterSpider-{Night}
 DL_16 : 4-SpitterSpider-{Night}, 4-Dropwig-{Ignorecycle}
 DL_18 : 4-Dropwig-{Night}-2, 2-LanternMouse-{Night}-2, 5-GlowLizard-{Ignorecycle}
-DL_19 : 6-Centiwing-{Ignorecycle}, 6-Centiwing-{Ignorecycle}, 8-PoleMimic-{11}, 10-Centipede-{Ignorecycle}, 4-SpitterSpider-{Night}, 5-BrownLizard, 11-BrownLizard
+DL_19 : 10-Centipede-{Ignorecycle}, 11-BrownLizard, 7-BrownLizard-2, 8-Centiwing-{Ignorecycle}-2, 5-PoleMimic-{11}, 6-SpitterSpider-{Night}
 DL_20 : 5-SmallCentipede-{Ignorecycle}, 5-MotherSpider-{Night}, 4-BigSpider-{Night}, 3-GlowLizard-{Ignorecycle}-2
 LINEAGE : DL_20 : 5 : SmallCentipede-{Ignorecycle}-0.4, RedCentipede-{Ignorecycle}-0
 DL_21 : 5-PoleMimic-{14}, 3-Spider-{Night}-9, 10-GarbageWorm-2, 4-Spider-{Night}-9, 4-BrownLizard

@@ -1,0 +1,10 @@
+
+Palette: 18
+overseersSpawnChance: 0.0
+overseersMin: 0
+overseersMax: 4
+playerGuideOverseerSpawnChance: 0.0
+Room Setting Templates: AridTunnels, Ducts, Outpost
+Subregion: Arid Tunnels
+Subregion: Scornful Ducts
+Subregion: The Outpost

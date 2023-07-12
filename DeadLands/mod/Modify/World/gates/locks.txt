@@ -1,2 +1,3 @@
 [ADD]GATE_OE_DL : 2 : 2
 [ADD]GATE_DL_AL : 3 : 2
+[ADD]GATE_DL_AU : 3 : 2
