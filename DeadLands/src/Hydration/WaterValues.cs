@@ -1,41 +1,40 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Deadlands;
 
 public class WaterValuesSetup
 {
+    public static Func<object, int> FixedValue(int number) => (_) => number; //function to return fixed number
+
     public WaterValuesSetup()
     {
-       /* WaterValues.AddFoodValue<DangleFruit>(new WaterInfo(5));
-        WaterValues.AddFoodValue<EggBugEgg>(new WaterInfo(3));*/
+        WaterInfo.AddValue<Centipede>(centipede => (int)Math.Round(centipede.size));
+        WaterInfo.AddValue<DangleFruit>(FixedValue(3));
     }
 }
 
-public class WaterInfo
+public static class WaterInfo
 {
-    public WaterInfo(float baseWater)
+    private static Dictionary<Type, Func<object, int>> _values = new();
+
+    public static void AddValue<T>(Func<T, int> func) where T : IPlayerEdible
     {
-        BaseWater = baseWater;
+        var type = typeof(T);
+
+        if (_values.ContainsKey(type))
+            Debug.Log($"Couldn't assign water value for {type}, it has already been assigned");
+        else
+            _values.Add(type, obj => func((T)obj)); //this line is converting obj->int into T->int
     }
 
-    public float BaseWater { get; set; }
-    //maybe things like how much it gets affected by sun;
-}
-
-public static class WaterValues
-{
-   /* private static Dictionary<Type, WaterInfo> _values = new();
-
-    public static WaterInfo GetFoodValue(Type edibleType)
+    public static int GetValue<T>(T instance)
     {
-        return _values.TryGetValue(edibleType, out var value)
-            ? value
-            : new WaterInfo(0);
+        var type = typeof(T);
+        return
+            _values.TryGetValue(type, out var func)
+                ? func(instance)
+                : 0;
     }
-
-    public static void AddFoodValue<T>(WaterInfo info) where T : IPlayerEdible
-    {
-        _values.Add(typeof(T), info);
-    }*/
 }
