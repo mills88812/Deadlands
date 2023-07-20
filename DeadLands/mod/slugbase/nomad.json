@@ -14,7 +14,7 @@
 			{ "name": "Eyes", "story": "FFFFFF", "arena": ["E05656","E05656","E05656","E05656"] }
 		],
 
-    "the_mark": true, 
+    "the_mark": false, 
     "world_state": "Spear",
     "cycle_length_min": 5.0,
     "cycle_length_max": 8.0,

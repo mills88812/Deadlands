@@ -1,6 +1,6 @@
 Template: DL_SettingsTemplate_Underground
 Effects: Dustpuffs-0.2391304-610-467, RockFlea-0.4347826-669-326, Wasp-0.01086957-392-383, DirtyWater-0.2717391-639-405, 
-PlacedObjects: FairyParticleSettings><100><100><-199.2906~3.279785~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, DayNightSettings><283.8945><45.91176><-100~20~18~33, Lantern><1087.457><583.5121><-140.8687~-160.0782~4~9, LanternOnStick><334.4015><580.5651><23.47812~-43.53662, SlimeMold><748.3959><583.1368><0~0~2~3, SlimeMold><596.4196><447.606><0~0~2~3, SlimeMold><724.3713><296.5969><46~34~2~3, SlimeMold><542.4125><560.1335><0~0~2~3, CosmeticSlimeMold><749.8704><605.6597><0~100, CosmeticSlimeMold><569.8051><544.3077><0~100, CosmeticSlimeMold2><718.0577><319.4449><0~100, 
+PlacedObjects: FairyParticleSettings><100><100><-199.2906~3.279785~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, DayNightSettings><500><500><-100~20~33~33, Lantern><1087.457><583.5121><-140.8687~-160.0782~4~9, LanternOnStick><334.4015><580.5651><23.47812~-43.53662, SlimeMold><748.3959><583.1368><0~0~2~3, SlimeMold><596.4196><447.606><0~0~2~3, SlimeMold><724.3713><296.5969><46~34~2~3, SlimeMold><542.4125><560.1335><0~0~2~3, CosmeticSlimeMold><749.8704><605.6597><0~100, CosmeticSlimeMold><569.8051><544.3077><0~100, CosmeticSlimeMold2><718.0577><319.4449><0~100, 
 FadePalette: 2, 0.15
 BackgroundOffset: 0,1693.842
 BackgroundType: atc_dune

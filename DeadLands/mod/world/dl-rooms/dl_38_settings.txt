@@ -1,6 +1,6 @@
 Template: DL_SettingsTemplate_Underground
 Effects: AboveCloudsView-0.326087-533-370, 
-PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, 
+PlacedObjects: DayNightSettings><500><500><-100~20~33~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, LanternOnStick><1682.214><186.3455><-23.47809~-110.4889, LanternOnStick><1947.65><87.6528><21.34375~-104.8, LanternOnStick><1076.691><186.0458><-19.92083~-89.15558, LanternOnStick><997.8853><200.5834><8.537537~-113.3333, LanternOnStick><510.576><259.7238><10.67188~-106.2222, 
 FadePalette: 2, 0.15, 0.15
 BackgroundOffset: 0,1750
 BackgroundType: atc_dune
