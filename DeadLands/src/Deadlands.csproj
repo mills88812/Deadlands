@@ -4,6 +4,7 @@
         <TargetFramework>net48</TargetFramework>
         <LangVersion>default</LangVersion>
 		<PublishSingleFile>true</PublishSingleFile>
+		<Nullable>enable</Nullable>
     </PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

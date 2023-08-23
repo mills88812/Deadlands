@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Rewired.ComponentControls.Effects.RotateAroundAxis;
+﻿using System.Runtime.CompilerServices;
 using UnityEngine;
-using System.Runtime.CompilerServices;
 
-namespace Deadlands;
+namespace Deadlands.Nomad;
 
 internal class NomadFly
 {
@@ -17,10 +11,10 @@ internal class NomadFly
     public static ConditionalWeakTable<Player, NomadEX> SlideData = new();
 
 
-        public static ConditionalWeakTable<Player, NomadEX> OnInit()
-        {
-            On.Player.ctor += Player_ctor;
-            On.Player.UpdateMSC += Player_UpdateMSC;
+    public static ConditionalWeakTable<Player, NomadEX> OnInit()
+    {
+        On.Player.ctor += Player_ctor;
+        On.Player.UpdateMSC += Player_UpdateMSC;
 
         return SlideData;
     }

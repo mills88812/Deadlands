@@ -452,6 +452,12 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+
+/DeadLands/src/bin/Debug/net48/run.bat
+/DeadLands/src/bin/Debug/net48/Deadlands.dll
+/DeadLands/src/bin/Debug/net48/Deadlands.pdb
+
 /DeadLands/src/.vs/Deadlands/v17/.suo
 /DeadLands/src/.vs/Deadlands/FileContentIndex/a79a6620-b73f-4100-8a66-776091f4714a.vsidx
 /DeadLands/src/.vs/Deadlands/FileContentIndex/a13153ff-dde9-4e4c-82b8-e115eb269f66.vsidx

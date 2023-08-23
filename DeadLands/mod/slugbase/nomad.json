@@ -7,12 +7,6 @@
     "select_menu_scene": "Slugcat_nomad",
     "select_menu_scene_ascended": "Slugcat_nomad",
     "sleep_scene": "Sleep_Nomad",
-    "color": "FFFFFF",
-		"custom_colors": 
-		[
-			{ "name": "Body", "story": "FFFFFF", "arena": ["F0F0FF","FFFF73","FF7373","1E112E"] },
-			{ "name": "Eyes", "story": "FFFFFF", "arena": ["E05656","E05656","E05656","E05656"] }
-		],
 
     "the_mark": false, 
     "world_state": "Spear",
