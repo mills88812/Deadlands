@@ -1,5 +1,7 @@
 Template: DL_SettingsTemplate_DustBowl
-PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, 
+Effects: LightBurn-0.157078-935.6468-484.5823, HeatWave-0.1546649-929.2437-428.3771, 
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, DangleFruit><260.8578><21.68591><-245.4532~46.95624~1~2, DangleFruit><131.0117><590.3969><0~0~1~6, KarmaFlower><528.4661><363.6604><-18.49792~77.54895~3~12, LanternOnStick><450.0246><393.7204><12.80627~-86.40204, LanternOnStick><88.14297><319.8876><-59.05106~-65.76981, LanternOnStick><437.0946><85.26889><20.63226~57.31252, 
+AmbientSounds: OMNI><am_env-natwind.ogg><728.507><460.9217><0.4072013><0.702895, OMNI><am_env-pasture.ogg><726.2822><530.0021><0.6573261><1.009132, OMNI><msc-structurestrain.ogg><730.2421><391.2491><0.203476><0.3596869, OMNI><am_win-howlingwnd.ogg><733.3345><326.4095><0.3066691><0.4571273, 
 FadePalette: 2, 0.3046649, 0.3046649
 BackgroundOffset: -927.9865,1778.644
 BackgroundType: atc_dune
