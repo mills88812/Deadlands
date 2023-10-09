@@ -24,9 +24,6 @@
     "food_min": 5,
     "food_max": 7,
     
-    "Nomad/SlideStamina": 2000,
-    "Nomad/SlideRecovery": 1,
-    "Nomad/SlideSpeed": 3,
     "Nomad/Nomad": true,
 
     "diet": {

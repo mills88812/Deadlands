@@ -1,0 +1,29 @@
+using System.Runtime.CompilerServices;
+
+namespace Deadlands.Nomad;
+
+internal static class Nomad
+{
+    public static readonly ConditionalWeakTable<Player, NomadData> NomadData = new();
+    
+    public static void OnInit()
+    {
+        On.Player.ctor += (orig, self, creature, world) =>
+        {
+            orig(self, creature, world);
+
+            if (!Plugin.Nomad.TryGet(self, out var nomad) || !nomad) return;
+            
+            
+            NomadData.Add(self, new NomadData(self));
+            
+            if (self.room.world.game.IsArenaSession) return;
+
+            ((PlayerState)self.State).slugcatCharacter = Plugin.Name;
+            self.SlugCatClass = Plugin.Name;
+        };
+        
+        NomadGliding.OnInit();
+        NomadGraphics.OnInit();
+    }
+}

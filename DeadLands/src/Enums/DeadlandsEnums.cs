@@ -1,12 +1,13 @@
 ﻿namespace Deadlands.Enums;
 
-internal class DeadlandsEnums
+internal static class DeadlandsEnums
 {
-    public static SoundID wind { get; set; }
+    public static SoundID Wind { get; private set; } = null!;
+
     //Hook to plugin cs
     public static void RegisterValues()
     {
-        wind = new SoundID("wind", true);
+        Wind = new SoundID("wind", true);
     }
     /*
     // this function was (i assume) from some tutorial with the comment //DO NOT... therefore i removed it

@@ -21,7 +21,7 @@ sealed class Whiskers
 
     public void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
     {
-        sLeaser.sprites[_startSprite] = TriangleMesh.MakeLongMesh(5, false, false); // new FSprite("Circle20");
+        sLeaser.sprites[_startSprite] = TriangleMesh.MakeLongMesh(5, false, false);
     }
 
 
@@ -35,11 +35,8 @@ sealed class Whiskers
             playerHips + (playerHead - playerHips);
 
         var hipsHeadDiff = Custom.DirVec(playerHips, playerHead);
-
-        /*
-        sLeaser.sprites[_startSprite].x = playerHead.x - camPos.x;
-        sLeaser.sprites[_startSprite].y = playerHead.y - camPos.y;
-        */
+        
+        
 
         for (int i = 0; i < 5; i++)
         {
@@ -51,7 +48,7 @@ sealed class Whiskers
 
             var mesh = sLeaser.sprites[_startSprite] as TriangleMesh;
 
-            mesh.MoveVertice(i * 4, bezierPoint + Vector2.up * 100 - camPos);
+            mesh!.MoveVertice(i * 4, bezierPoint + Vector2.up * 100 - camPos);
             mesh.MoveVertice(i * 4 + 1, bezierPoint + Vector2.up * 100 + Vector2.right * 3 - camPos);
             mesh.MoveVertice(i * 4 + 2, bezierPoint + Vector2.up * 100 + Vector2.up * 3 - camPos);
             mesh.MoveVertice(i * 4 + 3, bezierPoint + Vector2.up * 100 + (Vector2.right * 3) + (Vector2.right * 3) - camPos);
