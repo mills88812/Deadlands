@@ -4,7 +4,17 @@ namespace Deadlands.Nomad;
 
 internal static class Nomad
 {
+    public static SlugcatStats.Name Name = null!;
+    
     public static readonly ConditionalWeakTable<Player, NomadData> NomadData = new();
+
+    public static void PluginCtor()
+    {
+        if (ExtEnumBase.TryParse(typeof(SlugcatStats.Name), "Nomad", true, out var extEnum))
+        {
+            Name = (extEnum as SlugcatStats.Name)!;
+        }
+    }
     
     public static void OnInit()
     {
@@ -19,8 +29,8 @@ internal static class Nomad
             
             if (self.room.world.game.IsArenaSession) return;
 
-            ((PlayerState)self.State).slugcatCharacter = Plugin.Name;
-            self.SlugCatClass = Plugin.Name;
+            ((PlayerState)self.State).slugcatCharacter = Name;
+            self.SlugCatClass = Name;
         };
         
         NomadGliding.OnInit();

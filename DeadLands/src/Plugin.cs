@@ -16,8 +16,6 @@ namespace Deadlands;
 [BepInPlugin("DeadLands", "DeadLands", "0.1.2")]
 internal class Plugin : BaseUnityPlugin
 {
-    public static SlugcatStats.Name Name = null!;
-
     private readonly DeadlandsOptions _options;
     private bool _initialized;
 
@@ -30,11 +28,8 @@ internal class Plugin : BaseUnityPlugin
 
     public Plugin()
     {
-        if (ExtEnumBase.TryParse(typeof(SlugcatStats.Name), "Nomad", true, out var extEnum))
-        {
-            Name = (extEnum as SlugcatStats.Name)!;
-        }
-
+        Deadlands.Nomad.Nomad.PluginCtor();
+        
         try
         {
             _options = new DeadlandsOptions();

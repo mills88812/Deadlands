@@ -58,7 +58,7 @@ internal sealed class Wings
         Vector2 camPos,
         NomadData nomadData
     ) {
-        _wind = nomadData.Gliding;
+        _wind = nomadData.GlideSpeed;
         
         for (int i = 0; i < 2; i++)
         {

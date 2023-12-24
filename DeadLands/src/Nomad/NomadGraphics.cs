@@ -32,7 +32,7 @@ internal static class NomadGraphics
         // Changing the nomad's color
         /////////////////////////////////////
         
-        On.PlayerGraphics.DefaultSlugcatColor += (orig, slugClass) => slugClass == Plugin.Name ? NomadColor : orig(slugClass);
+        On.PlayerGraphics.DefaultSlugcatColor += (orig, slugClass) => slugClass == Nomad.Name ? NomadColor : orig(slugClass);
 
         /////////////////////////////////////
         // Drawing
@@ -162,7 +162,7 @@ internal static class NomadGraphics
 
         // Checks (Don't do wing splay if any of these are true)
 
-        if (playerData.Gliding <= 0) return orig(self);
+        if (playerData.GlideSpeed <= 0) return orig(self);
         
         if (player.animation == Player.AnimationIndex.ClimbOnBeam ||
             player.animation == Player.AnimationIndex.HangFromBeam ||
@@ -202,7 +202,7 @@ internal static class NomadGraphics
 
         // Assignment
         self.relativeHuntPos = targetPos;
-        self.pos = Vector2.Lerp(self.pos, player.firstChunk.pos + targetPos, 0.6f);
+        self.pos = Vector2.Lerp(self.pos, player.firstChunk.pos + targetPos, 0.5f);
 
 
         return orig(self);
