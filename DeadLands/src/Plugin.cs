@@ -53,7 +53,7 @@ internal class Plugin : BaseUnityPlugin
 
     private void Awake()
     {
-        //Sounds enums
+        //Enums
         DeadlandsEnums.RegisterValues();
     }
 
@@ -67,7 +67,9 @@ internal class Plugin : BaseUnityPlugin
             // Security check
             if (_initialized) return;
             _initialized = true;
-            
+
+            Deadlands.Hooks.Hooks.Apply();
+
             Deadlands.Nomad.Nomad.OnInit();
                 
             // Remix Menu
