@@ -1,4 +1,12 @@
-Template: DL_SettingsTemplate_Underground
-Effects: AboveCloudsView-1-771.3-546.4792, FireFlies-0.4098619-773.4343-495.9656, WaterDepth-0.03093288-773.4344-445.4521,
-PlacedObjects: DayNightSettings><500><500><-100~20~33~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, LanternOnStick><730.8444><435.1196><-24.90106~-74.30728, LanternOnStick><815.5869><540.3024><59.05103~-28.06256, LanternOnStick><202.6601><562.0898><-101.027~43.08337, 
-FadePalette: 2, 0.15
+Template: NONE
+DangerType: None
+Clouds: 0.1546647
+Grime: 0.0592051
+Palette: 33
+EffectColorA: 15
+EffectColorB: 6
+Effects: LightBurn-0.2010642-20-20, Contrast-0.05654426-22.88544-74.82188, Brightness-0.03334493-20.03958-126.0469, HeatWave-0.1546647-272.6073-126.7583, Dustpuffs-0.05413288-271.8958-74.82188, 
+PlacedObjects: LightSource><926.2407><152.0159><0.2576082~EffectColor1~-0.7115479~135.5729~-23.99158~70.23903~0~1~None~0~0, LightBeam><433.3752><65.60858><-406.9541~567.1907~-261.6583~607.0322~253.4376~60.47395~355.0177~-54.07082~0.6010638~0.05413284~0~1~None~0~0, SeedCob><418.6627><296.8033><-441.1041~56.91663~5~7, DeadSeedCob><258.0982><256.4158><, DeadSeedCob><518.5764><203.9646><, LightSource><926.6016><478.8694><0.2576082~EffectColor1~0~128.4584~-359.0886~12.61084~0~1~None~0~0, LightBeam><149.5343><455.0604><-133.0427~158.1022~52.80624~215.7302~164.5052~78.26044~118.1021~-49.0907~0.6010636~0.358141~0~1~None~0~0, 
+AmbientSounds: OMNI><am_env-natwind.ogg><657.5612><556.561><0.206137><1, OMNI><am_env-outside.ogg><483.8402><556.6977><0.5><1, OMNI><am_env-woods.ogg><830.2358><557.3517><0.206137><1, 
+FadePalette: 2, 0.3557291
+WetTerrain: OFF
