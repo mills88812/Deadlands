@@ -120,6 +120,6 @@ DL_47 : 4-GlowLizard-{Ignorecycle}, 3-Centipede-{Ignorecycle}, 3-SmallCentipede-
 DL_38 : 2-BigSpider-{Ignorecycle}, 3-SmallCentipede
 DL_48 : 5-GlowLizard-{Ignorecycle}-2, 1-DropBug-{Ignorecycle}, 2-Centipede-{Night}
 DL_51 : 2-DropBug-{Ignorecycle}
-DL_49 : 7-GlowLizard-{Ignorecycle}, 4-SmallCentipede, 8-BigSpider-{Night}, 2-PoleMimic, 3-GlowLizard
+DL_49 : 7-GlowLizard-{Ignorecycle}, 4-SmallCentipede, 8-BigSpider-{Night}, 2-PoleMimic-{7}, 3-GlowLizard
 LINEAGE : DL_49 : 9 : Centipede-1, RedCentipede-0
 END CREATURES
