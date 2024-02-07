@@ -1,6 +1,7 @@
 Template: DL_SettingsTemplate_Underground
 Effects: Dustpuffs-0.2391304-610-467, RockFlea-0.4347826-669-326, Wasp-0.01086957-392-383, DirtyWater-0.2717391-639-405, 
 PlacedObjects: FairyParticleSettings><100><100><-199.2906~3.279785~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, DayNightSettings><283.8945><45.91176><-100~20~18~33, Lantern><1087.457><583.5121><-140.8687~-160.0782~4~9, LanternOnStick><334.4015><580.5651><23.47812~-43.53662, SlimeMold><748.3959><583.1368><0~0~2~3, SlimeMold><596.4196><447.606><0~0~2~3, SlimeMold><724.3713><296.5969><46~34~2~3, SlimeMold><542.4125><560.1335><0~0~2~3, CosmeticSlimeMold><749.8704><605.6597><0~100, CosmeticSlimeMold><569.8051><544.3077><0~100, CosmeticSlimeMold2><718.0577><319.4449><0~100, 
+AmbientSounds: OMNI><AM_ENV-SubTerr.ogg><695.8682><447.2668><0.3695652><0.6478261, OMNI><AM_ENV-LightWind.ogg><718.1632><518.0652><0.2608702><1, 
 Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>DL_02 - Caveborn Hooligan<eA>vol<eB>0.5500004<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>5<eA>fadeIn<eB>0<eA>oneSongPerCycle<eB>1<eA>stopAtDeath<eB>1<eA>stopAtGate<eB>1<tA>multiUse<tB>1<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>652.9752<tB>386.5515<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB><tA>pos<tB>306.9752<tB>583.5515<tA>handlePos<tB>-161.3553<tB>-54.35535, 
 FadePalette: 2, 0.15
 BackgroundOffset: 0,1693.842
