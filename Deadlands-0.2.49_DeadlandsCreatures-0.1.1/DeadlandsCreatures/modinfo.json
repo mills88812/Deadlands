@@ -1,0 +1,9 @@
+﻿{
+	"id": "DeadlandsCreatures",
+	"name": "Deadlands Creatures",
+	"version": "0.1.1",
+	"authors": "mills888",
+	"description": "the creature addon for deadlands",
+	"requirements": [ "lizardcustomizer" ],
+	"requirements_names": [ "lizard customizer" ]
+}
