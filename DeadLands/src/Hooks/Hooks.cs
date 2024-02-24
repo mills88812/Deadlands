@@ -12,6 +12,7 @@ namespace Deadlands.Hooks
             // World
             World.DataPearlHooks.Apply();
             World.SLOracleHooks.Apply();
+            World.WorldHooks.Apply();
         }
     }
 }

@@ -1,0 +1,20 @@
+PROTECTED
+Type: AboveCloudsView
+OffsetX: 0
+OffsetY: 0
+---------------
+startAltitude: 100
+endAltitude: 31400
+cloudsStartDepth: 500
+cloudsEndDepth: 540
+distantCloudsEndDepth: 800
+cloudsCount: 1
+distantCloudsCount: 3
+daySky: AtC_cloudcover
+duskSky: AtC_cloudcover
+nightSky: AtC_cloudcover
+atmosphereColor: c77a39
+
+DistantBuilding: AtC_dune_1, 120, -100, 40, -50
+DistantBuilding: AtC_dune_2, 120, -100, 60, -70
+DistantBuilding: AtC_dune_3, 120, -100, 80, -90

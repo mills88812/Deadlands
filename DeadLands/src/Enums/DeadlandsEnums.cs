@@ -1,7 +1,15 @@
-﻿namespace Deadlands.Enums;
+﻿using Deadlands.Features;
+
+namespace Deadlands.Enums;
 
 internal static class DeadlandsEnums
 {
+    // DangerType
+    public static RoomRain.DangerType Desert { get; private set; } = null!; // Desert danger type covers heat and cold depending on time of day.
+
+    public static RoomRain.DangerType DesertAndSandstorm { get; private set; } = null!; // Does both
+    public static RoomRain.DangerType Sandstorm { get; private set; } = null!; // Sandstorms may be present
+
     // SoundID
     public static SoundID Wind { get; private set; } = null!;
     public static SoundID Basic_Mech { get; private set; } = null!;
@@ -13,9 +21,17 @@ internal static class DeadlandsEnums
     public static Conversation.ID Moon_Pearl_UPGoodbye { get; private set; } = null!;
     public static Conversation.ID Pebbles_Pearl_UPGoodbye { get; private set; } = null!;
 
+    // RoomEffect
+    public static RoomSettings.RoomEffect.Type SunShade { get; private set; } = null!;
+
     //Hook to plugin cs
     public static void RegisterValues()
     {
+        // DangerType
+        Desert = new RoomRain.DangerType("Desert", true);
+        DesertAndSandstorm = new RoomRain.DangerType("DesertAndSandstorm", true);
+        Sandstorm = new RoomRain.DangerType("Sandstorm", true);
+
         // SoundID
         Wind = new SoundID("wind", true);
         Basic_Mech = new SoundID("Basic_Mech", true);
@@ -26,6 +42,9 @@ internal static class DeadlandsEnums
         // Conversation
         Moon_Pearl_UPGoodbye = new Conversation.ID("Moon_Pearl_UPGoodbye", true);
         Pebbles_Pearl_UPGoodbye = new Conversation.ID("Pebbles_Pearl_UPGoodbye", true);
+
+        // RoomEffect
+        SunShade = new RoomSettings.RoomEffect.Type("SunShade", true);
     }
     /*
     // this function was (i assume) from some tutorial with the comment //DO NOT... therefore i removed it

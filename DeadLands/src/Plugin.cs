@@ -7,6 +7,9 @@ using System.Security.Permissions;
 
 using Deadlands.Enums;
 
+using Logger = BepInEx.Logging.ManualLogSource;
+using RWCustom;
+
 //Private members can't be accesed?, NOT ANYMORE    
 #pragma warning disable CS0618
 [assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
@@ -23,8 +26,6 @@ internal class Plugin : BaseUnityPlugin
 
     //Slugbase features, HELL I WANT TO DELETE THEM ALL!!!!!!!
     public static readonly PlayerFeature<bool> Nomad = PlayerBool("Nomad/Nomad");
-
-
 
     public Plugin()
     {
@@ -68,6 +69,8 @@ internal class Plugin : BaseUnityPlugin
             if (_initialized) return;
             _initialized = true;
 
+            LoadShaders();
+
             Deadlands.Hooks.Hooks.Apply();
 
             Deadlands.Nomad.Nomad.OnInit();
@@ -85,5 +88,18 @@ internal class Plugin : BaseUnityPlugin
         {
             orig.Invoke(self);
         }
+    }
+
+    private void LoadShaders()
+    {
+        var assetBundle = AssetBundle.LoadFromFile(AssetManager.ResolveFilePath("assetbundles/deadlandsshaders"));
+        if (assetBundle == null)
+        {
+            Debug.LogError("DeadLands Shaders Failed to load.");
+            return;
+        }
+
+        // Wish Rain World had a built in way to do this :p
+        Custom.rainWorld.Shaders["FlatLightNoFrag"] = FShader.CreateShader("FlatLightNoFrag", assetBundle.LoadAsset<Shader>("FlatLightNoFrag.shader"));
     }
 }
