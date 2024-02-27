@@ -1,3 +1,10 @@
+DangerType: Desert
+RainIntensity: 1
+WaveSpeed: 0.5
+WaveLength: 1
+WaveAmplitude: 0
+SecondWaveLength: 0.1666667
+SecondWaveAmplitude: 0
 Grime: 0.1630435
 EffectColorA: 19
 Effects: LightBurn-0.1195652-20-20, 

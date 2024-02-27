@@ -1,4 +1,11 @@
 Template: DL_SettingsTemplate_Underground
+DangerType: Desert
+RainIntensity: 1
+WaveSpeed: 0.5
+WaveLength: 1
+WaveAmplitude: 0
+SecondWaveLength: 0.1666667
+SecondWaveAmplitude: 0
 EffectColorA: 9
 EffectColorB: 21
 Effects: SunBlock-0-20-20, DarkenLights-0-20-20, Bloom-0.4130435-40-40, 

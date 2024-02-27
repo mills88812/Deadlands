@@ -1,4 +1,11 @@
 Template: DL_SettingsTemplate_Mountain
+DangerType: DesertAndSandstorm
+RainIntensity: 1
+WaveSpeed: 0.5
+WaveLength: 1
+WaveAmplitude: 0
+SecondWaveLength: 0.1666667
+SecondWaveAmplitude: 0
 PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, CustomDecal><860.1011><303.528><-23.37506~158.7556~158.2917~190.7555~168.9166~24.1778~-449.875~-42.7999~0.5760869~0.75~0.5620475~solthas_scav_41_chieftan~0.4071562~0~0~0.8238233~0.5688404~0~0.09148507~0.6929355, LanternOnStick><1244.449><170.271><-19~-80, LanternOnStick><1137.394><184.6112><19~-98, LanternOnStick><472.4081><416.6275><-36~-75, RectanglePopupTrigger><1281.654><64.31087><-25.21664~159.5111~Press and hold jump while airborne to glide. Re-glide to regain speed.~0~6~-1~1~True~True~-1~1078.519^754.3333, SeedCob><1475.408><647.5496><-35.57291~52.62224~7~10, DeadSeedCob><2179.496><698.5661><, DeadSeedCob><1512.885><660.9867><, DeadSeedCob><1438.133><640.2422><, DeadSeedCob><2135.181><688.7141><, ReliableSpear><1004.305><290.8653><, 
 FadePalette: 2, 0.15, 0.15, 0.15
 BackgroundOffset: 0,2078.801

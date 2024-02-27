@@ -1,4 +1,11 @@
 Template: DL_SettingsTemplate_Underground
+DangerType: Desert
+RainIntensity: 1
+WaveSpeed: 0.5
+WaveLength: 1
+WaveAmplitude: 0
+SecondWaveLength: 0.1666667
+SecondWaveAmplitude: 0
 EffectColorA: 15
 EffectColorB: 6
 Effects: LightBurn-0.2282609-20-20, 
