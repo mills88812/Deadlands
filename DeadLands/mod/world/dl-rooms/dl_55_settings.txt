@@ -1,0 +1,5 @@
+Template: DL_SettingsTemplate_Underground
+EffectColorB: 13
+Effects: HeatWave-0.100532-729.324-372.1719, LightBurn-0.05654443-727.9011-423.3969, FireFlies-0.2551973-728.6125-535.0959, 
+PlacedObjects: DayNightSettings><500><500><-454.1333~106.9333~33~33, FairyParticleSettings><100><100><703.0764~-361.7474~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, 
+FadePalette: 2, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15
