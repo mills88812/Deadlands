@@ -1,5 +1,6 @@
 Template: NONE
-DangerType: None
+DangerType: Desert
+RainIntensity: 1
 Clouds: 0.1546647
 Grime: 0.0592051
 Palette: 33

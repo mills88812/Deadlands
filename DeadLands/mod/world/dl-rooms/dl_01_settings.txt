@@ -1,4 +1,10 @@
-Template: DL_SettingsTemplate_Conurbation
+DangerType: DesertAndSandstorm
+RainIntensity: 1
+WaveSpeed: 0.5
+WaveLength: 1
+WaveAmplitude: 0
+SecondWaveLength: 0.1666667
+SecondWaveAmplitude: 0
 EffectColorA: 18
 EffectColorB: 6
 Effects: Darkness-0.5869565-30-30, Contrast-0.04347826-40-40, LightBurn-0.4565217-50-50, SkyBloom-0-60-60, 
