@@ -1,6 +1,8 @@
-GATE_DL_AU: -111><-99><-146><-102><1><
-AU_EXTRA: 102><-57><0><-76><0><
-AU_SGOODBYE: 150><-255><32><-198><0><
+GATE_DL_AU: -111><-97.5><-146><-102><1><
+AU_EXTRA: 312><-81><0><-76><0><
+AU_SGOODBYE: 351><-243><32><-198><0><
 OffScreenDen_AU: 1068><789><-529.856><56.3426><1><
-Connection: GATE_DL_AU,AU_EXTRA,43,23,4,10,1,2
+AU_Teaser: 93><-105><0><-70><0><
+Connection: GATE_DL_AU,AU_Teaser,36,5,7,17,3,2
+Connection: AU_EXTRA,AU_Teaser,4,10,64,19,2,0
 Connection: AU_EXTRA,AU_SGOODBYE,49,2,33,30,3,1
