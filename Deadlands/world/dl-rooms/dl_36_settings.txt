@@ -1,12 +1,9 @@
-Template: DL_SettingsTemplate_Mountain
+Template: NONE
 DangerType: DesertAndSandstorm
 RainIntensity: 1
-WaveSpeed: 0.5
-WaveLength: 1
-WaveAmplitude: 0
-SecondWaveLength: 0.1666667
-SecondWaveAmplitude: 0
-PlacedObjects: DayNightSettings><500><500><-100~20~2~33, LightBeam><1048.94><75.43616><565~658~811~647~182~-14~-80~233~0.8782607~0.3804348~0~1~None~0~0, FairyParticleSettings><1226.399><163.8275><390~44.66023~0~1~1~0~1~1.448696~60~495.2173~40~100~5~30~0~360~0~0.1999999~0.1521739~0.2282609~0.05434782~0.1413043~1~0.1195652~7.790894~Pixel~SIN_IO~SIN_IO~0~0~0, LanternOnStick><1399.226><521.3015><-119~64, CustomDecal><1409.399><167.3831><-90~236~355~306~388~-55~-480~-259~0~1~0~sauercats_scav_4~0.5~0~0.5~0~0.5~0~0.5~0, CustomDecal><1444.308><350.0585><-23~89~183~146~221~21~259~-276~0~1~0~solthas_scav_27_demo~0.5~0~0.5~0~0.5~0~0.5~0, CustomDecal><1653.255><389.45><-32~118~63~150~85~23~246~-337~0~1~0~sauercats_scav_20~0.5~0~0.5~0~0.5~0~0.5~0, HangingPearls><1559.05><718.7455><, HangingPearls><1533.374><704.593><, LanternOnStick><1257.881><547.9009><35~-95, LanternOnStick><508.7405><510.3002><-42~-58, LanternOnStick><-250.405><415.1236><0~100, LanternOnStick><-308.5563><411.45><0~100, LanternOnStick><-304.0501><411.5063><0~100, CustomDecal><-278.1877><389.819><0~40~40~40~40~0~-133~-155~0~1~0~PH~0.5~0~0.5~0~0.5~0~0.5~0, CustomDecal><-278.1804><389.8365><0~40~40~40~40~0~-131~-69~0~1~0~PH~0.5~0~0.5~0~0.5~0~0.5~0, LanternOnStick><466.1189><168.4011><45~-92, LanternOnStick><797.4436><148.3004><-59~-77, CustomDecal><530.1746><151.0194><-12~174~149~194~151~0~-727~-68~0~1~0~sauercats_scav_16_sun~0.5~0~0.5~0~0.5~0~0.5~0, LanternOnStick><674.8344><293.6379><35~-219, DangleFruit><590.0853><440.1809><0~0~2~3, DangleFruit><991.4417><437.9426><0~0~2~3, DangleFruit><1016.938><454.8193><0~0~2~3, DangleFruit><1316.446><497.3074><0~0~2~3, DangleFruit><1359.945><476.5453><0~0~2~3, DangleFruit><1408.199><516.9841><0~0~2~3, DangleFruit><554.1><414.1177><0~0~2~3, 
-FadePalette: 2, 0.15, 0.15
-BackgroundOffset: 0,2282.609
-BackgroundType: atc_dune
+Clouds: 0
+Grime: 0.1520041
+RandomItemDensity: 0.5077332
+Palette: 18
+PlacedObjects: NoSpearStickZone><1960.974><184.8239><-89.6438~132, LanternOnStick><1834.565><174.0204><14.22913~-121.1556, LanternOnStick><2039.234><219.4907><-37.70728~-151.0222, LanternOnStick><2138.36><134.5776><18.49792~-82.04445, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, RectanglePopupTrigger><1501.698><216.9624><100~50~Hold the jump button after jumping to perform a glide~0~6~-1~1~True~True~1~538.1334^331.4666, DangleFruit><2414.462><364.1706><0~0~2~3, DandelionPeach><397.9887><500.8421><-30.93335~27.73334~2~4, 
+FadePalette: 2, 0.2065217, 0.2065217

@@ -1,0 +1,9 @@
+Template: DL_SettingsTemplate_DustBowl
+DangerType: DesertAndSandstorm
+RainIntensity: 1
+Palette: 851
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, 
+AmbientSounds: OMNI><AM_WIN-MedWind.ogg><583.7922><592.6786><0.5><1, SPOT><AM_WIN-HowlingWnd.ogg><204.0811><397.0182><0.3028986><0.8539129><2809.681><851.9515><-326.5553><352.9113><0><0.2043474, SPOT><AM_WIN-HowlingWnd.ogg><731.7183><547.5165><0.5><0.8956526><2812.518><1553.916><-520.1553><-222.5553><0><0.1, SPOT><AM_WIN-HowlingWnd.ogg><577.6027><273.448><0.4072458><0.8539129><2807.203><329.7146><3.044617><523.5781><0><0.1753626, SPOT><AM_WIN-HowlingWnd.ogg><691.6244><341.4066><0.4565217><0.823913><2801.625><-499.5934><2.644592><522.6447><0><0.2086958, 
+FadePalette: 2, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15
+BackgroundOffset: -850.6542,1933.308
+BackgroundType: atc_dune
