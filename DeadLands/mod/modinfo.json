@@ -1,7 +1,11 @@
 ﻿{
 	"id": "Deadlands",
 	"name": "Deadlands",
+<<<<<<< Updated upstream
 	"version": "0.2.49.9",
+=======
+	"version": "0.2.49.9.2",
+>>>>>>> Stashed changes
 	"authors": "DEADLANDS TEAM",
 	"description": "A community project based off Daszombes' region concept \"The Deadlands\". It is a work in progress.",
 	"requirements": [ "regionkit", "slime-cubed.slugbase", "fisobs", "DeadlandsCreatures"],
