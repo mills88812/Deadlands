@@ -1,0 +1,13 @@
+Template: NONE
+DangerType: Flood
+CeilingDrips: 0
+Clouds: 0
+Grime: 0
+RandomItemDensity: 0.1956522
+Palette: 42
+Effects: Darkness-0.4347826-20-20, Desaturation-0.1847826-341-37, Hue-0.0326087-84-113, Fog-0-336-100, Bloom-0-293-176, HeatWave-0.3804348-287-294, Flies-0.5760869-455-480, 
+PlacedObjects: DangleFruit><832.3467><415.1284><279~84~2~3, DangleFruit><809.3135><425.6897><52~141~2~3, LanternOnStick><585.9371><293.3207><23~-73, LanternOnStick><434.1316><296.5994><38~-68, LanternOnStick><916.6851><349.1892><18~-35, LanternOnStick><956.1744><356.0979><-31~-36, LanternOnStick><605.7549><310.8001><-8~-79, NoSpearStickZone><197.1946><340.1922><297~39, 
+AmbientSounds: OMNI><AM_IND-Fabrik01.ogg><439.7036><349.0555><0.173913><0.7652174, OMNI><AM_SUB-MysticCave1.ogg><719.8501><266.6732><0.1630435><1, OMNI><AM_WIN-HowlingWnd.ogg><739.4431><580.6978><0.05434782><1, OMNI><MSC-LowGroans.ogg><702.5682><340.938><0.2065217><1, OMNI><AM_IND-Utility01.ogg><481.3187><549.3344><0.4021739><1, 
+Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>RW_Outro_Theme<eA>vol<eB>1<eA>prio<eB>1<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>5<eA>fadeIn<eB>0<eA>oneSongPerCycle<eB>1<eA>stopAtDeath<eB>0<eA>stopAtGate<eB>0<tA>multiUse<tB>0<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>188.3215<tB>26.9368<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB><tA>pos<tB>179.4578<tB>352.8991<tA>handlePos<tB>620.6447<tB>-87.35535, 
+FadePalette: 2, 0.1304348
+WetTerrain: OFF
