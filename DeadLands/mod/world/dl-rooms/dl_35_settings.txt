@@ -1,12 +1,11 @@
 Template: DL_SettingsTemplate_Mountain
 DangerType: DesertAndSandstorm
 RainIntensity: 1
-WaveSpeed: 0.5
-WaveLength: 1
-WaveAmplitude: 0
-SecondWaveLength: 0.1666667
-SecondWaveAmplitude: 0
-PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, CustomDecal><860.1011><303.528><-23.37506~158.7556~158.2917~190.7555~168.9166~24.1778~-449.875~-42.7999~0.5760869~0.75~0.5620475~solthas_scav_41_chieftan~0.4071562~0~0~0.8238233~0.5688404~0~0.09148507~0.6929355, LanternOnStick><1244.449><170.271><-19~-80, LanternOnStick><1137.394><184.6112><19~-98, LanternOnStick><472.4081><416.6275><-36~-75, RectanglePopupTrigger><1281.654><64.31087><-25.21664~159.5111~Press and hold jump while airborne to glide. Re-glide to regain speed.~0~6~-1~1~True~True~-1~1078.519^754.3333, SeedCob><1475.408><647.5496><-35.57291~52.62224~7~10, DeadSeedCob><2179.496><698.5661><, DeadSeedCob><1512.885><660.9867><, DeadSeedCob><1438.133><640.2422><, DeadSeedCob><2135.181><688.7141><, ReliableSpear><1004.305><290.8653><, 
-FadePalette: 2, 0.15, 0.15, 0.15
-BackgroundOffset: 0,2078.801
-BackgroundType: atc_dune
+Grime: 0.1404552
+Palette: 18
+EffectColorA: 7
+EffectColorB: 6
+Effects: ReplaceEffectColorB-0-956.3998-415.6-Color-0.3536257-0.2985508-0.1333346, ReplaceEffectColorA-0-950.5335-284.9334-Color-0.1913001-0.2260795-0.1217386, 
+PlacedObjects: LanternOnStick><754.4564><265.9861><-23.30936~-97.15555, LanternOnStick><1064.65><276.0689><5.70105~-128.8, LanternOnStick><315.5575><324.4519><0~100, LanternOnStick><1355.27><277.6544><26.84277~-97.51111, LanternOnStick><1296.23><478.9531><-3.204224~-57.15546, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, RectanglePopupTrigger><742.7387><720.6238><11.46661~140.1333~Crouch and pounce to get more momentum for gliding~0~6~-1~1~True~True~1~745.6^511.2, DangleFruit><1490.554><470.7303><0~0~2~4, DangleFruit><1510.349><433.3314><-23.46655~-39.47577~2~4, DangleFruit><356.2308><1063.835><0~0~2~4, DangleFruit><396.0858><1059.674><-47.46664~-71.46667~2~4, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><463.7633><502.0651><0.2043484><1, SPOT><AM_ENV-NatWind.ogg><648.9221><573.0208><0.2507245><1><2019.455><1346.612><-772.9554><-464.1553><0><0.1985513, SPOT><AM_ENV-Outside.ogg><847.6983><565.5734><0.1521739><1><2034.832><1342.44><-723.8887><-560.1554><0><0.1579709, 
+FadePalette: 2, 0.185598, 0.1623981, 0.3943954

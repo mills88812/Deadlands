@@ -6,7 +6,7 @@ overseersMax: 4
 playerGuideOverseerSpawnChance: 0.0
 Room Setting Templates: Conurbation, DustBowl, Mountain, Underground
 Subregion: Dustbowl
-Subregion: The Pass
+Subregion: Mountain Pass
 Subregion: Conurbation
 Subregion: Subway Caverns
 Room_Attr: DL_01: Scavenger-Like,
@@ -30,3 +30,5 @@ Room_Attr: DL_42: Scavenger-Like,
 Room_Attr: DL_47: Vulture-Forbidden,
 Room_Attr: DL_48: Vulture-Forbidden,
 Room_Attr: DL_50: Vulture-Forbidden,
+Room_Attr: DL_VENT1: Vulture-Forbidden,
+Room_Attr: DL_VENT2: Vulture-Forbidden,
