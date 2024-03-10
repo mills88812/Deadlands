@@ -1,0 +1,17 @@
+DangerType: None
+CeilingDrips: 0.1
+RainIntensity: 0
+RumbleIntensity: 0
+Clouds: 0.2
+Grime: 0.15
+BkgDroneVolume: 0.3
+BkgDroneNoThreatVolume: 1
+RandomItemDensity: 0.3
+RandomItemSpearChance: 0.1
+WaveSpeed: 0.5
+WaterReflectionAlpha: 0.3
+Palette: 33
+EffectColorA: 15
+EffectColorB: 6
+Effects: HeatWave-0.05-20-20, SkyBloom-0.3-20-70, Beetle-0.1-270-20, RockFlea-0.01-270-70, DustPuffs-0.2-20-120, DayNight-1.0-270-120, FairyParticles-1-270-170, Darkness-0.2-520-20, Contrast-0.02-520-70, 
+AmbientSounds: OMNI><AM_ENV-LightWind.ogg><718.1632><518.0652><0.3075183><1, OMNI><AM_ENV-SubTerr.ogg><695.8682><447.2668><0.646286><0.611957, 

@@ -1,0 +1,6 @@
+Template: DL_SettingsTemplate_Underground
+EffectColorB: 13
+Effects: HeatWave-0.100532-729.324-372.1719, LightBurn-0.05654443-727.9011-423.3969, FireFlies-0.2551973-728.6125-535.0959, 
+PlacedObjects: DayNightSettings><500><500><-454.1333~106.9333~33~33, FairyParticleSettings><100><100><703.0764~-361.7474~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, ColouredLightSource><670.301><151.5199><-345.5334~148.6~400006~-3.051758E-05^197~0.1942026~False~0.5~0~0.5~Always~0~100, 
+AmbientSounds: OMNI><AM_ENV-SubTerr.ogg><823.8681><344.8668><0.1985507><0.6139129, OMNI><AM_WIN-SubWnd.ogg><825.7914><562.9441><0.3028996><1, OMNI><Deep Weird Wind.wav><829.6018><418.5722><0.1347829><1, OMNI><Noise Wind.wav><825.3095><489.3916><0.1057971><1, 
+FadePalette: 2, 0.15, 0.15
