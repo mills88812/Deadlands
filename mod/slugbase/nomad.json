@@ -1,0 +1,52 @@
+{
+  "id": "Nomad",
+  "name": "The Nomad",
+  "description": "A gentle glider who lost its home long ago.<LINE>Now, you must find a treasure to exchange for your freedom.",
+  "features": {
+    "start_room": "DL_START",
+    "select_menu_scene": "Slugcat_nomad",
+    "select_menu_scene_ascended": "Slugcat_nomad",
+    "sleep_scene": "Sleep_Nomad",
+
+    "the_mark": false,
+    "world_state": "Spear",
+    "cycle_length_min": 5.0,
+    "cycle_length_max": 8.0,
+
+    "loudness": 0.5,
+    "tunnel_speed": 1.35,
+    "climb_speed": 1.35,
+    "walk_speed": 1.0,
+    "crouch_stealth": 0.5,
+    "throw_skill": 0,
+    "lung_capacity": 0.9,
+    "weight": 0.95,
+    "food_min": 5,
+    "food_max": 7,
+
+    "diet": {
+      "base": "White",
+      "corpses": 0.0,
+      "plants": 0.5,
+      "meats": 1.0,
+      "overrides": {
+        "DangleFruit": 1.0,
+        "Fly": 1.0,
+        "Spider": 0.5,
+        "DropBug": 0.5,
+        "BigSpider": 0.5,
+        "SpitterSpider": 0.5,
+        "Aquapede": 0.5,
+        "MotherSpider": 0.5,
+        "FireBug": 0.5,
+        "Snail": 0.5,
+        "CicadaA": 0.5,
+        "CicadaB": 0.5,
+        "BigNeedleWorm": 0.5,
+        "SmallNeedleWorm": 0.5,
+        "Centiwing": 0.5,
+        "TubeWorm": 0.5
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{"frames": {
+
+"TailTexture.png":
+{
+	"frame": {"x":2,"y":2,"w":150,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":75},
+	"sourceSize": {"w":150,"h":75}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "tail.png",
+	"format": "RGBA8888",
+	"size": {"w":154,"h":79},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:26989409cdf0e89bb3e466ae59a312fc:f99b9c3750551728283002c194a3e872:68f111719e2751a80948e1729ea7a6fa$"
+}
+}

@@ -1,0 +1,949 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fisobs</name>
+    </assembly>
+    <members>
+        <member name="T:Fisobs.Core.Content">
+            <summary>
+            Used to register custom content.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.Content.Register(Fisobs.Core.IContent[])">
+            <summary>
+            Registers some content. Call this from your mod's entry point.
+            </summary>
+            <param name="content">A bunch of content. Currently, fisobs provides <see cref="T:Fisobs.Items.Fisob"/> and <see cref="T:Fisobs.Creatures.Critob"/> for content types.</param>
+        </member>
+        <member name="T:Fisobs.Core.EntitySaveData">
+            <summary>
+            Represents saved information about <see cref="T:AbstractPhysicalObject"/> instances.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Core.EntitySaveData.Type">
+            <summary>
+            The APO's type.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Core.EntitySaveData.ID">
+            <summary>
+            The APO's ID.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Core.EntitySaveData.Pos">
+            <summary>
+            The APO's position.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Core.EntitySaveData.CustomData">
+            <summary>
+            Any extra data associated with the APO. This can be <see cref="F:System.String.Empty"/>, but not <see langword="null"/>.
+            </summary>
+            <remarks>For creatures, this will be a stringified <see cref="T:CreatureState"/>.</remarks>
+        </member>
+        <member name="M:Fisobs.Core.EntitySaveData.UnrecognizedAttribute(System.Int32)">
+            <summary>
+            Unrecognized data associated with the APO. This is used by mods to dynamically add information to objects. For the most part, this should simply be ignored.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Core.EntitySaveData.UnrecognizedAttributeCount">
+            <summary>
+            The number of <see cref="M:Fisobs.Core.EntitySaveData.UnrecognizedAttribute(System.Int32)"/> elements saved by the APO.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.EntitySaveData.#ctor(Fisobs.Core.PhysobType,EntityID,WorldCoordinate,System.String,System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Fisobs.Core.EntitySaveData"/> struct.
+            </summary>
+            <remarks>Do not use this constructor. Call <see cref="M:Fisobs.Core.EntitySaveData.CreateFrom(AbstractPhysicalObject,System.String)"/> instead.</remarks>
+        </member>
+        <member name="M:Fisobs.Core.EntitySaveData.CreateFrom(AbstractPhysicalObject,System.String)">
+            <summary>
+            Creates an instance of the <see cref="T:Fisobs.Core.EntitySaveData"/> struct.
+            </summary>
+            <param name="apo">The abstract physical object to get basic data from.</param>
+            <param name="customData">Extra data associated with the abstract physical object. This data should never contain &lt; characters.</param>
+            <returns>A new instance of <see cref="T:Fisobs.Core.EntitySaveData"/>.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when <paramref name="customData"/> contains &lt; characters.</exception>
+        </member>
+        <member name="M:Fisobs.Core.EntitySaveData.ToString(AbstractPhysicalObject)">
+            <summary>
+            Gets this entity's save data as a string.
+            </summary>
+            <returns>A string representation of this data.</returns>
+        </member>
+        <member name="M:Fisobs.Core.EntitySaveData.ToString">
+            <summary>
+            Gets this entity's save data as a string.
+            </summary>
+            <returns>A string representation of this data.</returns>
+        </member>
+        <member name="T:Fisobs.Core.Ext">
+            <summary>
+            Provides extension methods for POs and APOs.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Core.Ext.MenuGrey">
+            <summary>
+            The default color for menu items.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.Ext.Spawn(AbstractPhysicalObject,UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            Realizes an APO at a position with a specified velocity.
+            </summary>
+            <param name="apo">The abstract physical object.</param>
+            <param name="pos">The position of the object in the room.</param>
+            <param name="vel">The velocity of the object's body chunks.</param>
+        </member>
+        <member name="M:Fisobs.Core.Ext.Spawn(AbstractPhysicalObject,UnityEngine.Vector2)">
+            <summary>
+            Realizes an APO at a position with a speed of zero.
+            </summary>
+            <param name="apo">The abstract physical object.</param>
+            <param name="pos">The position of the object in the room.</param>
+        </member>
+        <member name="M:Fisobs.Core.Ext.Spawn(AbstractPhysicalObject)">
+            <summary>
+            Realizes an APO wherever it may be with a speed of zero.
+            </summary>
+            <param name="apo">The abstract physical object.</param>
+        </member>
+        <member name="M:Fisobs.Core.Ext.SaveToString(AbstractPhysicalObject,System.String)">
+            <summary>
+            Gets a string representation of an APO.
+            </summary>
+            <param name="apo">The abstract physical object.</param>
+            <param name="customData">Extra data associated with the abstract physical object. For creatures, this should be <see cref="T:CreatureState"/> data.</param>
+            <returns>A string representing this APO, for use in <see cref="M:AbstractPhysicalObject.ToString"/>.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when <paramref name="customData"/> contains &lt; characters.</exception>
+        </member>
+        <member name="M:Fisobs.Core.Ext.IsFreeSpace(AImap,RWCustom.IntVector2,System.Int32)">
+            <summary>
+            Gets if the location <paramref name="tile"/> on <paramref name="map"/> is <paramref name="tilesOfFreeSpace"/>-or-more tiles away from any solid terrain.
+            </summary>
+            <returns>True if the space is clear.</returns>
+        </member>
+        <member name="M:Fisobs.Core.Ext.IconAtlasName(System.String)">
+            <summary>
+            Loads an icon for a critob named <paramref name="name"/> into <see cref="F:Futile.atlasManager"/> if the resource exists.
+            </summary>
+            <param name="name">The critob's name.</param>
+            <returns>If the resource was successfully loaded, the atlas; otherwise, <see langword="null"/>.</returns>
+        </member>
+        <member name="T:Fisobs.Core.Icon">
+            <summary>
+            Determines how a physical object is displayed on the map screen and sandbox menus.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.Icon.SpriteName(System.Int32)">
+            <summary>
+            Gets the name of the <see cref="T:FAtlasElement"/> to display.
+            </summary>
+            <param name="data">The physob's custom data. This comes from <see cref="M:Fisobs.Core.Icon.Data(AbstractPhysicalObject)"/> if viewed from the story mode map, or from <see cref="F:Fisobs.Sandbox.SandboxUnlock.Data"/> if created from a sandbox unlock.</param>
+        </member>
+        <member name="M:Fisobs.Core.Icon.SpriteColor(System.Int32)">
+            <summary>
+            Gets the color of the sprite drawn on the screen.
+            </summary>
+            <param name="data">The physob's custom data. This comes from <see cref="M:Fisobs.Core.Icon.Data(AbstractPhysicalObject)"/> if viewed from the story mode map, or from <see cref="F:Fisobs.Sandbox.SandboxUnlock.Data"/> if created from a sandbox unlock.</param>
+        </member>
+        <member name="M:Fisobs.Core.Icon.Data(AbstractPhysicalObject)">
+            <summary>
+            Gets the custom data for a physob. This value is passed to <see cref="M:Fisobs.Core.Icon.SpriteName(System.Int32)"/> and <see cref="M:Fisobs.Core.Icon.SpriteColor(System.Int32)"/>.
+            </summary>
+            <param name="apo">The physob in question.</param>
+        </member>
+        <member name="T:Fisobs.Core.DefaultIcon">
+            <summary>
+            An icon whose sprite name is <c>"Futile_White"</c> and color is <see cref="P:Fisobs.Core.Ext.MenuGrey"/>.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.DefaultIcon.Data(AbstractPhysicalObject)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Core.DefaultIcon.SpriteColor(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Core.DefaultIcon.SpriteName(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fisobs.Core.SimpleIcon">
+            <summary>
+            An icon whose sprite name and color is unchanging.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.SimpleIcon.#ctor(System.String,UnityEngine.Color)">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Core.SimpleIcon"/> instance.
+            </summary>
+            <param name="spriteName">The name of the <see cref="T:FAtlasElement"/> to display.</param>
+            <param name="spriteColor">The color of the sprite drawn on the screen.</param>
+        </member>
+        <member name="M:Fisobs.Core.SimpleIcon.Data(AbstractPhysicalObject)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Core.SimpleIcon.SpriteColor(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Core.SimpleIcon.SpriteName(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fisobs.Core.IContent">
+            <summary>
+            Some form of content that can be added to a <see cref="T:Fisobs.Core.Registry"/>.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.IContent.Registries">
+            <summary>
+            Gets the registries this content belongs to. This is called when the object is passed to the <see cref="M:Fisobs.Core.Content.Register(Fisobs.Core.IContent[])"/> method.
+            </summary>
+        </member>
+        <member name="T:Fisobs.Core.PhysobType">
+            <summary>
+            The type of an item (<see cref="T:AbstractPhysicalObject.AbstractObjectType"/>) or creature (<see cref="T:CreatureTemplate.Type"/>).
+            </summary>
+        </member>
+        <member name="P:Fisobs.Core.PhysobType.ObjectType">
+            <summary>
+            If the object is an item, this is its type.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Core.PhysobType.CritType">
+            <summary>
+            If the object is a creature, this is its type.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Core.PhysobType.IsCrit">
+            <summary>
+            True if the object is a creature.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.PhysobType.#ctor(AbstractPhysicalObject.AbstractObjectType)">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Core.PhysobType"/> that represents an object type.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.PhysobType.#ctor(CreatureTemplate.Type)">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Core.PhysobType"/> that represents a creature type.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.PhysobType.Equals(System.Object)">
+            <summary>
+            Checks if two <see cref="T:Fisobs.Core.PhysobType"/> instances refer to the same type.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.PhysobType.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Core.PhysobType.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Core.PhysobType.op_Equality(Fisobs.Core.PhysobType,Fisobs.Core.PhysobType)">
+            <summary>
+            Checks if two <see cref="T:Fisobs.Core.PhysobType"/> instances refer to the same type.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.PhysobType.op_Inequality(Fisobs.Core.PhysobType,Fisobs.Core.PhysobType)">
+            <summary>
+            Checks if two <see cref="T:Fisobs.Core.PhysobType"/> instances refer to the same type.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.PhysobType.op_Implicit(AbstractPhysicalObject.AbstractObjectType)~Fisobs.Core.PhysobType">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Core.PhysobType"/> that represents an object type.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.PhysobType.op_Implicit(CreatureTemplate.Type)~Fisobs.Core.PhysobType">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Core.PhysobType"/> that represents a creature type.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.PhysobType.op_Implicit(IconSymbol.IconSymbolData)~Fisobs.Core.PhysobType">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Core.PhysobType"/> that represents an icon's object or creature type.
+            </summary>
+        </member>
+        <member name="T:Fisobs.Core.Registry">
+            <summary>
+            Registries hook into the vanilla game to simplify content creation.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Core.Registry.Process(Fisobs.Core.IContent)">
+            <summary>
+            Processes some content. The registry must ignore content not relevant to it and should throw an exception if content is relevant but malformed.
+            </summary>
+            <param name="content">The content entry to process.</param>
+        </member>
+        <member name="M:Fisobs.Core.Registry.Initialize">
+            <summary>
+            Should contain initialization logic. This is called right before <see cref="M:Fisobs.Core.Registry.Process(Fisobs.Core.IContent)"/> is called and should be used to apply things like MonoMod hooks.
+            </summary>
+        </member>
+        <member name="T:Fisobs.Creatures.AttackResist">
+            <summary>
+            Damage and stun resistance to particular damage types. Damage and stun amount will be <i>divided by</i> these values, so higher values mean more resistance.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.AttackResist.Base">
+            <summary>
+            Base resistance. This applies to all damage types.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.AttackResist.Blunt">
+            <summary>
+            Blunt damage, like from rocks.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.AttackResist.Stab">
+            <summary>
+            Stab damage, like from spears.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.AttackResist.Bite">
+            <summary>
+            Bite damage, like from lizards.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.AttackResist.Water">
+            <summary>
+            Seems unused?
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.AttackResist.Explosion">
+            <summary>
+            Explosion damage, like from <see cref="T:ScavengerBomb"/> items.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.AttackResist.Electric">
+            <summary>
+            Electric damage, like from underwater shocks and Underhang storms.
+            </summary>
+        </member>
+        <member name="T:Fisobs.Creatures.ConnectionResist">
+            <summary>
+            Resistance to pathfinding over certain connections between tiles.
+            </summary>
+        </member>
+        <member name="T:Fisobs.Creatures.CreatureFormula">
+            <summary>
+            Simplifies the creation of <see cref="T:CreatureTemplate"/> instances.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.CreatureFormula.Type">
+            <summary>
+            The creature type.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.CreatureFormula.Name">
+            <summary>
+            The name of the creature. This will be used in region file parsing and in logs.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.CreatureFormula.Ancestor">
+            <summary>
+            The creature's ancestor. Field values are inherited by the ancestor unless present in this struct.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.CreatureFormula.Pathing">
+            <summary>How the creature uses prebaked pathing. Most critobs will set this to some <see cref="M:Fisobs.Creatures.PreBakedPathing.Ancestral(CreatureTemplate.Type)"/> value.</summary>
+        </member>
+        <member name="F:Fisobs.Creatures.CreatureFormula.TileResistances">
+            <summary>How certain tiles impede the creature's movement.</summary>
+        </member>
+        <member name="F:Fisobs.Creatures.CreatureFormula.ConnectionResistances">
+            <summary>How certain tile connections impede the creature's movement.</summary>
+        </member>
+        <member name="F:Fisobs.Creatures.CreatureFormula.DamageResistances">
+            <summary>The creature's damage resistance.</summary>
+        </member>
+        <member name="F:Fisobs.Creatures.CreatureFormula.StunResistances">
+            <summary>The creature's stun resistance.</summary>
+        </member>
+        <member name="F:Fisobs.Creatures.CreatureFormula.InstantDeathDamage">
+            <summary>How much damage the creature can take before instantly dying.</summary>
+        </member>
+        <member name="F:Fisobs.Creatures.CreatureFormula.HasAI">
+            <summary>True if the creature has AI. If this is true, then <see cref="M:Fisobs.Creatures.Critob.CreateRealizedAI(AbstractCreature)"/> must return a non-null value.</summary>
+        </member>
+        <member name="F:Fisobs.Creatures.CreatureFormula.DefaultRelationship">
+            <summary>The default relationship this creature has with other unknown creature types.</summary>
+        </member>
+        <member name="M:Fisobs.Creatures.CreatureFormula.#ctor(Fisobs.Creatures.Critob)">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Creatures.CreatureFormula"/> from a critob.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Creatures.CreatureFormula.#ctor(CreatureTemplate.Type,Fisobs.Creatures.Critob)">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Creatures.CreatureFormula"/> from a critob.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Creatures.CreatureFormula.#ctor(CreatureTemplate.Type,CreatureTemplate.Type,System.String)">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Creatures.CreatureFormula"/>.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Creatures.CreatureFormula.IntoTemplate">
+            <summary>
+            Creates a new <see cref="T:CreatureTemplate"/> from this formula.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Fisobs.Creatures.Critob">
+            <summary>
+            Represents the "metadata" for a custom creature.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.#ctor(CreatureTemplate.Type)">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Creatures.Critob"/> instance for the given <paramref name="type"/>.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Creatures.Critob.Type">
+            <summary>The critob's type.</summary>
+        </member>
+        <member name="P:Fisobs.Creatures.Critob.Icon">
+            <summary>The critob's icon; a <see cref="T:Fisobs.Core.DefaultIcon"/> by default.</summary>
+            <remarks>When <see cref="M:Fisobs.Creatures.Critob.LoadResources(RainWorld)"/> is called, an embedded resource with the name <c>$"icon_{Type}"</c> will be auto-loaded as a <see cref="T:Fisobs.Core.SimpleIcon"/>, if it exists.</remarks>
+        </member>
+        <member name="P:Fisobs.Creatures.Critob.LoadedPerformanceCost">
+            <summary>The performance cost associated with the creature while it's loaded.</summary>
+            <value>A value of 10 is the default, and the minimum. Scavengers and leviathans use 300, lizards use 50, and batflies use 10.</value>
+        </member>
+        <member name="P:Fisobs.Creatures.Critob.SandboxPerformanceCost">
+            <inheritdoc/>
+        </member>
+        <member name="P:Fisobs.Creatures.Critob.ShelterDanger">
+            <summary>How much danger the creature poses to a player that shares a shelter with it.</summary>
+        </member>
+        <member name="P:Fisobs.Creatures.Critob.CreatureName">
+            <summary>The creature's user-facing name. Used in debug logs, <see cref="T:Fisobs.Creatures.CreatureFormula"/>, and various Expedition features.</summary>
+            <remarks>Defaults to the creature's type with spaces inserted after each lowercase letter that appears before a capital letter. For example, "BouncingBall" becomes "Bouncing Ball".</remarks>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.CreateState(AbstractCreature)">
+            <summary>Gets a new instance of <see cref="T:CreatureState"/> for <paramref name="acrit"/>. If spawned by a sandbox unlock, the <c>SandboxData</c> section of the creature's state will equal that unlock's <see cref="F:Fisobs.Sandbox.SandboxUnlock.Data"/> value.</summary>
+            <remarks>By default, this returns a <see cref="T:HealthState"/>.</remarks>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.CreateAbstractAI(AbstractCreature)">
+            <summary>Gets a new instance of <see cref="T:AbstractCreatureAI"/> (or <see langword="null"/>) from an abstract creature.</summary>
+            <remarks>If <see cref="F:CreatureTemplate.AI"/> is true for <paramref name="acrit"/>, then null will default to a simple <see cref="T:AbstractCreatureAI"/>. If false, then this method is not called in the first place.</remarks>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.Init(AbstractCreature,World,WorldCoordinate,EntityID)">
+            <summary>Perform arbitrary work after the <see cref="M:AbstractCreature.#ctor(World,CreatureTemplate,Creature,WorldCoordinate,EntityID)"/> constructor runs.</summary>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.GraspParalyzesPlayer(Creature.Grasp,System.Boolean@)">
+            <summary>Determines if being grasped by this creature should paralyze the player.</summary>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.CorpseIsEdible(Player,Creature,System.Boolean@)">
+            <summary>Determines if a creature's corpse is edible by the given player.</summary>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.KillsMatter(System.Boolean@)">
+            <summary>Determines if the creature should be displayed when listing kills in arena and hunter modes.</summary>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.ArenaFallback">
+            <summary>If this creature would be spawned in arena mode but isn't unlocked yet, the creature returned by this method is spawned instead.</summary>
+            <remarks>By default, this returns the creature's ancestor, or <see langword="null"/> if it has none.</remarks>
+            <returns>The creature type to spawn, or <see langword="null"/> to spawn nothing.</returns>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.ExpeditionScore">
+            <summary>The creature's score when killed in Expedition mode.</summary>
+            <remarks>By default, this returns a relevant sandbox unlock score, or 0 if that's not applicable.</remarks>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.Properties(Creature)">
+            <summary>Gets the custom properties of a creature.</summary>
+            <returns>An instance of <see cref="T:Fisobs.Properties.ItemProperties"/> or null.</returns>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.WorldFileAliases">
+            <summary>Extra names used for this creature in world files. Case-insensitive.</summary>
+            <remarks>By default, this returns only <see cref="P:Fisobs.Creatures.Critob.CreatureName"/> with all spaces removed.</remarks>
+            <returns>An assortment of aliases. For example, DaddyLongLegs can also be called Daddy.</returns>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.DevtoolsRoomAttraction">
+            <summary>What categories of room attraction this creature falls under.</summary>
+            <returns>An assortment of categories. For example, vultures classify as Flying and LikesOutside.</returns>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.DevtoolsMapName(AbstractCreature)">
+            <summary>The name that shows for this creature in the devtools map.</summary>
+            <remarks>By default, this returns up to the first three characters from the creature's type.</remarks>
+            <returns>An abbreviated name that should be a few characters long.</returns>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.DevtoolsMapColor(AbstractCreature)">
+            <summary>The color that shows for this creature in the devtools map.</summary>
+            <remarks>By default, this returns the creature's icon color.</remarks>
+            <returns>A color that should help in identifying the creature.</returns>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.ConnectionIsAllowed(AImap,MovementConnection,System.Nullable{System.Boolean}@)">
+            <summary>Modifies what movements creatures are allowed to make. Setting <paramref name="allow"/> to a non-null value will forcefully allow/disallow the connection.</summary>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.TileIsAllowed(AImap,RWCustom.IntVector2,System.Nullable{System.Boolean}@)">
+            <summary>Modifies what tiles creatures are allowed to move into. Setting <paramref name="allow"/> to a non-null value will forcefully allow/disallow the tile.</summary>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.CreateRealizedAI(AbstractCreature)">
+            <summary>Gets a new instance of <see cref="T:ArtificialIntelligence"/> (or <see langword="null"/>) from an abstract creature.</summary>
+            <remarks>If <see cref="F:CreatureTemplate.AI"/> is true for <paramref name="acrit"/>, then this must return a non-null object.</remarks>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.CreateRealizedCreature(AbstractCreature)">
+            <summary>Gets a new instance of <see cref="T:Creature"/> from an abstract creature.</summary>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.CreateTemplate">
+            <summary>Establishes creature templates for this critob. The <see cref="T:Fisobs.Creatures.CreatureFormula"/> type is recommended for this.</summary>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.EstablishRelationships">
+            <summary>Establishes relationships between creatures. The <see cref="T:Fisobs.Creatures.Relationships"/> type is recommended for this.</summary>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.LoadResources(RainWorld)">
+            <summary>
+            Used to load <see cref="T:FAtlas"/> and <see cref="T:FAtlasElement"/> sprites. Called once.
+            </summary>
+            <param name="rainWorld">The current <see cref="T:RainWorld"/> instance.</param>
+        </member>
+        <member name="M:Fisobs.Creatures.Critob.RegisterUnlock(Fisobs.Sandbox.KillScore,MultiplayerUnlocks.SandboxUnlockID,MultiplayerUnlocks.SandboxUnlockID,System.Int32)">
+            <summary>
+            Registers a sandbox unlock under this critob.
+            </summary>
+            <param name="type">The sandbox unlock type.</param>
+            <param name="parent">The sandbox's parent unlock. If the parent type's token has been collected in story mode, then this item will be unlocked. To unconditionally unlock this item, set <paramref name="parent"/> to <see cref="F:MultiplayerUnlocks.SandboxUnlockID.Slugcat"/>.</param>
+            <param name="data">The sandbox unlock's data value. This takes the place of <see cref="M:Fisobs.Core.Icon.Data(AbstractPhysicalObject)"/> when spawning objects from sandbox mode.</param>
+            <param name="killScore">The creature unlock's kill score. This is ignored for items.</param>
+        </member>
+        <member name="T:Fisobs.Creatures.CritobRegistry">
+            <summary>
+            A registry that stores <see cref="T:Fisobs.Creatures.Critob"/> instances and the hooks relevant to them.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Creatures.CritobRegistry.Instance">
+            <summary>
+            The singleton instance of this class.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Creatures.CritobRegistry.Process(Fisobs.Core.IContent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Creatures.CritobRegistry.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fisobs.Creatures.PreBakedPathing">
+            <summary>
+            The kind of prebaked pathing used by a creature template. Can be <see cref="P:Fisobs.Creatures.PreBakedPathing.None"/> (<see langword="default"/>), <see cref="P:Fisobs.Creatures.PreBakedPathing.Original"/>, or <see cref="M:Fisobs.Creatures.PreBakedPathing.Ancestral(CreatureTemplate.Type)"/>.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Creatures.PreBakedPathing.None">
+            <summary>
+            Creatures with this do not use prebaked pathing. Slugcats and garbage worms use this option.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Creatures.PreBakedPathing.Original">
+            <summary>
+            Creatures with this use their own, original prebaked pathing.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Creatures.PreBakedPathing.Ancestral(CreatureTemplate.Type)">
+            <summary>
+            Creatures with this use prebaked pathing from another creature.
+            </summary>
+            <param name="ancestor">The creature to inherit pathing from.</param>
+        </member>
+        <member name="P:Fisobs.Creatures.PreBakedPathing.IsNone">
+            <summary>
+            True if this is <see cref="P:Fisobs.Creatures.PreBakedPathing.None"/>.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Creatures.PreBakedPathing.IsOriginal">
+            <summary>
+            True if this is <see cref="P:Fisobs.Creatures.PreBakedPathing.Original"/>.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Creatures.PreBakedPathing.IsAncestral(CreatureTemplate.Type@)">
+            <summary>
+            True if this is <see cref="M:Fisobs.Creatures.PreBakedPathing.Ancestral(CreatureTemplate.Type)"/>.
+            </summary>
+            <param name="ancestor">The creature this pathing inherits from.</param>
+        </member>
+        <member name="T:Fisobs.Creatures.Relationships">
+            <summary>
+            A wrapper around a <see cref="T:CreatureTemplate.Relationship"/> used to establish creature relationships.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Creatures.Relationships.#ctor(CreatureTemplate.Type)">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Creatures.Relationships"/> instance wrapping <paramref name="self"/>.
+            </summary>
+        </member>
+        <member name="T:Fisobs.Creatures.ShelterDanger">
+            <summary>
+            Represents how much danger a creature poses to a player that shares a shelter with it.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.ShelterDanger.Safe">
+            <summary>Likely won't pose harm to the player.</summary>
+        </member>
+        <member name="F:Fisobs.Creatures.ShelterDanger.Hostile">
+            <summary>Almost certainly poses harm to the player. Excludes lizards.</summary>
+            <remarks>After sleeping in a shelter with a player, these creatures are killed.</remarks>
+        </member>
+        <member name="F:Fisobs.Creatures.ShelterDanger.TooLarge">
+            <summary>Too big to sanely stuff into a shelter. Includes rain deer, vultures, daddy long legs, and more.</summary>
+            <remarks>After sleeping in a shelter with a player, these creatures are killed and sent back to their den.</remarks>
+        </member>
+        <member name="T:Fisobs.Creatures.TileResist">
+            <summary>
+            Resistance to pathfinding over certain tiles.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.TileResist.OffScreen">
+            <summary>
+            Abstract pathfinding.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.TileResist.Floor">
+            <summary>
+            The air just above solid tiles.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.TileResist.Corridor">
+            <summary>
+            Tight corridors. These are the very thin and long "tunnels" creatures crawl through. Pipe cleaners love it here.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.TileResist.Climb">
+            <summary>
+            Climbable tiles like poles.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.TileResist.Wall">
+            <summary>
+            The air just to the left and right of solid tiles.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.TileResist.Ceiling">
+            <summary>
+            The air just below solid tiles.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.TileResist.Air">
+            <summary>
+            The air not adjacent to any solid tiles.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Creatures.TileResist.Solid">
+            <summary>
+            Impassable solid tiles. Unless your creature can phase through walls, don't set this.
+            </summary>
+        </member>
+        <member name="T:Fisobs.Items.Fisob">
+            <summary>
+            Represents the "metadata" for a custom item.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Items.Fisob.#ctor(AbstractPhysicalObject.AbstractObjectType)">
+            <summary>
+            Creates a new <see cref="T:Fisobs.Items.Fisob"/> instance for the given <paramref name="type"/>.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Items.Fisob.Type">
+            <summary>The fisob's type.</summary>
+        </member>
+        <member name="P:Fisobs.Items.Fisob.Icon">
+            <summary>The fisob's icon; a <see cref="T:Fisobs.Core.DefaultIcon"/> by default.</summary>
+            <remarks>When <see cref="M:Fisobs.Items.Fisob.LoadResources(RainWorld)"/> is called, an embedded resource with the name <c>$"icon_{Type}"</c> will be auto-loaded as a <see cref="T:Fisobs.Core.SimpleIcon"/>, if it exists.</remarks>
+        </member>
+        <member name="P:Fisobs.Items.Fisob.SandboxPerformanceCost">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Items.Fisob.Parse(World,Fisobs.Core.EntitySaveData,Fisobs.Sandbox.SandboxUnlock)">
+            <summary>
+            Gets a new <see cref="T:AbstractPhysicalObject"/> instance from custom data.
+            </summary>
+            <param name="world">The world the entity lives in.</param>
+            <param name="entitySaveData">The entity's save data.</param>
+            <param name="unlock">The sandbox unlock that spawned this entity, or <see langword="null"/> if the entity wasn't spawned by one.</param>
+        </member>
+        <member name="M:Fisobs.Items.Fisob.Properties(PhysicalObject)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Items.Fisob.LoadResources(RainWorld)">
+            <summary>
+            Loads <see cref="T:FAtlas"/> and <see cref="T:FAtlasElement"/> sprites. Called once.
+            </summary>
+            <param name="rainWorld">The current <see cref="T:RainWorld"/> instance.</param>
+        </member>
+        <member name="M:Fisobs.Items.Fisob.RegisterUnlock(MultiplayerUnlocks.SandboxUnlockID,MultiplayerUnlocks.SandboxUnlockID,System.Int32)">
+            <summary>
+            Registers a sandbox unlock under this fisob.
+            </summary>
+            <param name="type">The sandbox unlock type.</param>
+            <param name="parent">The sandbox's parent unlock. If the parent type's token has been collected in story mode, then this item will be unlocked. To unconditionally unlock this item, set <paramref name="parent"/> to <see cref="F:MultiplayerUnlocks.SandboxUnlockID.Slugcat"/>.</param>
+            <param name="data">The sandbox unlock's data value. This takes the place of <see cref="M:Fisobs.Core.Icon.Data(AbstractPhysicalObject)"/> when spawning objects from sandbox mode.</param>
+        </member>
+        <member name="T:Fisobs.Items.FisobRegistry">
+            <summary>
+            A registry that stores <see cref="T:Fisobs.Items.Fisob"/> instances and the hooks relevant to them.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Items.FisobRegistry.Instance">
+            <summary>
+            The singleton instance of this class.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Items.FisobRegistry.Process(Fisobs.Core.IContent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Items.FisobRegistry.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fisobs.Properties.IPropertyHandler">
+            <summary>
+            Used by <see cref="T:Fisobs.Properties.PropertyRegistry"/> to manage an item's properties.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Properties.IPropertyHandler.Type">
+            <summary>
+            The type of item. Only items of this type will be passed into <see cref="M:Fisobs.Properties.IPropertyHandler.Properties(PhysicalObject)"/>.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Properties.IPropertyHandler.Properties(PhysicalObject)">
+            <summary>
+            Gets the custom properties of an item.
+            </summary>
+            <param name="forObject">The item in question.</param>
+            <returns>An instance of <see cref="T:Fisobs.Properties.ItemProperties"/> or null.</returns>
+        </member>
+        <member name="T:Fisobs.Properties.ItemProperties">
+            <summary>
+            Defines properties for custom item types, like how scavengers interact with an item and if players can grab it.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Properties.ItemProperties.ScavCollectScore(Scavenger,System.Int32@)">
+            <summary>
+            How valuable the item is as a collectible.
+            </summary>
+            <remarks>Pearls score 10, spears score 3, shrooms score 2, unwanted items score 0.</remarks>
+            <param name="scav">The scavenger.</param>
+            <param name="score">Items with higher scores will be picked up first.</param>
+        </member>
+        <member name="M:Fisobs.Properties.ItemProperties.ScavWeaponPickupScore(Scavenger,System.Int32@)">
+            <summary>
+            How valuable the item is as a weapon.
+            </summary>
+            <remarks>Spears score 3, explosive spears score 4, spore puffs score 1.</remarks>
+            <param name="scav">The scavenger.</param>
+            <param name="score">Items with higher scores will be picked up first.</param>
+        </member>
+        <member name="M:Fisobs.Properties.ItemProperties.ScavWeaponUseScore(Scavenger,System.Int32@)">
+            <summary>
+            How readily the item will be used as a weapon. This may depend on the scavenger's current violence type (<see cref="F:ScavengerAI.currentViolenceType"/>).
+            </summary>
+            <remarks>
+            <code>
+            +——————————————+————————+———————————+
+            | ITEM         | LETHAL | NONLETHAL |
+            +==============+========+===========+
+            | normal spear | 3      | 2         |
+            +——————————————+————————+———————————+
+            | expld. spear | 4      | 1         |
+            +——————————————+————————+———————————+
+            | jellyfish    | 2      | 3         |
+            +——————————————+————————+———————————+
+            | spore puff   | 1      | 1         |
+            +——————————————+————————+———————————+
+            | rock         | 2      | 4*        |
+            +——————————————+————————+———————————+
+            | bomb         | 3**    | 0         |
+            +——————————————+————————+———————————+
+            
+            *  2 if the scav has rocks
+            ** 1 if the scav is scared and next to the target, else 0 if there are friends next to the target
+            </code>
+            </remarks>
+            <param name="scav">The scavenger.</param>
+            <param name="score">Items with higher scores will be used first.</param>
+        </member>
+        <member name="M:Fisobs.Properties.ItemProperties.LethalWeapon(Scavenger,System.Boolean@)">
+            <summary>
+            Determines if scavengers will purposely miss when using this item if they don't mean to kill their target.
+            </summary>
+            <remarks>
+            Only <see cref="T:Spear"/> and <see cref="T:ScavengerBomb"/> objects are considered lethal in vanilla.
+            </remarks>
+            <param name="scav">The scavenger.</param>
+            <param name="isLethal">True if the item is lethal.</param>
+        </member>
+        <member name="M:Fisobs.Properties.ItemProperties.Grabability(Player,Player.ObjectGrabability@)">
+            <summary>
+            Determines if the player can pick up the item.
+            </summary>
+            <param name="player">The player.</param>
+            <param name="grabability">How difficult carrying the item is. Spears, for example, are <see cref="F:Player.ObjectGrabability.BigOneHand"/> items.</param>
+        </member>
+        <member name="M:Fisobs.Properties.ItemProperties.Throwable(Player,System.Boolean@)">
+            <summary>
+            Determines if the player can throw or toss the item.
+            </summary>
+            <param name="player">The player.</param>
+            <param name="throwable">True if the item can be thrown. Vulture masks, for example, cannot be thrown.</param>
+        </member>
+        <member name="M:Fisobs.Properties.ItemProperties.Nourishment(Player,System.Int32@)">
+            <summary>
+            This determines if the item gives full pips to the hunter slugcat when eaten.
+            </summary>
+            <remarks>This is ignored unless the item implements the <see cref="T:IPlayerEdible"/> interface.</remarks>
+            <param name="player">The player.</param>
+            <param name="quarterPips">The amount of quarter pips the food should give. If eaten by Saint, a value of -1 will stun the player.</param>
+        </member>
+        <member name="T:Fisobs.Properties.PropertyRegistry">
+            <summary>
+            A registry that stores <see cref="T:Fisobs.Properties.IPropertyHandler"/> instances and the hooks relevant to them.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Properties.PropertyRegistry.Instance">
+            <summary>
+            The singleton instance of this class.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Properties.PropertyRegistry.Process(Fisobs.Core.IContent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Properties.PropertyRegistry.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fisobs.Sandbox.ISandboxHandler">
+            <summary>
+            Used by <see cref="T:Fisobs.Sandbox.SandboxRegistry"/> to manage a set of sandbox unlocks.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Sandbox.ISandboxHandler.Type">
+            <summary>
+            The physob these unlocks spawn.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Sandbox.ISandboxHandler.SandboxPerformanceCost">
+            <summary>
+            The performance cost associated with the entity in sandbox mode.
+            </summary>
+            <value>A value of 0.2 for linear and 0 for exponential is the default. Some examples:
+            <list type="bullet">
+            <item>Scavengers have 0.5 for linear and 0.925 for exponential.</item>
+            <item>Leviathans have 4.0 for linear and 1.2 for exponential.</item>
+            <item>Leeches have 0.3 for linear and 0.1 for exponential.</item>
+            <item>Batflies have 0.5 for linear and 0.1 for exponential.</item>
+            <item>Scavenger bombs have 1.2 for linear and 0 for exponential.</item>
+            </list>
+            </value>
+        </member>
+        <member name="P:Fisobs.Sandbox.ISandboxHandler.SandboxUnlocks">
+            <summary>
+            The sandbox unlocks associated with the entity.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Sandbox.ISandboxHandler.ParseFromSandbox(World,Fisobs.Core.EntitySaveData,Fisobs.Sandbox.SandboxUnlock)">
+            <summary>
+            Gets a new <see cref="T:AbstractWorldEntity"/> instance for when an entity is spawned in sandbox mode.
+            </summary>
+            <param name="world">The arena mode world.</param>
+            <param name="data">The entity's data.</param>
+            <param name="unlock">The unlock which spawned this entity.</param>
+        </member>
+        <member name="T:Fisobs.Sandbox.KillScore">
+            <summary>
+            Determines how many points a player earns when killing a creature as The Hunter and in arena mode.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Sandbox.KillScore.Value">
+            <summary>
+            The score gained when the creature is killed.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Sandbox.KillScore.IsConfigurable">
+            <summary>
+            True if this value was created through <see cref="M:Fisobs.Sandbox.KillScore.Configurable(System.Int32)"/>.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Sandbox.KillScore.Configurable(System.Int32)">
+            <summary>
+            Creates a kill score that players can configure in the sandbox menu.
+            </summary>
+            <param name="defaultScore">The score awarded to a player that kills this creature unless the value is overridden in sandbox mode.</param>
+        </member>
+        <member name="M:Fisobs.Sandbox.KillScore.Constant(System.Int32)">
+            <summary>
+            Creates a kill score that's hidden from the player and cannot be configured.
+            </summary>
+            <param name="score">The score awarded to a player that kills this creature.</param>
+        </member>
+        <member name="T:Fisobs.Sandbox.SandboxPerformanceCost">
+            <summary>
+            Represents an item or creature's performance impact in sandbox mode.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Sandbox.SandboxPerformanceCost.Linear">
+            <summary>
+            A higher value means many creatures will proportionally degrade performance.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Sandbox.SandboxPerformanceCost.Exponential">
+            <summary>
+            A higher value means many creatures will explosively degrade performance.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Sandbox.SandboxPerformanceCost.#ctor(System.Single,System.Single)">
+            <summary>
+            Creates a new instance of the <see cref="T:Fisobs.Sandbox.SandboxPerformanceCost"/> class.
+            </summary>
+            <param name="linear">A higher value indicates having many of a creature will proportionally degrade performance.</param>
+            <param name="exponential">A higher value indicates having many of a creature will explosively degrade performance.</param>
+        </member>
+        <member name="T:Fisobs.Sandbox.SandboxRegistry">
+            <summary>
+            A registry that stores <see cref="T:Fisobs.Sandbox.ISandboxHandler"/> instances and the hooks relevant to them.
+            </summary>
+        </member>
+        <member name="P:Fisobs.Sandbox.SandboxRegistry.Instance">
+            <summary>
+            The singleton instance of this class.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Sandbox.SandboxRegistry.Process(Fisobs.Core.IContent)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Fisobs.Sandbox.SandboxRegistry.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="T:Fisobs.Sandbox.SandboxUnlock">
+            <summary>
+            Represents a sandbox unlock.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Sandbox.SandboxUnlock.Type">
+            <summary>
+            The sandbox unlock type.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Sandbox.SandboxUnlock.Parent">
+            <summary>
+            The sandbox's parent unlock. If the parent type's token has been collected in story mode, then this item will be unlocked.
+            </summary>
+            <remarks>If this is set to <see cref="F:MultiplayerUnlocks.SandboxUnlockID.Slugcat"/>, the item is unconditionally unlocked.</remarks>
+        </member>
+        <member name="F:Fisobs.Sandbox.SandboxUnlock.Data">
+            <summary>
+            The sandbox unlock's data value. This takes the place of <see cref="M:Fisobs.Core.Icon.Data(AbstractPhysicalObject)"/> when spawning objects from sandbox mode.
+            </summary>
+        </member>
+        <member name="F:Fisobs.Sandbox.SandboxUnlock.KillScore">
+            <summary>
+            The creature unlock's default kill score. This is ignored for items.
+            </summary>
+        </member>
+        <member name="M:Fisobs.Sandbox.SandboxUnlock.#ctor(MultiplayerUnlocks.SandboxUnlockID,MultiplayerUnlocks.SandboxUnlockID,System.Int32,Fisobs.Sandbox.KillScore)">
+            <summary>
+            Creates a new instance of the <see cref="T:Fisobs.Sandbox.SandboxUnlock"/> class.
+            </summary>
+            <param name="type">The sandbox unlock type.</param>
+            <param name="parent">The sandbox's parent unlock. If the parent type's token has been collected in story mode, then this item will be unlocked. To unconditionally unlock this item, set <paramref name="parent"/> to <see cref="F:MultiplayerUnlocks.SandboxUnlockID.Slugcat"/>.</param>
+            <param name="data">The sandbox unlock's data value. This takes the place of <see cref="M:Fisobs.Core.Icon.Data(AbstractPhysicalObject)"/> when spawning objects from sandbox mode.</param>
+            <param name="killScore">The creature unlock's kill score. This is ignored for items.</param>
+        </member>
+    </members>
+</doc>
