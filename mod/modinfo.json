@@ -1,7 +1,7 @@
 ﻿{
 	"id": "Deadlands",
 	"name": "Deadlands",
-	"version": "0.2.49.9.2",
+	"version": "0.2.49.9.5",
 	"authors": "DEADLANDS TEAM",
 	"description": "A community project based off Daszombes' region concept \"The Deadlands\". It is a work in progress.",
 	"requirements": [ "regionkit", "slime-cubed.slugbase", "fisobs", "moreslugcats" ],
