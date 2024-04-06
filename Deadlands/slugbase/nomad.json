@@ -8,23 +8,21 @@
     "select_menu_scene_ascended": "Slugcat_nomad",
     "sleep_scene": "Sleep_Nomad",
 
-    "the_mark": false, 
+    "the_mark": false,
     "world_state": "Spear",
     "cycle_length_min": 5.0,
     "cycle_length_max": 8.0,
 
     "loudness": 0.5,
     "tunnel_speed": 1.35,
-	"climb_speed": 1.35,
-	"walk_speed": 1.0,
-	"crouch_stealth": 0.5,
-	"throw_skill": 0,
-	"lung_capacity": 0.9,
+    "climb_speed": 1.35,
+    "walk_speed": 1.0,
+    "crouch_stealth": 0.5,
+    "throw_skill": 0,
+    "lung_capacity": 0.9,
     "weight": 0.95,
     "food_min": 5,
     "food_max": 7,
-    
-    "Nomad/Nomad": true,
 
     "diet": {
       "base": "White",

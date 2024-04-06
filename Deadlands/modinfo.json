@@ -1,10 +1,10 @@
 ﻿{
 	"id": "Deadlands",
 	"name": "Deadlands",
-	"version": "0.2.49.9",
+	"version": "0.2.49.9.2",
 	"authors": "DEADLANDS TEAM",
 	"description": "A community project based off Daszombes' region concept \"The Deadlands\". It is a work in progress.",
-	"requirements": [ "regionkit", "slime-cubed.slugbase", "fisobs", "DeadlandsCreatures"],
-	"requirements_names": [ "RegionKit", "SlugBase", "Fisobs", "Deadlands Creatures"],
+	"requirements": [ "regionkit", "slime-cubed.slugbase", "fisobs", "moreslugcats" ],
+	"requirements_names": [ "RegionKit", "SlugBase", "Fisobs", "More Slugcats Expansion" ],
 	"tags": [ "Slugcats", "Cosmetics", "Regions", "Items", "Arenas"]
 }

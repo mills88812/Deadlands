@@ -1,2 +1,2 @@
 [ADD]wind/rangeFac=1 : wind/vol=0.6/pitch=1
-[ADD]Basic_Mech : basicmech/vol=0.3/pitch=1
+[ADD]basicmech : basicmech/vol=0.3/pitch=1
