@@ -1,0 +1,30 @@
+# This builds the mod on Github's Windows machines,
+# to ensure that any code pushed to main, at the very least, will compile
+# (and maybe pass some basic tests, if we add any)
+
+name: DLL Build and Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    # Running on Windows is slower,
+    # but it reflects that fact that this mod can only feasibly run in a Windows environment.
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x # this is a .NET 8 project
+    - name: Restore dependencies
+      run: dotnet restore src/Deadlands.sln /p:Configuration=Debug /p:Platform="Any CPU"
+    - name: Build
+      run: dotnet build src/Deadlands.sln --no-restore /p:Configuration=Debug /p:Platform="Any CPU"
+    - name: Test
+      run: dotnet test src/Deadlands.sln --no-build /p:Configuration=Debug /p:Platform="Any CPU"
