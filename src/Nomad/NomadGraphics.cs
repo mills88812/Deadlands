@@ -1,13 +1,21 @@
-﻿namespace Deadlands;
+﻿using Fisobs.Creatures;
+
+namespace Deadlands;
 
 internal static class NomadGraphics
 {
     private static readonly ConditionalWeakTable<Player, Wings> Wings = new();
-    // private static readonly ConditionalWeakTable<Player, Whiskers> Whiskers = new();
+    private static readonly ConditionalWeakTable<Player, Whiskers> Whiskers = new();
 
     private static readonly Color NomadColor = new(1f, 196f / 255f, 120f / 255f, 1);
 
     private static bool _initializingSprites;
+
+    /// <summary> How many sprites a slugcat normally needs to render, in Vanilla.</summary>
+    private const int VanillaSlugcatSpriteCount = 12;
+
+    /// <summary> How many additional sprite slots have to be reserved for sprites used by the More Slugcats DLC.</summary>
+    private static int MoreSlugsSpriteCount { get { return ModManager.MSC ? 1 : 0; } }
 
     /////////////////////////////////////
     // Initialization
@@ -20,8 +28,9 @@ internal static class NomadGraphics
             orig(self, ow);
             if (!self.player.IsNomad(out _)) return;
 
-            Wings.Add(self.player, new Wings(self, 12 + (ModManager.MSC ? 1 : 0)));
-            // Whiskers.Add(self.player, new Whiskers(self, 14 + (ModManager.MSC ? 1 : 0)));
+            // Add the wings and whiskers of our boi, at the correct sprite indices
+            Wings.Add(self.player, new Wings(self, VanillaSlugcatSpriteCount + MoreSlugsSpriteCount));
+            Whiskers.Add(self.player, new Whiskers(self, VanillaSlugcatSpriteCount + MoreSlugsSpriteCount + Deadlands.Wings.RequiredSprites));
         };
 
         /////////////////////////////////////
@@ -58,13 +67,14 @@ internal static class NomadGraphics
 
         if (!self.player.IsNomad(out _)) return;
 
-        Array.Resize(ref sLeaser.sprites, 14 + (ModManager.MSC ? 1 : 0));
+        int totalSpritesNeeded = VanillaSlugcatSpriteCount + MoreSlugsSpriteCount + Deadlands.Wings.RequiredSprites + Deadlands.Whiskers.RequiredSprites;
+        Array.Resize(ref sLeaser.sprites, totalSpritesNeeded);
 
         if (Wings.TryGetValue(self.player, out var wings))
             wings.InitiateSprites(sLeaser, rCam);
 
-        // if (Whiskers.TryGetValue(self.player, out var whiskers))
-        // whiskers.InitiateSprites(sLeaser, rCam);
+        if (Whiskers.TryGetValue(self.player, out var whiskers))
+            whiskers.InitiateSprites(sLeaser, rCam);
 
         self.AddToContainer(sLeaser, rCam, null);
     }
@@ -79,8 +89,8 @@ internal static class NomadGraphics
         if (Wings.TryGetValue(self.player, out var wings))
             wings.DrawSprites(sLeaser, timeStacker, camPos, playerData);
 
-        // if (Whiskers.TryGetValue(self.player, out var whiskers))
-        // whiskers.DrawSprites(sLeaser, rCam, timeStacker, camPos);
+        if (Whiskers.TryGetValue(self.player, out var whiskers))
+            whiskers.DrawSprites(sLeaser, rCam, timeStacker, camPos);
     }
 
     private static void ApplyPalette(On.PlayerGraphics.orig_ApplyPalette orig, PlayerGraphics self, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, RoomPalette palette)
@@ -101,8 +111,8 @@ internal static class NomadGraphics
         if (Wings.TryGetValue(self.player, out var wings))
             wings.ApplyPalette(sLeaser, rCam, palette);
 
-        // if (Whiskers.TryGetValue(self.player, out var whiskers))
-        // whiskers.ApplyPalette(sLeaser, rCam, palette);
+        if (Whiskers.TryGetValue(self.player, out var whiskers))
+            whiskers.ApplyPalette(sLeaser, rCam, palette);
     }
 
     private static void AddToContainer(On.PlayerGraphics.orig_AddToContainer orig, PlayerGraphics self, RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)
@@ -116,8 +126,8 @@ internal static class NomadGraphics
         if (Wings.TryGetValue(self.player, out var wings))
             wings.AddToContainer(sLeaser, rCam, rCam.ReturnFContainer("Midground"));
 
-        // if (Whiskers.TryGetValue(self.player, out var whiskers))
-        // whiskers.AddToContainer(sLeaser, rCam, rCam.ReturnFContainer("Midground"));
+        if (Whiskers.TryGetValue(self.player, out var whiskers))
+            whiskers.AddToContainer(sLeaser, rCam, rCam.ReturnFContainer("Midground"));
     }
 
     /////////////////////////////////////

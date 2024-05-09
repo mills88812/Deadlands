@@ -16,6 +16,8 @@ internal sealed class Wings(PlayerGraphics owner, int startSprite, float size = 
 
     private float _wind;
 
+    public const int RequiredSprites = 2;
+
     public void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
     {
         Debug.Log(sLeaser.sprites.Length);
@@ -23,14 +25,7 @@ internal sealed class Wings(PlayerGraphics owner, int startSprite, float size = 
         for (int i = 0; i < 2; i++)
         {
             Debug.Log(_startSprite + i);
-            // All indices are realized clock-wise (Probably doesn't matter cause it's a 2D game, but I did it anyways)
-            sLeaser.sprites[_startSprite + i] = new TriangleMesh("Futile_White",
-            [
-                new(0, 2, 1),
-                new(1, 2, 3),
-                new(2, 4, 3),
-                new(3, 4, 5)
-            ], false);
+            sLeaser.sprites[_startSprite + i] = Utils.CreateSimpleMesh();
         }
     }
 
@@ -46,6 +41,8 @@ internal sealed class Wings(PlayerGraphics owner, int startSprite, float size = 
 
     private void PlaceWingVerts(RoomCamera.SpriteLeaser sLeaser, float timeStacker, Vector2 camPos, int startSprite, int wingIndex)
     {
+        sLeaser.sprites[_startSprite].color = Color.cyan;
+        sLeaser.sprites[_startSprite + 1].color = Color.red;
         /////////////////////////////////////
         // Base vertices
         /////////////////////////////////////
