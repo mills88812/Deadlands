@@ -13,10 +13,9 @@ public class SunShade : UpdatableAndDeletable, IDrawable
     public override void Update(bool eu)
     {
         base.Update(eu);
-        if (room == null)
-        {
+        if (room is null)
             return;
-        }
+
         foreach (var effect in room.roomSettings.effects)
         {
             if (effect.type == DeadlandsEnums.RoomEffect.SunShade)

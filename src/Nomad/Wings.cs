@@ -1,5 +1,10 @@
 ﻿namespace Deadlands;
 
+/// <summary>
+/// Stores the graphics data for the Wings of a Nomad slugcat.
+/// </summary>
+/// <param name="owner">The main body of the slugcat, used for determining head/body/tail positioning.</param>
+/// <param name="startSprite">The index into the <see cref="RoomCamera.SpriteLeaser"/>'s array where the Wings store their sprites.</param>
 internal sealed class Wings(PlayerGraphics owner, int startSprite, float size = 0.1f, float pointiness = 0.7f)
 {
     private readonly PlayerGraphics _pGraphics = owner;
@@ -109,9 +114,7 @@ internal sealed class Wings(PlayerGraphics owner, int startSprite, float size = 
     public void ApplyPalette(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, RoomPalette palette)
     {
         for (int i = 0; i < 2; i++)
-        {
             sLeaser.sprites[_startSprite + i].color = sLeaser.sprites[0].color;
-        }
     }
 
     public void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)

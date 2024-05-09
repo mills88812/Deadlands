@@ -1,12 +1,18 @@
 ﻿namespace Deadlands;
 
-internal sealed class Whiskers(PlayerGraphics owner, int startSprite, float length = 0.12f)
+namespace Deadlands;
+
+/// <summary>
+/// Stores the graphics data for the Whiskers of a Nomad slugcat.
+/// </summary>
+/// <param name="owner">The main body of the slugcat, used for determining head/body/tail positioning.</param>
+/// <param name="startSprite">The index into the <see cref="RoomCamera.SpriteLeaser"/>'s array where the Whiskers store their sprites.</param>
+internal sealed class Whiskers(PlayerGraphics owner, int startSprite)
 {
     private readonly PlayerGraphics _pGraphics = owner;
 
     private readonly int _startSprite = startSprite;
 
-    public float _length = length;
 
     public void InitiateSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam)
     {
