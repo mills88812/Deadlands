@@ -19,4 +19,27 @@ public static class Utils
             }
         }
     }
+
+    /// <summary>
+    /// Returns a small mesh, consisting of two quads. The vertices' positions can be manipulated to control where a sprite goes.
+    /// </summary>
+    public static TriangleMesh CreateSimpleMesh()
+    {
+        // All indices in these Triangle ctors are sorted clock-wise (Probably doesn't matter cause it's a 2D game, but I did it anyways)
+        /*
+        0 ------ 2 ------ 4
+        |       /|       /|
+        |     /  |     /  |
+        |   /    |   /    |
+        | /      | /      |
+        1 ------ 3 ------ 5
+        */
+        return new TriangleMesh("Futile_White",
+            [
+                new(0, 2, 1),
+                new(1, 2, 3),
+                new(2, 4, 3),
+                new(3, 4, 5)
+            ], false);
+    }
 }

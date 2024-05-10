@@ -77,11 +77,10 @@ internal static class NomadGliding
 
         float vol = nomadData.windSound.Volume;
 
-        nomadData.windSound.Volume = nomadData.GlideSpeed > 0 &&
-                                     self.bodyMode == Player.BodyModeIndex.Default &&
-                                     rootChunk.lastPos.y - rootChunk.pos.y > -1 ?
-            Mathf.Min(vol + 0.3f, 1f * nomadData.GlideSpeed) :
-            Mathf.Max(vol - 0.5f, 0f);
+        if (nomadData.GlideSpeed > 0 && self.bodyMode == Player.BodyModeIndex.Default && rootChunk.lastPos.y - rootChunk.pos.y > -1)
+            nomadData.windSound.Volume = Mathf.Min(vol + 0.3f, 1f * nomadData.GlideSpeed);
+        else
+            nomadData.windSound.Volume = Mathf.Max(vol - 0.5f, 0f);
 
         //Deprecated, used to update the sound but actually the sound is updated with the Mathf Min and Max, maybe should be changed to a lerp instead
         //nomadData.windSound.Update();
