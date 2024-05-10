@@ -14,7 +14,7 @@ internal sealed class Whiskers(PlayerGraphics owner, int startSprite)
     private readonly int _startSprite = startSprite;
 
     /// <summary> How many whiskers to give them.</summary>
-    private const int _whiskerCount = 2;
+    private const int _whiskerCount = 4;
 
     public const int RequiredSprites = _whiskerCount;
 
@@ -24,14 +24,13 @@ internal sealed class Whiskers(PlayerGraphics owner, int startSprite)
         for (int i = 0; i < RequiredSprites; i++)
         {
             sLeaser.sprites[_startSprite + i] = Utils.CreateSimpleMesh();
+            sLeaser.sprites[_startSprite + i].color = Color.white;
         }
     }
 
     public void DrawSprites(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, float timeStacker, Vector2 camPos)
     {
-        sLeaser.sprites[_startSprite].color = Color.green;
-        sLeaser.sprites[_startSprite + 1].color = Color.magenta;
-        var playerHead = _pGraphics.player.firstChunk.pos;
+        var playerHead = Vector2.Lerp(_pGraphics.head.lastPos,_pGraphics.head.pos,timeStacker);
         for (int i = 0; i < RequiredSprites; i++)
         {
             var mesh = sLeaser.sprites[_startSprite + i] as TriangleMesh;
@@ -41,23 +40,30 @@ internal sealed class Whiskers(PlayerGraphics owner, int startSprite)
             const int offset = 3; // how far we are from the nose
             const int lengthBend = 5; // the horizontal girth of the bent part
             const int lengthStraight = 3; // the girth of the straightaway part
-            const int height = 5; // the height
-            int verticalOrigin = i * 3 * height; // How up we are from the nose (differs between whiskers)
+            const int height = 1; // the height
+            int verticalOrigin = i * -2 * height; // How up we are from the nose (differs between whiskers)
 
-            mesh.MoveVertice(0, playerHead + new Vector2(-lengthStraight - offset - lengthBend, verticalOrigin));
-            mesh.MoveVertice(1, playerHead + new Vector2(-lengthStraight - offset - lengthBend*0.9f, verticalOrigin - height*0.9f));
-            mesh.MoveVertice(2, playerHead + new Vector2(-lengthStraight - offset, height + verticalOrigin));
-            mesh.MoveVertice(3, playerHead + new Vector2(-lengthStraight - offset, verticalOrigin));
-            mesh.MoveVertice(4, playerHead + new Vector2(-offset, height + verticalOrigin));
-            mesh.MoveVertice(5, playerHead + new Vector2(-offset, verticalOrigin));
+            Vector2[] moustacheStash = [
+                    new Vector2(-lengthStraight - offset - lengthBend, verticalOrigin),
+                    new Vector2(-lengthStraight - offset - lengthBend*0.9f, verticalOrigin - height*0.9f),
+                    new Vector2(-lengthStraight - offset, height + verticalOrigin),
+                    new Vector2(-lengthStraight - offset, verticalOrigin),
+                    new Vector2(-offset, height + verticalOrigin),
+                    new Vector2(-offset, verticalOrigin)
+            ];
+            if (i % 2 == 0) // if it should go on the right side
+                for (int m = 0; m < 6; m++)
+                    moustacheStash[m].x *= -1.0f; // flip the vertices :^)
+
+            var headVertexLoc = playerHead - camPos;
+            for(int v = 0; v < 6; v++)
+                mesh.MoveVertice(v, headVertexLoc + moustacheStash[v]);
         }
     }
 
     public void ApplyPalette(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, RoomPalette palette)
     {
-        // Just do whatever the root node is doing
-        for (int i = 0; i < RequiredSprites; i++)
-            sLeaser.sprites[_startSprite + i].color = sLeaser.sprites[0].color;
+        // Do nothing, we're always white :^)
     }
 
     public void AddToContainer(RoomCamera.SpriteLeaser sLeaser, RoomCamera rCam, FContainer newContainer)

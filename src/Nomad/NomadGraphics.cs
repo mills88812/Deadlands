@@ -1,9 +1,31 @@
 ﻿using Fisobs.Creatures;
+using UnityEngine.Assertions;
 
 namespace Deadlands;
 
 internal static class NomadGraphics
 {
+    /// <summary>
+    /// This is the association between raw indices and <see cref="RoomCamera.SpriteLeaser.sprites"/>'s sprites. <br/>
+    /// Leaving this here as reference and maybe a guide as to wtf is happening :^)
+    /// </summary>
+    /// <remarks> Check out <see cref="PlayerGraphics.InitiateSprites(RoomCamera.SpriteLeaser, RoomCamera)"/> to see where I got this info.</remarks> 
+    enum SlugcatSpriteSlot : int
+    {
+        LowerBody = 0,
+        Hips,
+        MaybeTail,
+        Head,
+        Legs,
+        LeftArm,
+        RightArm,
+        LeftCrawlHand,
+        RightCrawlHand,
+        Face = 9, // This one is usually always black, so should be treated special during any colouring.
+        NeuronGlow, // I think? Might also be used for other situations where slugcats glow
+        MarkOfCommunication
+    }
+
     private static readonly ConditionalWeakTable<Player, Wings> Wings = new();
     private static readonly ConditionalWeakTable<Player, Whiskers> Whiskers = new();
 
@@ -14,7 +36,7 @@ internal static class NomadGraphics
     /// <summary> How many sprites a slugcat normally needs to render, in Vanilla.</summary>
     private const int VanillaSlugcatSpriteCount = 12;
 
-    /// <summary> How many additional sprite slots have to be reserved for sprites used by the More Slugcats DLC.</summary>
+    /// <summary> How many additional sprite slots have to be reserved for sprites used by the More Slugcats DLC, if it's enabled.</summary>
     private static int MoreSlugsSpriteCount { get { return ModManager.MSC ? 1 : 0; } }
 
     /////////////////////////////////////
@@ -23,6 +45,11 @@ internal static class NomadGraphics
 
     public static void Apply()
     {
+        // Load the Nomad's sprites
+        //Debug.Log("resource suffix is '" + Futile.resourceSuffix + "'");
+        Futile.atlasManager.LoadAtlas("nomad/head");
+        Futile.atlasManager.LoadAtlas("nomad/face");
+
         On.PlayerGraphics.ctor += (orig, self, ow) =>
         {
             orig(self, ow);
@@ -70,6 +97,10 @@ internal static class NomadGraphics
         int totalSpritesNeeded = VanillaSlugcatSpriteCount + MoreSlugsSpriteCount + Deadlands.Wings.RequiredSprites + Deadlands.Whiskers.RequiredSprites;
         Array.Resize(ref sLeaser.sprites, totalSpritesNeeded);
 
+        // Replace normal slugcat sprites with our cool ones
+        sLeaser.sprites[(int)SlugcatSpriteSlot.Head] = new FSpriteNomad("nomad_HeadA0");
+        sLeaser.sprites[(int)SlugcatSpriteSlot.Face] = new FSpriteNomad("nomad_FaceA0");
+
         if (Wings.TryGetValue(self.player, out var wings))
             wings.InitiateSprites(sLeaser, rCam);
 
@@ -102,7 +133,7 @@ internal static class NomadGraphics
         {
             for (int i = 0; i < 14 + (ModManager.MSC ? 1 : 0); i++)
             {
-                if (i == 9) continue;
+                if (i == (int)SlugcatSpriteSlot.Face) continue;
 
                 sLeaser.sprites[i].color = PlayerGraphics.SlugcatColor((self.owner as Player)!.SlugCatClass);
             }

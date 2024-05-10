@@ -41,8 +41,6 @@ internal sealed class Wings(PlayerGraphics owner, int startSprite, float size = 
 
     private void PlaceWingVerts(RoomCamera.SpriteLeaser sLeaser, float timeStacker, Vector2 camPos, int startSprite, int wingIndex)
     {
-        sLeaser.sprites[_startSprite].color = Color.cyan;
-        sLeaser.sprites[_startSprite + 1].color = Color.red;
         /////////////////////////////////////
         // Base vertices
         /////////////////////////////////////
