@@ -1,4 +1,4 @@
-![A depiction of the 'RAIN WORLD' title screen, featuring Nomad.](mod/decals/Notocorda_TitleScreen.png)
+![A depiction of the 'RAIN WORLD' title screen, featuring Nomad.](../mod/decals/Notocorda_TitleScreen.png)
 
 ## Introduction
 The following is a general guide on how to help out for an open-source C# project like this, for those unfamiliar with typical etiquette and expectations. **These are not rules**, just some common wisdom that will make it easier for you to get your code merged and this mod further on its way to being complete! ❤️
