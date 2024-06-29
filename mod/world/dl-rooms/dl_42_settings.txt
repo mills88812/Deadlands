@@ -1,13 +1,3 @@
-DangerType: Desert
-RainIntensity: 1
-WaveSpeed: 0.5
-WaveLength: 1
-WaveAmplitude: 0
-SecondWaveLength: 0.1666667
-SecondWaveAmplitude: 0
 Effects: WaterDepth-0.2319973-446.9146-358.5333, 
 PlacedObjects: DayNightSettings><500><500><-183.2407~-61.06665~2~33, FairyParticleSettings><100><100><-272.0552~176.0889~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, LanternOnStick><185.2603><249.5513><-7.82605~-205.7778, LanternOnStick><179.5393><438.1499><-147.9833~-44.35559, LightSource><604.8696><580.6891><0.2885417~Environment~-261.1052~63.02222~-287.2312~-66.28632~0~0~None~0~0, SteamPipe><281.667><437.444><-33.43851~-9.511139, SteamPipe><275.6546><476.6903><-16.36356~-36.53333, VultureMask><509.9968><326.1733><, PuffBall><423.0697><105.8089><-235.4926~4.266663~2~3, ExitSymbolHidden><802.1189><391.6582><, ExitSymbolHidden><-262.5931><338.2936><, ExitSymbolHidden><426.7156><151.3854><, SlimeMold><410.5283><200.2594><-240.4729~12.08897~2~3, SlimeMold><400.847><279.6355><-203.4771~-36.97775~2~3, Hazer><714.165><153.3315><18.49774~-140.0889~7~10, Lantern><735.5679><379.2383><-120.2364~91.73331~4~9, Lantern><652.8608><340.2282><-2.134216~122.3111~4~9, PuffBall><425.7641><187.8829><-326.5594~-59.02222~2~3, Hazer><539.4272><139.3148><76.12604~-29.15553~7~10, SlimeMold><831.9784><81.8163><43.39899~68.97775~2~3, 
 AmbientSounds: OMNI><Noise Wind.wav><757.9135><489.9835><0.204347><0.6869565, 
-FadePalette: 2, 0.6
-BackgroundOffset: 155.6665,1159.664
-BackgroundType: atc_dune

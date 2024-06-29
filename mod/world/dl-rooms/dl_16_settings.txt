@@ -1,15 +1,5 @@
 Template: DL_SettingsTemplate_Underground
-DangerType: Desert
-RainIntensity: 1
-WaveSpeed: 0.5
-WaveLength: 1
-WaveAmplitude: 0
-SecondWaveLength: 0.1666667
-SecondWaveAmplitude: 0
-EffectColorA: 9
-EffectColorB: 21
 Effects: SunBlock-0-20-20, DarkenLights-0-20-20, Bloom-0.4130435-40-40, 
 PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0~0.05~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, LightSource><270.8893><1230.143><1~Environment~57~-85~50~86.60254~1~0~None~0~0, LightSource><248.6213><1248.909><1~Environment~33~62~-88~94.60254~0~1~None~0~0, LightBeam><68.35031><940.1174><178~328~759~126~523~-190~-45~-255~0.008695851~0.5434784~0.05434782~0~None~0~0, LightSource><258.181><1238.915><1~Environment~-35~109~102~-1.397461~0~0~None~0~0, LightSource><248.8185><1090.166><1~Environment~0~100~122~43.60254~0~0~None~0~0, LightSource><226.1978><1084.193><1~Environment~-3~47~-171~97.60254~0~0~None~0.1630435~0, LightSource><263.5684><968.0839><1~Environment~10~75~-47.00003~112.6025~0~0~None~0~0, LightSource><377.8077><1206.195><1~Environment~8~71~161~54.60254~0~0~None~0~0, LanternOnStick><-151.6097><958.8328><-19~102, LanternOnStick><-151.9476><1221.719><0~100, CustomDecal><758.7007><709.4813><12.80621~150.9333~140.3157~162.3111~149.5646~4.977783~-48.37909~-307.2~0~1~0~sauercats_scav_3_painpoppy~1~0.2861302~1~0.2861302~1~0.2861302~1~0.2861302, InsectGroup><389.1036><1231.125><0~100~61~-64~Beetle~0.5, CustomDecal><549.6833><1117.922><44.11041~160.1777~190.1179~186.4888~195.098~12.79999~234.0697~24.17776~0.2783966~0.4818726~0~solthas_scav_35_demo~1~0.1391986~1~0.1391986~1~0.1391986~1~0.1391986, CustomDecal><-27.53627><344.5683><2.134369~146.6667~94.78232~105.4222~96.20523~22.75554~-283.8719~-133.6889~0~1~0~sauercats_scav_20~1~0.1391985~1~0.1391985~1~0.1391985~1~0.1391985, PuffBall><58.9158><792.4299><0~0~2~3, PuffBall><321.8609><271.4904><-255~-164~2~3, PuffBall><66.07495><1326.576><0~0~2~3, PuffBall><78.87787><1348.101><0~0~2~3, LightBeam><145.4492><1080.233><-4~430~286~432~423~-2~-297~-33~0.7152176~0.05434766~0~1~None~0~0, LightSource><449.6462><240.3864><0.6304348~Environment~6~66~50~86.60254~0~0~None~0~0, 
 AmbientSounds: OMNI><AM_ENV-SubTerr.ogg><749.6753><444.8145><0.4021726><0.9021739, SPOT><AM_WIN-SubWnd.ogg><716.3031><185.0351><0.3043485><0.9021739><305.3031><1506.035><2.644653><-332.3553><0><0.2413045, OMNI><AM_ENV-LightWind.ogg><718.1632><518.0652><0.2608702><1, 
 Triggers: Spot<tA>event<tB>MusicEvent<eA>songName<eB>DL_02 - Caveborn Hooligan<eA>vol<eB>0.3<eA>prio<eB>0.5<eA>mxThrt<eB>1<eA>loop<eB>0<eA>droneTol<eB>0<eA>rooms<eB>-1<eA>rest<eB>5<eA>fadeIn<eB>0<eA>oneSongPerCycle<eB>1<eA>stopAtDeath<eB>1<eA>stopAtGate<eB>1<tA>multiUse<tB>1<tA>toCycle<tB>-1<tA>fromCycle<tB>0<tA>delay<tB>0<tA>panPos<tB>614.661<tB>421.5709<tA>fireChance<tB>1<tA>entrance<tB>-1<tA>karma<tB>0<tA>slugcats<tB><tA>pos<tB>531.661<tB>968.5709<tA>handlePos<tB>-679.3553<tB>-45.35535, 
-FadePalette: 2, 0.15, 0.15

@@ -1,11 +1,4 @@
 Template: DL_SettingsTemplate_Mountain
-DangerType: DesertAndSandstorm
-RainIntensity: 1
-Grime: 0.1404552
-Palette: 18
-EffectColorA: 7
-EffectColorB: 6
 Effects: ReplaceEffectColorB-0-956.3998-415.6-Color-0.3536257-0.2985508-0.1333346, ReplaceEffectColorA-0-950.5335-284.9334-Color-0.1913001-0.2260795-0.1217386, 
 PlacedObjects: LanternOnStick><754.4564><265.9861><-23.30936~-97.15555, LanternOnStick><1064.65><276.0689><5.70105~-128.8, LanternOnStick><315.5575><324.4519><0~100, LanternOnStick><1355.27><277.6544><26.84277~-97.51111, LanternOnStick><1296.23><478.9531><-3.204224~-57.15546, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, RectanglePopupTrigger><742.7387><720.6238><11.46661~140.1333~Crouch and pounce to get more momentum for gliding~0~6~-1~1~True~True~1~745.6^511.2, DangleFruit><1490.554><470.7303><0~0~2~4, DangleFruit><1510.349><433.3314><-23.46655~-39.47577~2~4, DangleFruit><356.2308><1063.835><0~0~2~4, DangleFruit><396.0858><1059.674><-47.46664~-71.46667~2~4, 
 AmbientSounds: OMNI><AM_ENV-LightWind.ogg><463.7633><502.0651><0.2043484><1, SPOT><AM_ENV-NatWind.ogg><648.9221><573.0208><0.2507245><1><2019.455><1346.612><-772.9554><-464.1553><0><0.1985513, SPOT><AM_ENV-Outside.ogg><847.6983><565.5734><0.1521739><1><2034.832><1342.44><-723.8887><-560.1554><0><0.1579709, 
-FadePalette: 2, 0.185598, 0.1623981, 0.3943954

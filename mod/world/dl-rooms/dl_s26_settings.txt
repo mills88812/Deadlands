@@ -1,6 +1,2 @@
-Clouds: 1
 PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, 
 AmbientSounds: SPOT><AM_ENV-WinterHum.ogg><734.2256><400.8938><0.611504><1><981.6923><369.6938><-68.0304><5.355713><0><0.2101454, OMNI><Noise Wind.wav><533.9135><538.5168><0.1579709><0.6765219, 
-FadePalette: 2, 0.6
-BackgroundOffset: 0,1933.312
-BackgroundType: atc_dune

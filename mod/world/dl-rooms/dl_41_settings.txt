@@ -1,12 +1,2 @@
-DangerType: Desert
-RainIntensity: 1
-WaveSpeed: 0.5
-WaveLength: 1
-WaveAmplitude: 0
-SecondWaveLength: 0.1666667
-SecondWaveAmplitude: 0
-Grime: 0.1630435
-EffectColorA: 19
 Effects: LightBurn-0.1195652-20-20, 
 PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~LINEAR~0~0~0, LightSource><475.813><654.0709><1~EffectColor1~-187~216~50~86.60254~0~0~Flash~0.3369565~0, LightSource><68.61987><103.4101><1~EffectColor1~-13~160~50~86.60254~0~0~None~0~0, LightBeam><511.8053><342.5457><82~319~431~256~331~-197~0~0~0.8239123~0.4891304~0.4130435~0~None~0~0, LightSource><671.9331><420.8305><0.4021739~Environment~-487~228~50~86.60254~1~1~None~0~0, ExitSymbolHidden><121.5042><623.0222><, CustomDecal><38.69882><563.2716><-5~120~103~106~120~3~170~-232~0~0.1195652~0.5108696~serser_scav_4~0.75~0.326087~0.75~0.326087~0.75~0.326087~0.75~0.326087, 
-FadePalette: 2, 0.6

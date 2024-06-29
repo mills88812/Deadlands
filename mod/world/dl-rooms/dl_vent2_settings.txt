@@ -1,6 +1,4 @@
 Template: DL_SettingsTemplate_Underground
-EffectColorB: 13
 Effects: HeatWave-0.100532-729.324-372.1719, LightBurn-0.05654443-727.9011-423.3969, FireFlies-0.2551973-728.6125-535.0959, 
 PlacedObjects: DayNightSettings><500><500><-454.1333~106.9333~33~33, FairyParticleSettings><100><100><703.0764~-361.7474~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, ColouredLightSource><672.4343><106.1866><339.2666~-7.666656~170C00~-3.051758E-05^197~0.08406001~False~0.5~0~0.5~Always~0~100, SlimeMold><355.3683><612.1748><0~0~2~3, SlimeMold><333.6333><629.7939><0~0~2~3, CosmeticSlimeMold2><339.6782><621.6738><-55.46664~-8.799988, CosmeticSlimeMold><1044.383><1991.601><-6.93335~77.60004, CosmeticSlimeMold2><1064.889><1981.333><5.333374~58.40002, SlimeMold><1054.889><2013.333><-9.06665~57.06665~2~4, SlimeMold><1103.063><1977.151><0~0~2~5, SlimeMold><1056.026><1954.678><0~0~2~3, 
 AmbientSounds: OMNI><AM_ENV-SubTerr.ogg><823.8681><344.8668><0.1985507><0.6139129, OMNI><AM_WIN-SubWnd.ogg><825.7914><562.9441><0.3028996><1, OMNI><Deep Weird Wind.wav><829.6018><418.5722><0.1347829><1, OMNI><Noise Wind.wav><825.3095><489.3916><0.1057971><1, 
-FadePalette: 2, 0.15, 0.15, 0.15, 0.15
