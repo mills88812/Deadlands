@@ -3,6 +3,14 @@
         <TargetFramework>net48</TargetFramework>
         <LangVersion>12</LangVersion>
     </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <DebugType>portable</DebugType>
+      <WarningLevel>5</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+      <DebugType>portable</DebugType>
+      <WarningLevel>5</WarningLevel>
+    </PropertyGroup>
 	
        <Target Name="GenerateMod" AfterTargets="PostBuildEvent">
 		   
@@ -26,5 +34,9 @@
             <Private>false</Private>
         </Reference>
     </ItemGroup>
+	
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="call symlinkHandler.bat" />
+    </Target>
     
 </Project>
