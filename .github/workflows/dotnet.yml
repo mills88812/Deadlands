@@ -24,6 +24,8 @@ jobs:
         dotnet-version: 8.0.x # this is a .NET 8 project
     - name: Restore dependencies
       run: dotnet restore src/Deadlands.sln /p:Configuration=Debug /p:Platform="Any CPU"
+    - name: Inform build script that this is a Github Action
+      run: set IsGithubAction="Yes"
     - name: Build
       run: dotnet build src/Deadlands.sln --no-restore /p:Configuration=Debug /p:Platform="Any CPU"
     - name: Test
