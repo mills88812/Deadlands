@@ -1,3 +1,7 @@
+if "%GITHUB_WORKSPACE%"=="" (call) else (
+	echo "Github Actions detected, not doing symlink stuff..."
+	exit /b 0
+)
 REM First step: find Rainworld's folder
 set progfiles=C:/Program Files
 set progfiles86=C:/Program Files (x86)
