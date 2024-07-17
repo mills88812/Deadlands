@@ -1,0 +1,16 @@
+DangerType: None
+CeilingDrips: 0
+RainIntensity: 0
+RumbleIntensity: 0
+Clouds: 0.3
+Grime: 0.2
+BkgDroneVolume: 0.2
+RandomItemDensity: 0.3
+RandomItemSpearChance: 0.5
+WaveSpeed: 0.5
+WaterReflectionAlpha: 0.3
+Palette: 850
+EffectColorA: 15
+EffectColorB: 13
+Effects: HeatWave-0.1-20-20, SkyBloom-0.3-20-70, Wasp-0.05-270-20, FireFlies-0.05-270-70, DayNight-1.0-270-120, Dustpuffs-0.1-20-120, FairyParticles-1-270-170, 
+AmbientSounds: OMNI><AM_ENV-CityTone.ogg><754.1801><560.3835><0.3922106><0.6812496, OMNI><Noise Wind.wav><754.1801><560.3835><0.3922106><0.6812496,

@@ -1,3 +1,4 @@
 Template: DL_SettingsTemplate_Underground
-Effects: LightBurn-0.4456522-30-30, SkyBloom-0-40-40, 
+Effects: LightBurn-0-15.05937-73.2211, SkyBloom-0-466.3414-513.2977, 
 PlacedObjects: DayNightSettings><500><500><-100~20~33~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, TradeOutpost><437.4862><26.76569><0~100, LanternOnStick><714.8345><133.3932><-14.94061~-110.4889, LanternOnStick><657.2548><149.3781><31.3042~-126.8444, LanternOnStick><240.3683><171.8496><4.268738~-93.42221, LanternOnStick><287.7195><151.124><-23.47812~-72.8, 
+FadePalette: 851, 0.504594
