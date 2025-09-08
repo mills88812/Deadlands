@@ -36,7 +36,6 @@
     </ItemGroup>
 	
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-      <Exec Command="call symlinkHandler.bat" />
     </Target>
     
 </Project>

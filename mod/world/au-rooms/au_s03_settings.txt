@@ -1,0 +1,6 @@
+Template: NONE
+Clouds: 0.326087
+Grime: 0.2934783
+Palette: 851
+EffectColorA: 10
+EffectColorB: 6

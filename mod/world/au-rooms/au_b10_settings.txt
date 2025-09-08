@@ -1,0 +1,7 @@
+Template: NONE
+Grime: 0.1195652
+Palette: 851
+EffectColorA: 14
+EffectColorB: 6
+Effects: Contrast-0.02173913-20-20, 
+PlacedObjects: CustomDecal><468.1497><1037.673><-180~84~272~79~95~-28~313~18~0~1~0~crudegrey~0.2282609~0.25~0.326087~0.25~0.2391304~0.25~0.3043478~0.25, 
