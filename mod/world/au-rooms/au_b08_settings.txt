@@ -1,6 +1,0 @@
-Template: NONE
-Grime: 0.1630435
-Palette: 851
-EffectColorA: 14
-EffectColorB: 9
-Effects: Contrast-0.01086957-20-20, 

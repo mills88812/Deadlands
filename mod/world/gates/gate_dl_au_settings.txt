@@ -1,18 +1,3 @@
-Template: NONE
-DangerType: None
-RainIntensity: 0
-RumbleIntensity: 0
-WaveSpeed: 0.5
-WaveLength: 1
-WaveAmplitude: 0.001833237
-SecondWaveLength: 0.1666667
-SecondWaveAmplitude: 0
-Clouds: 0.2065217
-Grime: 0.1521739
-Palette: 851
-EffectColorA: 15
-EffectColorB: 6
-Effects: Dustpuffs-0.2065217-20-20, SkyBloom-0.3043478-30-30, HeatWave-0.05434782-40-40, DayNight-1-50-50, Darkness-0.4130435-316-89, Contrast-0.04347826-70-70, FairyParticles-0.2173913-80-80, 
-PlacedObjects: DayNightSettings><500><500><-670~-50~3~33, FairyParticleSettings><100><100><574~-441~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, CommonGateData><467.8521><328.6346><385.9999~-428~False~False~False~False~False~False~True~True~0.1195653~1~1, WaterGateData><430.588><597.8827><-403~-55~False~False~Hiddn~Hiddn, ExitSymbolShelter><915.2366><285.9496><, 
-AmbientSounds: SPOT><so_wat-splashes.ogg><716.5684><442.8337><0.2826087><1><568.5684><219.8337><-20.35535><-22.35535><0><0.1434784, OMNI><am_win-subwnd.ogg><403.8837><408.3373><0.3152178><1, OMNI><so_ind-boiler.ogg><357.0172><317.1992><0.1630435><0.5304348, OMNI><msc-wetconduits.ogg><279.8821><236.6501><0.1195652><0.6478261, OMNI><am_env-subterr.ogg><155.9218><485.8977><0.4347827><0.6478261, SPOT><am_env-natwind.ogg><717.3892><523.5835><0.4347826><1><357.3892><376.5835><-46.35535><-66.35535><0><0.154348, SPOT><am_env-lightwind.ogg><544.0457><513.3053><0.4565217><1><556.0457><374.3053><-59.35535><-62.35535><0><0.1434784, 
-FadePalette: 3, 0.4891304
+Template: DL_SettingsTemplate_Underground
+PlacedObjects: DayNightSettings><500><500><-100~20~2~33, FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, 
+FadePalette: 2, 0.15

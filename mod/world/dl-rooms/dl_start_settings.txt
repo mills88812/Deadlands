@@ -1,4 +1,4 @@
-Template: DL_SettingsTemplate_DustBowl
+Template: dl_settingstemplate_dustbowl
 DangerType: DesertAndSandstorm
 RainIntensity: 1
 WaveSpeed: 0.5
@@ -11,7 +11,7 @@ Palette: 18
 EffectColorA: 6
 EffectColorB: 6
 Effects: HeatWave-0.1521739-0-0, FairyParticles-0-20-20, 
-PlacedObjects: CustomDecal><274.2769><324.2091><5.799988~332.4001~341.4001~275.8666~341.9333~-16.19998~756~57.99998~0.2717391~1~0~zxidenbel_startdecal~1~0~1~0~1~0~1~0, ScavengerOutpost><540.1028><231.6145><53~292~-389~88~0.5978254~67~54, LanternOnStick><511.0718><386.9091><16~-130, LanternOnStick><716.5434><351.3048><-15~-108, MSArteryPush><1005.196><303.7105><-2~197, 
+PlacedObjects: CustomDecal><274.2769><324.2091><5.799988~332.4001~341.4001~275.8666~341.9333~-16.19998~756~57.99998~0.2717391~1~0~zxidenbel_startdecal~1~0~1~0~1~0~1~0, ScavengerOutpost><540.1028><231.6145><53~292~-356~167~0.5978254~67~54, LanternOnStick><511.0718><386.9091><16~-130, LanternOnStick><716.5434><351.3048><-15~-108, MSArteryPush><1005.196><303.7105><-2~197, Opal><2267.793><184.9843><, Opal><2453.673><264.9914><, Opal><2810.08><287.6259><, Opal><2914.153><303.5837><, Opal><2530.692><264.9617><, 
 FadePalette: 2, 0.223279, 0.223279, 0.223279
 BackgroundOffset: 0,811.5953
 BackgroundType: atc_dune

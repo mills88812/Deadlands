@@ -1,9 +1,0 @@
-Template: NONE
-Clouds: 0
-Grime: 0
-RandomItemDensity: 0
-Palette: 851
-EffectColorA: 14
-EffectColorB: 3
-Effects: Contrast-0.0326087-20-20, Darkness-0-30-30, 
-PlacedObjects: CustomDecal><363.723><937.1982><76~47~256~186~317~-61~476~129~0~1~0~hoko can~0.326087~0.5869565~0.326087~0.5869565~0.326087~0.5869565~0.326087~0.5869565, 

@@ -1,8 +1,0 @@
-Template: NONE
-Grime: 0.2370698
-Palette: 851
-EffectColorA: 1
-EffectColorB: 6
-Effects: Contrast-0.02006348-20-20, HeatWave-0.02319983-268-98, Flies-0.1391983-45.69168-95.46667, 
-PlacedObjects: InsectGroup><267.8991><451.0196><0~100~0~0~RockFlea~0.5, InsectGroup><679.6376><398.3929><50.51355~90.04443~0~0~RockFlea~0.5, CustomDecal><204.5511><316.5211><-40~99~171~121~198~-3~154~87~0~1~0~norgad liz~0.326087~0.3586957~0~0.3586957~0.02173913~0.3586957~0.3478261~0.3586957, 
-FadePalette: 13, 0

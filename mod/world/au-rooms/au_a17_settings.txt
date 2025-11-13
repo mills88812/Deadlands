@@ -1,8 +1,0 @@
-Template: NONE
-Clouds: 0.2826087
-Grime: 0.2717391
-Palette: 851
-EffectColorA: 14
-EffectColorB: 6
-Effects: WaterDepth-0.04347826-20-20, 
-PlacedObjects: AirPocket><380.6855><-1E+11><378.6365~1E+18~30~30~N~-459, LightBeam><488.3047><154.4569><-73~665~212~647~225~1~-355~-108~0.1173912~0.1521739~0~1~None~0~0, 
