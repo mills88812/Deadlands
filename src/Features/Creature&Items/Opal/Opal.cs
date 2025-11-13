@@ -16,6 +16,7 @@ namespace DeadlandsCreatures.Features.Opal
 {
     public class Opal : Weapon, IDrawable, IPlayerEdible
     {
+         
         public AbstractConsumable AbstrConsumable
         {
             get
@@ -164,25 +165,41 @@ namespace DeadlandsCreatures.Features.Opal
         }
         public void BitByPlayer(Creature.Grasp grasp, bool eu)
         {
-            bites--;
-            room.PlaySound(bites == 0 ? SoundID.Slugcat_Eat_Dangle_Fruit : SoundID.Slugcat_Bite_Dangle_Fruit, firstChunk.pos);
-            firstChunk.MoveFromOutsideMyUpdate(eu, grasp.grabber.mainBodyChunk.pos);
-            if (bites < 1)
+            if(Dead = false)
             {
-                (grasp.grabber as Player).ObjectEaten(this);
-                grasp.Release();
+                bites--;
+                room.PlaySound(bites == 0 ? SoundID.Slugcat_Eat_Dangle_Fruit : SoundID.Slugcat_Bite_Dangle_Fruit, firstChunk.pos);
+                firstChunk.MoveFromOutsideMyUpdate(eu, grasp.grabber.mainBodyChunk.pos);
+                if (bites < 1)
+                {
+                    (grasp.grabber as Player).ObjectEaten(this);
+                    grasp.Release();
 
 
+                    Destroy();
+                }
+            }
+            else
+            {
                 Destroy();
             }
         }
-        private bool ConnectedToStalk;
+        public bool Dead = false;
         public override void Update(bool eu)
         {
             base.Update(eu);
             var fc = firstChunk;
             if (stalk != null && grabbedBy.Count == 0)
             {
+                float t = room.world.rainCycle.AmountLeft;
+                if (t < 0.33f)
+                {
+                    Dead = true;
+                }
+                else
+                {
+                    Dead = false;
+                }
                 Vector2 targetPos = stalk.RootPos + (firstChunk.pos - stalk.RootPos).normalized * 0.1f;
                 firstChunk.pos = targetPos;
                 firstChunk.vel = Vector2.zero;
@@ -221,10 +238,12 @@ namespace DeadlandsCreatures.Features.Opal
             Futile.atlasManager.LoadImage("assets/Opal2");
             Futile.atlasManager.LoadImage("assets/Opal1");
             Futile.atlasManager.LoadImage("assets/Opal0");
-            sLeaser.sprites = new FSprite[3];
+            Futile.atlasManager.LoadImage("assets/OpalDead");
+            sLeaser.sprites = new FSprite[4];
             sLeaser.sprites[0] = new FSprite("assets/Opal1", true);
             sLeaser.sprites[1] = new FSprite("assets/Opal0", true);
             sLeaser.sprites[2] = new FSprite("assets/Opal2", true);
+            sLeaser.sprites[3] = new FSprite("assets/OpalDead");
             AddToContainer(sLeaser, rCam, null);
         }
         public virtual AbstractConsumable AbstrCons => (abstractPhysicalObject as AbstractConsumable)!;
@@ -245,7 +264,14 @@ namespace DeadlandsCreatures.Features.Opal
                 sLeaser.sprites[i].x = vector.x - camPos.x;
                 sLeaser.sprites[i].y = vector.y - camPos.y;
                 sLeaser.sprites[i].rotation = Custom.VecToDeg(v);
-                sLeaser.sprites[i].element = Futile.atlasManager.GetElementWithName("assets/Opal" + Custom.IntClamp(3 - bites, 0, 2).ToString());
+                if(Dead == false)
+                {
+                    sLeaser.sprites[i].element = Futile.atlasManager.GetElementWithName("assets/Opal" + Custom.IntClamp(3 - bites, 0, 2).ToString());
+                }
+                else
+                {
+                    sLeaser.sprites[i].element = Futile.atlasManager.GetElementWithName("assets/OpalDead");
+                }
             }
             if (blink > 0 && Random.value < 0.5f)
             {
