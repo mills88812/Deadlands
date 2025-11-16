@@ -1,0 +1,39 @@
+{"frames": {
+
+
+"Kill_Iguana.png":
+{
+	"frame": {"x":0,"y":0,"w":27,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":21},
+	"sourceSize": {"w":27,"h":21}
+},
+"Kill_Brown.png":
+{
+	"frame": {"x":26,"y":1,"w":31,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":18},
+	"sourceSize": {"w":31,"h":18}
+},
+"Kill_Buzzard.png":
+{
+	"frame": {"x":0,"y":21,"w":22,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":37},
+	"sourceSize": {"w":22,"h":37}
+},
+
+}
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "icon.png",
+	"format": "RGBA8888",
+	"size": {"w":57,"h":58},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:973378c2cb09336e50b99b24f9f25ab6:7fdaa0b1b36e0d28f35d253cba055c9f:9eaa3507303827772746237d9f0342b5$"
+}
+}

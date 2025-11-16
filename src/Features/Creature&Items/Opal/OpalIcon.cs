@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Fisobs.Core;
 using UnityEngine;
 
-namespace DeadlandsCreatures.Features.Opal
+namespace Deadlands.Features.Opal
 {
     public class OpalIcon : Icon
     {

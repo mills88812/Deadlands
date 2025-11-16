@@ -9,7 +9,7 @@ using Fisobs.Items;
 using Fisobs.Properties;
 using Fisobs.Sandbox;
 
-namespace DeadlandsCreatures.Features.Opal
+namespace Deadlands.Features.Opal
 {
     public class OpalCritob : Fisob
     {

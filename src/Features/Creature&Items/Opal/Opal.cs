@@ -12,7 +12,7 @@ using System.Globalization;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace DeadlandsCreatures.Features.Opal
+namespace Deadlands.Features.Opal
 {
     public class Opal : Weapon, IDrawable, IPlayerEdible
     {
@@ -73,7 +73,7 @@ namespace DeadlandsCreatures.Features.Opal
             }
             else
             {
-                Debug.LogWarning("Opal.PlaceInRoom: AbstrConsumable is null — falling back to default placement.");
+                Debug.LogWarning("Opal.PlaceInRoom: AbstrConsumable is null ï¿½ falling back to default placement.");
             }
 
             base.firstChunk.HardSetPosition(placeRoom.MiddleOfTile(this.abstractPhysicalObject.pos));

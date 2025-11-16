@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Fisobs.Properties;
 
-namespace DeadlandsCreatures.Features.Opal
+namespace Deadlands.Features.Opal
 {
     public class OpalProperties : ItemProperties
     {

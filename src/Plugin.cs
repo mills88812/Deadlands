@@ -1,15 +1,30 @@
 ﻿using BepInEx;
-using DeadlandsCreatures.Features.Opal;
+using Deadlands.Features.Opal;
 using Fisobs.Core;
-using Fisobs.Core;
+using Deadlands.Hooks;
+using System.Security.Permissions;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using BepInEx.Logging;
+using System.Security;
+
+// IMPORTANT
+// This requires Fisobs to work!
+// Big thx to Dual-Iron (on github) for help with Fisobs!
+// This code was based off of Dual-Iron's Centishield as practice, I didn't make parts of this! (Probably add more details on that later)
+
+#pragma warning disable CS0618 // Do not remove the following line.
+
+[module: UnverifiableCode]
+[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
+
 namespace Deadlands;
 
 [BepInPlugin(GUID: "DeadLands", "DeadLands", "0.1.2")]
 internal class Plugin : BaseUnityPlugin
 {
+    public static new ManualLogSource Logger { get; private set; } = null!;
     public const string MOD_ID = "DeadLands";
     public const string MOD_NAME = "DeadLands";
     public const string VERSION = "0.2.49.9.2";
@@ -18,6 +33,7 @@ internal class Plugin : BaseUnityPlugin
 
     private void OnEnable()
     {
+        Logger = base.Logger;
         On.Room.Loaded += Room_Loaded;
         Debug.LogWarning($"{MOD_NAME} is loading....");
         //custom Items and creatures
@@ -45,6 +61,7 @@ internal class Plugin : BaseUnityPlugin
             _initialized = true;
             //loadResources(self);
             DeadlandsEnums.Init();
+            DeadlandsEnums.RegisterEnums();
 
             LoadShaders();
 
@@ -64,7 +81,20 @@ internal class Plugin : BaseUnityPlugin
             MachineConnector.SetRegisteredOI("DeadLands", _options = new DeadlandsOptions());
 
             //creatures and items
+            CreatureHooks.Apply();
+
+            
             Futile.atlasManager.LoadImage("assets/OpalPlant");
+            if (!Futile.atlasManager.DoesContainAtlas("iguanahead"))
+            {
+                Futile.atlasManager.LoadAtlas("atlas/iguanahead");
+
+            }
+            if (!Futile.atlasManager.DoesContainAtlas("icon"))
+            {
+                Futile.atlasManager.LoadAtlas("atlas/icon");
+
+            }
 
 
         }
@@ -105,6 +135,17 @@ internal class Plugin : BaseUnityPlugin
             if (newlyDisabledMods[i].id == "DeadLands")
             {
                 DeadlandsEnums.Unregister();
+                if (MultiplayerUnlocks.CreatureUnlockList.Contains(UnlockID.Buzzard))
+                    MultiplayerUnlocks.CreatureUnlockList.Remove(UnlockID.Buzzard);
+                if (MultiplayerUnlocks.CreatureUnlockList.Contains(UnlockID.Iguana))
+                    MultiplayerUnlocks.CreatureUnlockList.Remove(UnlockID.Iguana);
+                if (MultiplayerUnlocks.CreatureUnlockList.Contains(UnlockID.BrownLizard))
+                    MultiplayerUnlocks.CreatureUnlockList.Remove(UnlockID.BrownLizard);
+                if (MultiplayerUnlocks.CreatureUnlockList.Contains(UnlockID.GlowLizard))
+                    MultiplayerUnlocks.CreatureUnlockList.Remove(UnlockID.GlowLizard);
+                DLCreature.UnregisterValues();
+                UnlockID.UnregisterValues();
+                return;
             }
             if (newlyDisabledMods[i].id == "moreslugcats")
             {
