@@ -1,0 +1,13 @@
+Template: NONE
+Clouds: 1
+Grime: 0
+Palette: 851
+TerrainLight: 1
+TerrainStainAmount: 0
+TerrainStainHeight: 0
+TerrainWaves: 0
+TerrainEdgeRadius: 104.0795
+TerrainGrain: 1
+TerrainDepth: 0.1329368
+TerrainSkyFade: 1
+TerrainPalette: tomb

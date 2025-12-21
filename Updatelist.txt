@@ -1,0 +1,13 @@
+DL Improvement Room List
+
+new room: DL_xyz (Discord)
+
+DL_hallway01
+DL_hallway02
+DL_12
+DL_09
+DL_Shaft
+DL_10 (semi-rework)
+DL_Start (rework)
+DL_32 (Glide Platform Update)
+DL_56

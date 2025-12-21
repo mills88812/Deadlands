@@ -1,0 +1,4 @@
+Template: DL_SettingsTemplate_Underground
+Clouds: 0.3043478
+PlacedObjects: FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, PlacedWind><299.4539><-11.8007><1.067169~6740.87~360.1564~6732.866~358.0219~-3.735157~0.6379912~Creatures~Vertical, PlacedWind><299.5477><-14.03047><1.067169~6740.87~360.1564~6732.866~358.0219~-3.735157~0.6379912~Visuals~Vertical, ParticleVisualCustomizer><493.6823><198.1913><100~50~FFFFFF~000000~FFFFFF~000000~242.7656^544.2657~Foreground~SkyDandelion~False~0~0~30~0~20~0~Basic~0.482065~0.4049257, OffscreenParticleSpawner><337.7207><103.3524><-105.9672~63.87341~0.1187134^74.82188~5~2~20~0~200~0~400~0~1~True~0~15~0~False, 
+FadePalette: 850, 0.75, 0.5, 0.25, 0, 0, 0, 0, 0, 0, 0

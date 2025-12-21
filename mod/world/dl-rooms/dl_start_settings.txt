@@ -1,3 +1,15 @@
-Template: DL_SettingsTemplate_DustBowl
-Effects: HeatWave-0.1521739-0-0, FairyParticles-0-20-20, 
-PlacedObjects: FairyParticleSettings><100><100><-250~100~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, CustomDecal><274.2769><324.2091><5.799988~332.4001~341.4001~275.8666~341.9333~-16.19998~756~57.99998~0.2717391~1~0~zxidenbel_startdecal~1~0~1~0~1~0~1~0, ScavengerOutpost><540.1028><231.6145><53~292~-389~88~0.5978254~67~54, LanternOnStick><511.0718><386.9091><16~-130, LanternOnStick><716.5434><351.3048><-15~-108, MSArteryPush><1005.196><303.7105><-2~197, 
+Template: dl_settingstemplate_mountain
+Palette: 99
+TerrainLight: 0
+TerrainStainAmount: 1
+TerrainStainHeight: 1
+TerrainWaves: 0.8641902
+TerrainEdgeRadius: 18.24022
+TerrainGooHeight: 0.07201087
+TerrainGrain: 0.5239974
+TerrainDepth: 0.0459224
+TerrainSkyFade: 1
+TerrainPalette: torrid_desert
+Effects: HeatWave-0.1521739-320.1563-310.018, FairyParticles-1-439.9383-490.6297, 
+PlacedObjects: FairyParticleSettings><100><100><220.6297~196.0469~0~1~1~0~1~1.4~60~500~40~100~5~30~0~360~0~0.2~0.15~0.25~0.05~0.15~1~0.1~8~Pixel~SIN_IO~SIN_IO~0~0~0, CustomDecal><274.2769><324.2091><5.799988~332.4001~341.4001~275.8666~341.9333~-16.19998~756~57.99998~0.2717391~1~0~zxidenbel_startdecal~1~0~1~0~1~0~1~0, ScavengerOutpost><540.1028><231.6145><53~292~-389~88~0.5978254~67~54, MSArteryPush><1005.196><303.7105><-2~197, FloatingDebris><490.0697><440.4873><-23.63593~-59.38672~364869982~1~30~0~0.2564014~100~-348.2789|2507.357~188.2007|168.9913~1.91936|1.194461~-0.1120547|-0.1067187~-1.398015|-0.9284533~Stardust~1~0.5442654v0.5922887v0v0|0.9231164v0.6349762v0v0~0, FloatingDebris><1265><208><-23.63593~-59.38672~930543481~1~30~0~0.2564014~100~-1053.156|2693.582~168.9914|40.9288~1.91936|1.194461~-0.1120547|-0.1067187~-1.403351|-1.53675~Stardust~1~0.8911014v0.7577028v0v0|-0.1067187v0.3735156v0v0~0, 
+TerrainFadePalette: badlands_2, 0.7017915, 0.7017915, 0.7017915
