@@ -143,6 +143,8 @@ internal class Plugin : BaseUnityPlugin
                     MultiplayerUnlocks.CreatureUnlockList.Remove(UnlockID.BrownLizard);
                 if (MultiplayerUnlocks.CreatureUnlockList.Contains(UnlockID.GlowLizard))
                     MultiplayerUnlocks.CreatureUnlockList.Remove(UnlockID.GlowLizard);
+                if (MultiplayerUnlocks.CreatureUnlockList.Contains(UnlockID.SaltWorm))
+                    MultiplayerUnlocks.CreatureUnlockList.Remove(UnlockID.SaltWorm);
                 DLCreature.UnregisterValues();
                 UnlockID.UnregisterValues();
                 return;

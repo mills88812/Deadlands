@@ -25,6 +25,14 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":37},
 	"sourceSize": {"w":22,"h":37}
 },
+"SanltBackShell.png":
+{
+	"frame": {"x":34,"y":33,"w":16,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":6,"y":0,"w":16,"h":25},
+	"sourceSize": {"w":16,"h":25}
+},
 
 }
 "meta": {

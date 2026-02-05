@@ -1,6 +1,7 @@
 ﻿using Deadlands.Creatures.Buzzard;
 using Deadlands.Creatures.CandleMouse;
 using Deadlands.Creatures.Iguana;
+using Deadlands.Creatures.SaltWorm;
 using System.Collections.Generic;
 
 namespace Deadlands.Hooks
@@ -576,7 +577,7 @@ namespace Deadlands.Hooks
             #endregion
 
             #region SaltWorm
-            /*
+            
             CreatureTemplate creatureTemplate15 = StaticWorld.GetCreatureTemplate(CreatureTemplate.Type.Centipede);
 
             if (creatureTemplate == null)
@@ -584,11 +585,13 @@ namespace Deadlands.Hooks
                 Debug.Log("Ancestor not found!");
             }
 
-            CreatureTemplate saltWorm = new CreatureTemplate(CreatureTemplate.Type.RedCentipede, creatureTemplate15, list2, list3, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Eats, 1f));
+            CreatureTemplate saltWorm = new CreatureTemplate(DLCreature.SaltWorm, creatureTemplate15, list2, list3, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Eats, 1f));
             saltWorm.baseDamageResistance = 1.5f;
             saltWorm.visualRadius = 1100f;
             saltWorm.communityInfluence = 0.25f;
+            saltWorm.lungCapacity = 9900f;
             saltWorm.meatPoints = 1;
+            saltWorm.pathingPreferencesTiles[9] = new PathCost(1f, PathCost.Legality.Allowed);
             saltWorm.shortcutColor = Color.white;
             saltWorm.shortcutSegments = 5;
             saltWorm.bodySize = 8.5f;
@@ -600,7 +603,8 @@ namespace Deadlands.Hooks
             saltWorm.throwAction = "Release";
             list2.Clear();
             list3.Clear();
-            */
+
+            StaticWorld.creatureTemplates[DLCreature.SaltWorm.Index] = saltWorm;
             #endregion
 
 
@@ -675,6 +679,13 @@ namespace Deadlands.Hooks
             StaticWorld.EstablishRelationship(DLCreature.CandleMouse, CreatureTemplate.Type.Scavenger, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Afraid, 0.4f));
 
             #endregion
+
+            #region SaltWorm
+
+            /*StaticWorld.EstablishRelationship(DLCreature.SaltWorm, WatcherEnums.CreatureTemplateType.SandGrub, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Eats, 0.2f));
+            StaticWorld.EstablishRelationship(DLCreature.SaltWorm, WatcherEnums.CreatureTemplateType.BigSandGrub, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Eats, 0.2f));*/
+
+            #endregion
             /*
             Plugin.Logger.LogFatal("OnInitStaticWorld SpinePlant");
             #region SpinePlant
@@ -689,12 +700,12 @@ namespace Deadlands.Hooks
             StaticWorld.EstablishRelationship(Type.SpinePlant, CreatureTemplate.Type.Deer, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Afraid, 0.2f));
 
             StaticWorld.EstablishRelationship(CreatureTemplate.Type.Slugcat, Type.SpinePlant, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Afraid, 1f));
-            #endregion
+            #endregion*/
             Plugin.Logger.LogFatal("OnInitStaticWorld SaltWorm");
             #region SaltWorm
             // Todo: Relationships
             #endregion
-            */
+            
         }
         #endregion
 
@@ -773,7 +784,10 @@ namespace Deadlands.Hooks
             {
                 self.state = new CandleState(self);
             }
-
+            if (creatureTemplate.type == DLCreature.SaltWorm && creatureTemplate.TopAncestor().type == CreatureTemplate.Type.Centipede)
+            {
+                self.state = new Centipede.CentipedeState(self);
+            }
             // Creature Abstract AI
 
             if (creatureTemplate.AI)
@@ -892,6 +906,10 @@ namespace Deadlands.Hooks
             if (self.creatureTemplate.type == DLCreature.GlowLizard)
             {
                 self.abstractAI.RealAI = new LizardAI(self, self.world);
+            }
+            if (self.creatureTemplate.type == DLCreature.SaltWorm)
+            {
+                self.abstractAI.RealAI = new CentipedeAI(self, self.world);
             }
             /*
             if (self.creatureTemplate.type == Type.CandleMouse)

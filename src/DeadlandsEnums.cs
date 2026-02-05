@@ -76,6 +76,7 @@ public class DLCreature
         Iguana = new CreatureTemplate.Type("IguanaLizard", true);
         BrownLizard = new CreatureTemplate.Type("BrownLizard", true);
         GlowLizard = new CreatureTemplate.Type("GlowLizard", true);
+        SaltWorm = new CreatureTemplate.Type("SaltWorm", true);
         // CandleMouse = new CreatureTemplate.Type("CandleMouse", true);
     }
     public static void UnregisterValues()
@@ -95,6 +96,10 @@ public class DLCreature
         if (GlowLizard != null)
         {
             GlowLizard.Unregister();
+        }
+        if (SaltWorm != null)
+        {
+            SaltWorm.Unregister();
         }
         /*
         if (CandleMouse != null)
@@ -120,6 +125,7 @@ public class UnlockID
         Iguana = new MultiplayerUnlocks.SandboxUnlockID("IguanaLizard", true);
         BrownLizard = new MultiplayerUnlocks.SandboxUnlockID("BrownLizard", true);
         GlowLizard = new MultiplayerUnlocks.SandboxUnlockID("GlowLizard", true);
+        SaltWorm = new MultiplayerUnlocks.SandboxUnlockID("SaltWorm", true);
         // CandleMouse = new CreatureTemplate.Type("CandleMouse", true);
     }
     public static void UnregisterValues()
@@ -139,6 +145,10 @@ public class UnlockID
         if (GlowLizard != null)
         {
             GlowLizard.Unregister();
+        }
+        if (SaltWorm != null)
+        {
+            SaltWorm.Unregister();
         }
         /*
         if (CandleMouse != null)
