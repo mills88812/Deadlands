@@ -1,5 +1,6 @@
 ﻿using Deadlands;
 using Deadlands.Creatures.SaltWorm;
+using MoreSlugcats;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -35,6 +36,8 @@ namespace Deadlands.Hooks
             On.Centipede.Act += OnCentipedeAct;
 
             On.Centipede.Violence += OnCentipedeViolence;
+            ///turn into IL later
+            On.Centipede.Shock += OnCentipedeShock;
 
             // CentipedeAI
 
@@ -48,6 +51,13 @@ namespace Deadlands.Hooks
 
         #region Centipede
 
+        public static StaticSoundLoop burrowSound;
+
+        public static StaticSoundLoop burrowDeepSound;
+
+        public static float burrowSoundSmooth;
+
+        public static bool burrowUpcoming = false;
         private static float OnGenerateSize(On.Centipede.orig_GenerateSize orig, AbstractCreature abstrCrit)
         {
             if (abstrCrit.creatureTemplate.type == DLCreature.SaltWorm)
@@ -135,7 +145,7 @@ namespace Deadlands.Hooks
                 float num = 0f;
                 if (self.room.terrain != null)
                 {
-                    num = Mathf.Clamp01((self.room.terrain.SnapToTerrain(self.HeadChunk.pos, false).y - self.HeadChunk.pos.y) / 200f);
+                    num = Mathf.Clamp01((self.room.terrain.SnapToTerrain(self.HeadChunk.pos, null, false).y - self.HeadChunk.pos.y) / 200f);
                 }
                 float num2 = 0f;
                 int num3 = 0;
@@ -196,13 +206,14 @@ namespace Deadlands.Hooks
                         self.bodyChunks[num7].burrow = flag6;
                     }
                 }
+                ///leap
                 /*if (!self.moving && self.AI.preyTracker.MostAttractivePrey != null && self.AI.preyTracker.MostAttractivePrey.representedCreature.realizedCreature != null && self.AI.preyTracker.MostAttractivePrey.representedCreature.realizedCreature.room == self.room && self.AI.preyTracker.MostAttractivePrey.VisualContact && self.grasps[0] == null && self.grasps[1] == null)
                 {
-                    //if (charging > 0f)
-                    //{
-                    //this.sitting = true;self
-                    //base.GoThroughFloors = false;
-                    //charging += 0.05f;
+                    if (charging > 0f)
+                    {
+                    this.sitting = true;self
+                    base.GoThroughFloors = false;
+                    charging += 0.05f;
                     for (int num7 = 0; num7 < self.bodyChunks.Length; num7++)
                     {
                         Vector2 a2 = Custom.DirVec(self.HeadChunk.pos, self.AI.preyTracker.MostAttractivePrey.representedCreature.realizedCreature.mainBodyChunk.pos);
@@ -215,9 +226,9 @@ namespace Deadlands.Hooks
 
 
                     }
-                    Attack(self);
+                     Attack(self);
                         
-                    //}
+                    }
                 }*/
                 /*self.gripPoint = null;
                 self.narrowUpcoming = false;*/
@@ -232,7 +243,7 @@ namespace Deadlands.Hooks
                 return;
             }
             Vector2 vector = Custom.DirVec(self.mainBodyChunk.pos, self.AI.preyTracker.MostAttractivePrey.representedCreature.realizedCreature.mainBodyChunk.pos);
-        
+           
                 Vector2 vector2 = self.AI.preyTracker.MostAttractivePrey.representedCreature.realizedCreature.mainBodyChunk.pos;
                 vector2 += new Vector2(0f, Mathf.InverseLerp(40f, 300f, Vector2.Distance(self.HeadChunk.pos, vector2)) * 40f);
                 if (!Custom.DistLess(self.HeadChunk.pos, vector2, Custom.LerpMap(Vector2.Dot(vector, Custom.DirVec(self.HeadChunk.pos, vector2)), -1f, 1f, 0f, 500f)))
@@ -276,7 +287,6 @@ namespace Deadlands.Hooks
         }
         private static void OnCentipedeViolence(On.Centipede.orig_Violence orig, Centipede self, BodyChunk source, Vector2? directionAndMomentum, BodyChunk hitChunk, PhysicalObject.Appendage.Pos hitAppendage, Creature.DamageType type, float damage, float stunBonus)
         {
-            orig(self, source, directionAndMomentum, hitChunk, hitAppendage, type, damage, stunBonus);
             if (self.Template.type == DLCreature.SaltWorm)
             {
                 if (hitChunk != null && hitChunk.index >= 0 && hitChunk.index < self.CentiState.shells.Length)
@@ -294,10 +304,84 @@ namespace Deadlands.Hooks
                                     self.room.AddObject(new SandPuffSpawner.SandPuff(hitChunk.pos, 8, 0f, true));
                                 }
                             }
+                            damage *= 0.05f;
                         }
                     }
                 }
             }
+            orig(self, source, directionAndMomentum, hitChunk, hitAppendage, type, damage, stunBonus);
+            
+        }
+        private static void OnCentipedeShock(On.Centipede.orig_Shock orig, Centipede self, PhysicalObject shockObj)
+        {
+            if (self.Template.type == DLCreature.SaltWorm)
+            {
+                if (shockObj.abstractPhysicalObject.rippleLayer != self.abstractPhysicalObject.rippleLayer && !shockObj.abstractPhysicalObject.rippleBothSides && !self.abstractPhysicalObject.rippleBothSides)
+                {
+                    return;
+                }
+
+                self.room.PlaySound(SoundID.Centipede_Shock, self.mainBodyChunk);
+                if (self.graphicsModule != null)
+                {
+                    (self.graphicsModule as SaltWormGraphics).lightFlash = 1f;
+                    for (int i = 0; i < (int)Mathf.Lerp(4f, 8f, self.size); i++)
+                    {
+                        self.room.AddObject(new Spark(self.HeadChunk.pos, Custom.RNV() * Mathf.Lerp(4f, 14f, UnityEngine.Random.value), new Color(0.7f, 0.7f, 1f), null, 8, 14));
+                    }
+                }
+
+                for (int j = 0; j < self.bodyChunks.Length; j++)
+                {
+                    self.bodyChunks[j].vel += Custom.RNV() * (6f * UnityEngine.Random.value);
+                    self.bodyChunks[j].pos += Custom.RNV() * (6f * UnityEngine.Random.value);
+                }
+
+                for (int k = 0; k < shockObj.bodyChunks.Length; k++)
+                {
+                    shockObj.bodyChunks[k].vel += Custom.RNV() * (6f * UnityEngine.Random.value);
+                    shockObj.bodyChunks[k].pos += Custom.RNV() * (6f * UnityEngine.Random.value);
+                }
+
+
+                if (shockObj is Creature)
+                {
+                    if (self.Small)
+                    {
+                        (shockObj as Creature).Stun(120);
+                        self.room.AddObject(new CreatureSpasmer(shockObj as Creature, allowDead: false, (shockObj as Creature).stun));
+                        (shockObj as Creature).LoseAllGrasps();
+                    }
+                    else if (shockObj.TotalMass < self.TotalMass)
+                    {
+                        if (ModManager.MSC && shockObj is Player && (shockObj as Player).SlugCatClass == MoreSlugcatsEnums.SlugcatStatsName.Artificer)
+                        {
+                            (shockObj as Player).PyroDeath();
+                        }
+                        else
+                        {
+                            (shockObj as Creature).Die();
+                            self.room.AddObject(new CreatureSpasmer(shockObj as Creature, allowDead: true, (int)Mathf.Lerp(70f, 120f, self.size)));
+                        }
+                    }
+                    else
+                    {
+                        (shockObj as Creature).Stun((int)Custom.LerpMap(shockObj.TotalMass, 0f, self.TotalMass * 2f, 300f, 30f));
+                        self.room.AddObject(new CreatureSpasmer(shockObj as Creature, allowDead: false, (shockObj as Creature).stun));
+                        (shockObj as Creature).LoseAllGrasps();
+                        self.Stun(6);
+                        self.shockGiveUpCounter = Math.Max(self.shockGiveUpCounter, 30);
+                        self.AI.annoyingCollisions = Math.Min(self.AI.annoyingCollisions / 2, 150);
+                    }
+                }
+
+                if (shockObj.Submersion > 0f)
+                {
+                    self.room.AddObject(new UnderwaterShock(self.room, self, self.HeadChunk.pos, 14, Mathf.Lerp(ModManager.MMF ? 0f : 200f, 1200f, self.size), 0.2f + 1.9f * self.size, self, new Color(0.7f, 0.7f, 1f)));
+                }
+            } else
+                orig(self, shockObj);
+
         }
 
         #endregion
@@ -335,7 +419,7 @@ namespace Deadlands.Hooks
                 {
                     cost.resistance += 5f;
                 }
-                int num2 = (int)(self.centipede.room.terrain.SnapToTerrain(coord.destinationCoord.Vec2(), false).y / 20f);
+                int num2 = (int)(self.centipede.room.terrain.SnapToTerrain(coord.destinationCoord.Vec2(), null,false).y / 20f);
                 if (coord.destinationCoord.y <= num2 && Custom.ManhattanDistance(coord.destinationCoord, self.pathFinder.GetDestination) > 5)
                 {
                     cost.resistance += Mathf.Lerp(7f, 0f, Mathf.Min((float)(num2 - coord.destinationCoord.y), 4f) / 4f);

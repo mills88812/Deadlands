@@ -145,33 +145,7 @@ namespace Deadlands.Creatures.SaltWorm
                 bodyRotations[i, 0] = Custom.DegToVec(defaultRotat);
                 bodyRotations[i, 1] = Custom.DegToVec(defaultRotat);
             }
-
-            if (centipede.AquaCenti)
-            {
-                wingPairs = centipede.bodyChunks.Length;
-                hue = Mathf.Lerp(-0.02f, 0.01f, UnityEngine.Random.value);
-                saturation = 0.3f + 0.1f * UnityEngine.Random.value;
-                wingLengths = new float[totSegs];
-                for (int k = 0; k < totSegs; k++)
-                {
-                    float num4 = (float)k / (float)(totSegs - 1);
-                    float num5 = Mathf.Sin(Mathf.Pow(Mathf.InverseLerp(0.4f, 0f, num4), 0.75f) * (float)Math.PI);
-                    num5 *= 1f - num4;
-                    float num6 = Mathf.Cos(Mathf.Pow(Mathf.InverseLerp(0.6f, 0.4f, num4), 0.75f) * (float)Math.PI);
-                    num6 *= num4;
-                    num5 = 0.5f + 0.5f * num5;
-                    num6 = 0.5f + 0.5f * num6;
-                    wingLengths[k] = Mathf.Lerp(3f, Custom.LerpMap(centipede.size, 0.5f, 1f, 100f, 130f), Mathf.Max(num5, num6)) * 0.75f;
-                    wingLengths[k] = Mathf.Clamp(wingLengths[k], 60f, 80f);
-                }
-            }
-            else if (centipede.Red)
-            {
-                wingPairs = centipede.bodyChunks.Length;
-                hue = Mathf.Lerp(-0.02f, 0.01f, UnityEngine.Random.value);
-                saturation = 0.9f + 0.1f * UnityEngine.Random.value;
-            }
-            else if (ModManager.DLCShared && centipede.Small && centipede.abstractCreature.superSizeMe)
+            if (ModManager.DLCShared && centipede.Small && centipede.abstractCreature.superSizeMe)
             {
                 hue = Mathf.Lerp(0.28f, 0.38f, UnityEngine.Random.value);
                 saturation = 0.85f;
@@ -532,15 +506,6 @@ namespace Deadlands.Creatures.SaltWorm
                 }
             }
 
-            if (centipede.Red)
-            {
-                for (int num3 = 0; num3 < wingPairs; num3++)
-                {
-                    sLeaser.sprites[WingSprite(1, num3)] = new FSprite("CentipedeSegment");
-                    sLeaser.sprites[WingSprite(0, num3)] = new FSprite("Cicada8body");
-                    sLeaser.sprites[WingSprite(0, num3)].anchorY = 0.55f;
-                }
-            }
 
             AddToContainer(sLeaser, rCam, null);
             base.InitiateSprites(sLeaser, rCam);
@@ -617,14 +582,6 @@ namespace Deadlands.Creatures.SaltWorm
                 (sLeaser.sprites[TubeSprite] as TriangleMesh).MoveVertice(i * 4 + 3, vector3 + vector5 * num5 - normalized2 * num3 - camPos);
                 float num6 = Mathf.Clamp(Mathf.Sin(num * (float)Math.PI), 0f, 1f);
                 num6 *= Mathf.Lerp(1f, 0.5f, centipede.size);
-                if (centipede.Centiwing)
-                {
-                    num6 = Mathf.Lerp(0.6f, 0.3f, Mathf.Pow(Mathf.Clamp(Mathf.Sin(num * (float)Math.PI), 0f, 1f), 2f));
-                }
-                else if (centipede.AquaCenti)
-                {
-                    num6 = Mathf.Lerp(0.8f, 0.2f, Mathf.Pow(Mathf.Clamp(Mathf.Sin(num * (float)Math.PI), 0f, 1f), 2f));
-                }
 
                 sLeaser.sprites[SegmentSprite(i)].x = vector3.x - camPos.x;
                 sLeaser.sprites[SegmentSprite(i)].y = vector3.y - camPos.y;
@@ -687,63 +644,6 @@ namespace Deadlands.Creatures.SaltWorm
                     sLeaser.sprites[SecondarySegmentSprite(i - 1)].y = Mathf.Lerp(vector2.y, vector3.y, 0.5f) - camPos.y;
                     sLeaser.sprites[SecondarySegmentSprite(i - 1)].rotation = Custom.VecToDeg(Vector3.Slerp(vector, normalized2, 0.5f));
                     sLeaser.sprites[SecondarySegmentSprite(i - 1)].scaleX = base.owner.bodyChunks[i].rad * Mathf.Lerp(0.9f, Mathf.Lerp(1.1f, 0.8f, Mathf.Abs(normalized.x)), num6) * 2f;
-                }
-
-                if (centipede.Red)
-                {
-                    Vector2 vector6 = Custom.DegToVec(Custom.VecToDeg(normalized) + ((normalized.x > 0f) ? (-90f) : 90f));
-                    if (vector6.y > 0f && centipede.CentiState.shells[i])
-                    {
-                        sLeaser.sprites[WingSprite(1, i)].isVisible = true;
-                        sLeaser.sprites[WingSprite(1, i)].scaleX = base.owner.bodyChunks[i].rad * Mathf.Lerp(1f, Mathf.Lerp(1.5f, 0.9f, Mathf.Abs(vector6.x)), num6) * 0.7f * vector6.y * (1f / 14f);
-                        sLeaser.sprites[WingSprite(1, i)].scaleY = base.owner.bodyChunks[i].rad * 1.2f * (1f / 11f);
-                        float num8 = Mathf.InverseLerp(-0.5f, 0.5f, Vector3.Dot(normalized2, Custom.DegToVec(30f) * vector6.x));
-                        num8 *= Mathf.Max(Mathf.InverseLerp(0.3f, 0.05f, Mathf.Abs(-0.5f - vector6.x)), Mathf.InverseLerp(0.3f, 0.05f, Mathf.Abs(0.5f - vector6.x)));
-                        num8 *= Mathf.Pow(1f - darkness, 2f);
-                        if (centipede.abstractCreature.IsVoided())
-                        {
-                            sLeaser.sprites[WingSprite(1, i)].color = Color.Lerp(RainWorld.SaturatedGold, blackColor, 0.3f + 0.7f * darkness * (1f - num8));
-                        }
-                        else
-                        {
-                            sLeaser.sprites[WingSprite(1, i)].color = Color.Lerp(Custom.HSL2RGB(hue, saturation, 0.5f + 0.25f * num8), blackColor, 0.3f + 0.7f * darkness * (1f - num8));
-                        }
-
-                        sLeaser.sprites[WingSprite(1, i)].x = (vector3 + Custom.PerpendicularVector(normalized2) * vector6.x * base.owner.bodyChunks[i].rad * 1.2f).x - camPos.x;
-                        sLeaser.sprites[WingSprite(1, i)].y = (vector3 + Custom.PerpendicularVector(normalized2) * vector6.x * base.owner.bodyChunks[i].rad * 1.2f).y - camPos.y;
-                        sLeaser.sprites[WingSprite(1, i)].rotation = Custom.VecToDeg((vector2 - vector4).normalized);
-                    }
-                    else
-                    {
-                        sLeaser.sprites[WingSprite(1, i)].isVisible = false;
-                    }
-
-                    if (centipede.CentiState.shells[i])
-                    {
-                        sLeaser.sprites[WingSprite(0, i)].isVisible = true;
-                        float num9 = Mathf.Pow(Mathf.Abs(normalized.x), 0.5f) * Mathf.Sign(normalized.x);
-                        sLeaser.sprites[WingSprite(0, i)].x = (vector3 + Custom.PerpendicularVector(normalized2) * num9 * base.owner.bodyChunks[i].rad * 1.1f).x - camPos.x;
-                        sLeaser.sprites[WingSprite(0, i)].y = (vector3 + Custom.PerpendicularVector(normalized2) * num9 * base.owner.bodyChunks[i].rad * 1.1f).y - camPos.y;
-                        sLeaser.sprites[WingSprite(0, i)].rotation = Custom.VecToDeg(Vector3.Slerp((num < 0.5f) ? normalized2 : (-normalized2), Custom.PerpendicularVector(normalized2) * Mathf.Sign(num9), 0.3f + 0.7f * Mathf.Sin(num * (float)Math.PI)));
-                        float num10 = Mathf.InverseLerp(-0.5f, 0.5f, Vector3.Dot(normalized2, Custom.DegToVec(30f) * normalized.x));
-                        num10 *= Mathf.Max(Mathf.InverseLerp(0.3f, 0.05f, Mathf.Abs(-0.5f - normalized.x)), Mathf.InverseLerp(0.3f, 0.05f, Mathf.Abs(0.5f - normalized.x)));
-                        num10 *= Mathf.Pow(1f - darkness, 2f);
-                        if (centipede.abstractCreature.IsVoided())
-                        {
-                            sLeaser.sprites[WingSprite(0, i)].color = Color.Lerp(RainWorld.SaturatedGold, blackColor, darkness);
-                        }
-                        else
-                        {
-                            sLeaser.sprites[WingSprite(0, i)].color = Color.Lerp(Custom.HSL2RGB(hue, saturation, 0.5f + 0.25f * num10), blackColor, darkness);
-                        }
-
-                        sLeaser.sprites[WingSprite(0, i)].scaleY = Mathf.Abs(num9) * Mathf.Lerp(-0.25f, -0.6f, Mathf.Sin(num * (float)Math.PI));
-                        sLeaser.sprites[WingSprite(0, i)].scaleX = Mathf.Lerp(0.15f, 0.25f, Mathf.Sin(num * (float)Math.PI));
-                    }
-                    else
-                    {
-                        sLeaser.sprites[WingSprite(0, i)].isVisible = false;
-                    }
                 }
 
                 vector2 = vector3;
@@ -867,10 +767,6 @@ namespace Deadlands.Creatures.SaltWorm
                     float b = Mathf.InverseLerp(0.85f, 1f, Vector2.Dot(lhs2, Custom.DegToVec(45f))) * Mathf.Abs(Vector2.Dot(Custom.DegToVec(45f + Custom.VecToDeg(vector17)), -vector15));
                     a = Mathf.Pow(Mathf.Max(a, b), 0.5f);
                     float num17 = 2f;
-                    if (centipede.AquaCenti)
-                    {
-                        num17 = 5f;
-                    }
 
                     (sLeaser.sprites[WingSprite(m, num16)] as CustomFSprite).MoveVertice(1, vector18 + vector15 * num17 - camPos);
                     (sLeaser.sprites[WingSprite(m, num16)] as CustomFSprite).MoveVertice(0, vector18 - vector15 * num17 - camPos);
@@ -903,11 +799,6 @@ namespace Deadlands.Creatures.SaltWorm
             Vector2 b = (dr * Mathf.Lerp(1f, -1f, t) + Vector2.Lerp(prp * ((side == 0) ? (-1f) : 1f) * chunkRotat.y, prp * (0f - chunkRotat.x), Mathf.Abs(chunkRotat.x))) * 0.5f;
             a = Vector2.Lerp(a, b, Mathf.Lerp(lastWingsFolded, wingsFolded, timeStacker));
             Vector2 vector2 = ChunkDrawPos(wing, timeStacker);
-            if (centipede.AquaCenti)
-            {
-                Vector2 vector3 = Custom.PerpendicularVector(vector2, vector2 + a) * Mathf.Cos((Mathf.Lerp(lastWingSwimCycle, wingSwimCycle, timeStacker) + (float)wing * Custom.LerpMap(chunkRotat.y, -1f, 1f, 1.8f, 0.6f)) * (float)Math.PI * 0.3f) * (wingLengths[wing] / 4f);
-                return vector2 + a * wingLengths[wing] + vector3;
-            }
 
             return vector2 + a * wingLengths[wing];
         }

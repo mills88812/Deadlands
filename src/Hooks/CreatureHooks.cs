@@ -586,7 +586,7 @@ namespace Deadlands.Hooks
             }
 
             CreatureTemplate saltWorm = new CreatureTemplate(DLCreature.SaltWorm, creatureTemplate15, list2, list3, new CreatureTemplate.Relationship(CreatureTemplate.Relationship.Type.Eats, 1f));
-            saltWorm.baseDamageResistance = 1.5f;
+            saltWorm.baseDamageResistance = 1f;
             saltWorm.visualRadius = 1100f;
             saltWorm.communityInfluence = 0.25f;
             saltWorm.lungCapacity = 9900f;
