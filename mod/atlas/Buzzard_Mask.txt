@@ -1,0 +1,89 @@
+{"frames": {
+
+
+"Buzard_Mask0.png":
+{
+	"frame": {"x":1,"y":1,"w":59,"h":59},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":59},
+	"sourceSize": {"w":59,"h":59}
+},
+"Buzard_Mask1.png":
+{
+	"frame": {"x":62,"y":1,"w":59,"h":59},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":59},
+	"sourceSize": {"w":59,"h":59}
+},
+"Buzard_Mask2.png":
+{
+	"frame": {"x":123,"y":1,"w":59,"h":59},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":59},
+	"sourceSize": {"w":59,"h":59}
+},
+"Buzard_Mask3.png":
+{
+	"frame": {"x":184,"y":1,"w":59,"h":59},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":59},
+	"sourceSize": {"w":59,"h":59}
+},
+"Buzard_Mask4.png":
+{
+	"frame": {"x":245,"y":1,"w":59,"h":59},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":59},
+	"sourceSize": {"w":59,"h":59}
+},
+"Buzard_Mask5.png":
+{
+	"frame": {"x":306,"y":1,"w":59,"h":59},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":59},
+	"sourceSize": {"w":59,"h":59}
+},
+"Buzard_Mask6.png":
+{
+	"frame": {"x":367,"y":1,"w":59,"h":59},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":59},
+	"sourceSize": {"w":59,"h":59}
+},
+"Buzard_Mask7.png":
+{
+	"frame": {"x":428,"y":1,"w":59,"h":59},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":59},
+	"sourceSize": {"w":59,"h":59}
+},
+
+"Buzard_Mask8.png":
+{
+	"frame": {"x":489,"y":1,"w":59,"h":59},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":59},
+	"sourceSize": {"w":59,"h":59}
+}
+
+
+}
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Buzard_Mask.png",
+	"format": "RGBA8888",
+	"size": {"w":549,"h":61},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:973378c2cb09336e50b99b24f9f25ab6:7fdaa0b1b36e0d28f35d253cba055c9f:9eaa3507303827772746237d9f0342b5$"
+}
+}

@@ -95,7 +95,16 @@ internal class Plugin : BaseUnityPlugin
                 Futile.atlasManager.LoadAtlas("atlas/icon");
 
             }
+            if (!Futile.atlasManager.DoesContainAtlas("Buzzard_Mask"))
+            {
+                Futile.atlasManager.LoadAtlas("atlas/Buzzard_Mask");
 
+            }
+            if (!Futile.atlasManager.DoesContainAtlas("Buzzard_Mask"))
+            {
+                Futile.atlasManager.LoadAtlas("atlas/Buzzard_Mask");
+            }
+            
 
         }
         catch (Exception ex)

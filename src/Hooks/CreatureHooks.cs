@@ -852,7 +852,7 @@ namespace Deadlands.Hooks
                     // Creature Realization
                     if (abstractCreature.creatureTemplate.TopAncestor().type == DLCreature.Buzzard)
                     {
-                        abstractCreature.realizedCreature = new Buzzard(abstractCreature, abstractCreature.world);
+                        abstractCreature.realizedCreature = new Vulture(abstractCreature, abstractCreature.world);
                     }
                     if (abstractCreature.creatureTemplate.TopAncestor().type == DLCreature.Iguana)
                     {

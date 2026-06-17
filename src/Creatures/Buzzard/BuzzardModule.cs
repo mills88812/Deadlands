@@ -3,6 +3,7 @@ using System;
 using System.Numerics;
 using System.Reflection;
 using UnityEngine;
+using static Watcher.FireSpriteGraphics;
 using Vector2 = UnityEngine.Vector2;
 using Random = UnityEngine.Random;
 
@@ -18,6 +19,7 @@ namespace Deadlands.Creatures.Buzzard
 
         public float panic;
         public float wantsToThrowSpear;
+        public int coudldown =0;
 
         public VultureGraphics graphics
         {
@@ -38,20 +40,24 @@ namespace Deadlands.Creatures.Buzzard
         public BuzzardModule(Vulture vulture)
         {
             owner = vulture;
+
+            grabChunk = owner.Head();
+            wantToGrabChunk = owner.Head();
         }
 
         public bool Weaponized()
         {
             if (owner.State.alive)
             {
-                if (this.wantToGrabChunk != null && this.wantToGrabChunk.owner is Weapon)
+                /*if (this.wantToGrabChunk != null && this.wantToGrabChunk.owner is Weapon)
+                {
+                    return true;
+                }*/
+                if (owner.grasps[0].grabbedChunk != null && owner.grasps[0].grabbedChunk.owner is Weapon)
                 {
                     return true;
                 }
-                if (this.grabChunk != null && this.grabChunk.owner is Weapon)
-                {
-                    return true;
-                }
+                       
             }
             return false;
         }
@@ -60,31 +66,39 @@ namespace Deadlands.Creatures.Buzzard
         /// </summary>
         public void Act(Vulture self)
         {
-            if (wantToGrabChunk != null)
+            if (coudldown>=0)
             {
-                Debug.Log("wantToGrabChunk != null");
-                if (wantToGrabChunk.owner.room != owner.room)
+                coudldown--;
+            }
+            if (AI.focusWepon != null && self.grasps[0] == null && coudldown<=0 && this.AI.preyTracker.MostAttractivePrey != null && !this.AI.preyTracker.MostAttractivePrey.representedCreature.realizedCreature.dead)
+            {
+                //Debug.Log("wantToGrabChunk != null");
+                if (AI.focusWepon.representedItem.realizedObject.room != owner.room)
                 {
                     Debug.Log("wantToGrabChunk not in same room");
-                    wantToGrabChunk = null;
+                    AI.focusWepon = null;
                 }
                 else
                 {
-                    if (Vector2.Distance(owner.neck.Tip.pos, wantToGrabChunk.pos) < 25)
+                    
+                    if (Custom.DistLess(owner.Head().pos, AI.focusWepon.representedItem.realizedObject.bodyChunks[0].pos, AI.focusWepon.representedItem.realizedObject.bodyChunks[0].rad + 30f) && (Custom.DistLess(owner.Head().pos, AI.focusWepon.representedItem.realizedObject.bodyChunks[0].pos, AI.focusWepon.representedItem.realizedObject.bodyChunks[0].rad + 15f) || owner.room.VisualContact(owner.bodyChunks[0].pos, AI.focusWepon.representedItem.realizedObject.bodyChunks[0].pos)))
                     {
-                        grabChunk = wantToGrabChunk;
-                        if (grabChunk.owner is Player)
+                        Debug.Log("Stean222");
+                        owner.Grab(AI.focusWepon.representedItem.realizedObject, 0, 0, Creature.Grasp.Shareability.CanOnlyShareWithNonExclusive, 1f, true, true);
+                        grabChunk = AI.focusWepon.representedItem.realizedObject.bodyChunks[0];
+                        if (self.grasps[0].grabbedChunk.owner is Player)
                         {
-                            owner.room.PlaySound(SoundID.Vulture_Grab_Player, grabChunk.pos);
+                            owner.room.PlaySound(SoundID.Vulture_Grab_Player, AI.focusWepon.representedItem.realizedObject.bodyChunks[0].pos);
                         }
-                        else if (grabChunk.owner is Weapon)
+                        else if (self.grasps[0].grabbedChunk.owner is Weapon)
                         {
-                            owner.room.PlaySound(SoundID.Slugcat_Pick_Up_Spear, this.grabChunk.pos);
-                            if (grabChunk.owner is Spear)
+                            Debug.Log("Stean333");
+                            owner.room.PlaySound(SoundID.Slugcat_Pick_Up_Spear, AI.focusWepon.representedItem.realizedObject.bodyChunks[0].pos);
+                            if (self.grasps[0].grabbedChunk.owner is Spear)
                             {
-                                (grabChunk.owner as Spear).PulledOutOfStuckObject();
-                                (grabChunk.owner as Spear).PickedUp(owner);
-                                (grabChunk.owner as Spear).ChangeMode(Weapon.Mode.Free);
+                                (self.grasps[0].grabbedChunk.owner as Spear).PulledOutOfStuckObject();
+                                (self.grasps[0].grabbedChunk.owner as Spear).PickedUp(owner);
+                                (self.grasps[0].grabbedChunk.owner as Spear).ChangeMode(Weapon.Mode.Free);
                             }
                         }
                         else
@@ -92,8 +106,6 @@ namespace Deadlands.Creatures.Buzzard
                             owner.room.PlaySound(SoundID.Vulture_Grab_NPC, grabChunk.pos);
                         }
                         wantToGrabChunk = null;
-                        grabChunk.pos = owner.Head().pos + Custom.DirVec(owner.neck.Tip.pos, owner.Head().pos) * 5f;
-                        grabChunk.vel *= 0f;
                     }
                     else if (Weaponized() && Vector2.Distance(owner.mainBodyChunk.pos, wantToGrabChunk.pos) > 800f)
                     {
@@ -120,24 +132,22 @@ namespace Deadlands.Creatures.Buzzard
                     }
                 }
             }
-            else if (grabChunk != null && grabChunk.owner.room != owner.room)
+            else if (self.grasps[0].grabbedChunk != null && self.grasps[0].grabbedChunk.owner.room != owner.room)
             {
-                Debug.Log("grabChunk != null && grabChunk.owner.room != owner.room");
-                grabChunk = null;
+                Debug.Log("self.grasps[0].grabbedChunk != null && self.grasps[0].grabbedChunk.owner.room != owner.room");
+                self.grasps[0] = null;
                 owner.neck.floatGrabDest = null;
             }
-            else if (grabChunk != null)
+            else if(self.grasps[0].grabbedChunk.owner is Weapon)
             {
-                Debug.Log("grabChunk != null");
-                grabChunk.owner.AllGraspsLetGoOfThisObject(true);
+                Debug.Log("self.grasps[0].grabbedChunk != null");
                 wantToGrabChunk = null;
-                grabChunk.pos = owner.Head().pos;
-                grabChunk.vel *= 0f;
                 if (Weaponized())
                 {
-                    if (grabChunk.owner is Spear)
+                    //Debug.Log("Weaponized is active");
+                    if (self.grasps[0].grabbedChunk.owner is Spear)
                     {
-                        (grabChunk.owner as Spear).setRotation = new Vector2?(Custom.PerpendicularVector(Custom.DirVec(owner.neck.tChunks[owner.neck.tChunks.Length - 2].lastPos, owner.neck.Tip.lastPos)));
+                        (self.grasps[0].grabbedChunk.owner as Spear).setRotation = new Vector2?(-Custom.DirVec(owner.neck.tChunks[owner.neck.tChunks.Length - 2].lastPos, owner.neck.Tip.lastPos));
                     }
                     Creature creature = null;
                     Vector2 vector = Vector2.zero;
@@ -150,52 +160,22 @@ namespace Deadlands.Creatures.Buzzard
                     }
                     if (creature != null)
                     {
-                        Vector2 vector2 = vector;
+                        if (creature.dead)
+                        {
+                            self.grasps[0] = null;
+                        }
                         if (room == owner.room.abstractRoom.index)
                         {
                             Vector2 pos = owner.neck.Tip.pos;
-                            Vector2 a = Custom.DirVec(grabChunk.pos, vector2);
-                            if (owner.neck.floatGrabDest == null)
-                            {
-                                owner.neck.Tip.vel += a * -40f;
-                                if (Vector2.Distance(grabChunk.pos, owner.mainBodyChunk.pos) > 80f && Vector2.Distance(grabChunk.pos, vector2) < Vector2.Distance(vector2, owner.mainBodyChunk.pos))
+                                if ((!self.AirBorne || Random.value < 0.016666668f) && self.snapFrames == 0 && !self.safariControlled && Custom.DistLess(self.mainBodyChunk.pos, creature.abstractCreature.realizedCreature.bodyChunks[Random.Range(0, creature.abstractCreature.realizedCreature.bodyChunks.Length)].pos, 520f) && self.room.VisualContact(self.bodyChunks[4].pos, creature.abstractCreature.realizedCreature.bodyChunks[Random.Range(0, creature.abstractCreature.realizedCreature.bodyChunks.Length)].pos))
                                 {
-                                    if (owner.neck.Tip.vel.magnitude > 25f)
-                                    {
-                                        IntVector2 intVector = IntVector2.FromVector2(a.normalized * 2f);
-                                        intVector = IntVector2.ClampAtOne(intVector);
-                                        if (intVector.x != 0 || intVector.y != 0)
-                                        {
-                                            string str = "Buzzard throw weapon ";
-                                            PhysicalObject objectOwner = grabChunk.owner;
-                                            Debug.Log(str + ((owner != null) ? owner.ToString() : null));
-                                            string str2 = "Dir ";
-                                            IntVector2 intVector2 = intVector;
-                                            Debug.Log(str2 + intVector2.ToString());
-                                            (grabChunk.owner as Weapon).Thrown(owner, this.grabChunk.pos, new Vector2?(this.grabChunk.pos - intVector.ToVector2() * 15f), intVector, 1f, true);
-                                            this.grabChunk = null;
-                                            this.wantToGrabChunk = null;
-                                        }
-                                    }
-                                    else
-                                    {
-                                        owner.neck.floatGrabDest = null;
-                                    }
+                                    Debug.Log("Steap4");
+                                    owner.Snap(creature.abstractCreature.realizedCreature.bodyChunks[Random.Range(0, creature.abstractCreature.realizedCreature.bodyChunks.Length)]);
+                                    
                                 }
-                            }
-                            else if ((Vector2.Distance(grabChunk.pos, owner.mainBodyChunk.pos) > 80f && owner.room.RayTraceTilesForTerrain(IntVector2.FromVector2(pos / 20f).x, IntVector2.FromVector2(pos / 20f).y, IntVector2.FromVector2(grabChunk.pos / 20f).x, IntVector2.FromVector2(grabChunk.pos / 20f).y) && Vector2.Distance(grabChunk.pos, vector2) > Vector2.Distance(vector2, grabChunk.pos)) || Vector2.Distance(grabChunk.pos, vector2) < 10f)
-                            {
-                                owner.neck.floatGrabDest = null;
-                                owner.neck.tChunks[owner.neck.tChunks.Length - 1].vel += a * 80f;
-                                owner.neck.tChunks[owner.neck.tChunks.Length - 2].vel += a * 80f;
-                                owner.neck.tChunks[owner.neck.tChunks.Length - 3].vel += a * 80f;
-                                owner.neck.tChunks[owner.neck.tChunks.Length - 4].vel += a * 80f;
-                                owner.neck.tChunks[owner.neck.tChunks.Length - 5].vel += a * 80f;
-                            }
-                            else
-                            {
-                                owner.neck.floatGrabDest = new Vector2?(owner.mainBodyChunk.pos + a * -80f);
-                            }
+                               
+                                
+                          
                         }
                         else
                         {
@@ -204,7 +184,29 @@ namespace Deadlands.Creatures.Buzzard
                     }
                     else if (Random.value < 0.01f && !owner.safariControlled)
                     {
-                        grabChunk = null;
+                        self.grasps[0] = null;
+                    }
+
+                    Vector2 vector2 = vector;
+                    Vector2 a = Custom.DirVec(self.grasps[0].grabbedChunk.pos, vector2);
+                    if (self.snapFrames <= 7 && self.snapFrames > 0)
+                    {
+                        Debug.Log("Steap5");
+                        IntVector2 intVector = IntVector2.FromVector2(a.normalized * 2f);
+                        if (intVector.x != 0 || intVector.y != 0)
+                        {
+                            string str = "Buzzard throw weapon ";
+                        PhysicalObject objectOwner = self.grasps[0].grabbedChunk.owner;
+                        Debug.Log(str + ((owner != null) ? owner.ToString() : null));
+                        string str2 = "Dir ";
+                        IntVector2 intVector2 = intVector;
+                        Debug.Log(str2 + intVector2.ToString());
+                        (self.grasps[0].grabbedChunk.owner as Weapon).Shoot(owner, self.grasps[0].grabbedChunk.pos + intVector.ToVector2() * 25f, a.normalized, 1f, owner.evenUpdate);
+                        Debug.Log((self.grasps[0].grabbedChunk.owner as Weapon).firstChunk.vel.magnitude);
+                        self.grasps[0] = null;
+                        this.wantToGrabChunk = null;
+                        coudldown = 10;
+                        }
                     }
                 }
             }
