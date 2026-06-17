@@ -818,12 +818,7 @@ namespace Deadlands.Hooks
                     {
                         
                     }
-                    sLeaser.sprites[TotalBuzzardSprites(self) - 21] = TriangleMesh.MakeLongMesh(data.tail.Length, true, false);
-                    for (int i = 1; i < 21; i++)
-                    {
-                        sLeaser.sprites[TotalBuzzardSprites(self) - i] = new FSprite("pixel", true);
-                        sLeaser.sprites[TotalBuzzardSprites(self) - i].anchorY = 0f;
-                    }
+                    sLeaser.sprites[TotalBuzzardSprites(self) - 1] = TriangleMesh.MakeLongMesh(data.tail.Length, true, false);
                 }
                 
                 self.AddToContainer(sLeaser, rCam, null);

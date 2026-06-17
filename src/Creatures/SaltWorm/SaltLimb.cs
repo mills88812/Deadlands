@@ -4,11 +4,11 @@ namespace Deadlands.Creatures.SaltWorm
 {
     internal class SaltLimb : Limb
     {
-        public SaltWormGraphicsnew graphics
+        public SaltWormGraphics graphics
         {
             get
             {
-                return this.owner as SaltWormGraphicsnew;
+                return this.owner as SaltWormGraphics;
             }
         }
 

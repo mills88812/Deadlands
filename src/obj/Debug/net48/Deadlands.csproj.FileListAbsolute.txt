@@ -1,0 +1,9 @@
+C:\Users\sergi\Desktop\Deadlands-AridTunnels (1)\Deadlands-AridTunnels\src\obj\Debug\net48\Deadlands.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\Deadlands-AridTunnels (1)\Deadlands-AridTunnels\src\obj\Debug\net48\Deadlands.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sergi\Desktop\Deadlands-AridTunnels (1)\Deadlands-AridTunnels\src\obj\Debug\net48\Deadlands.AssemblyInfoInputs.cache
+C:\Users\sergi\Desktop\Deadlands-AridTunnels (1)\Deadlands-AridTunnels\src\obj\Debug\net48\Deadlands.AssemblyInfo.cs
+C:\Users\sergi\Desktop\Deadlands-AridTunnels (1)\Deadlands-AridTunnels\src\obj\Debug\net48\Deadlands.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\Deadlands-AridTunnels (1)\Deadlands-AridTunnels\src\bin\Debug\net48\Deadlands.dll
+C:\Users\sergi\Desktop\Deadlands-AridTunnels (1)\Deadlands-AridTunnels\src\bin\Debug\net48\Deadlands.pdb
+C:\Users\sergi\Desktop\Deadlands-AridTunnels (1)\Deadlands-AridTunnels\src\obj\Debug\net48\Deadlands.dll
+C:\Users\sergi\Desktop\Deadlands-AridTunnels (1)\Deadlands-AridTunnels\src\obj\Debug\net48\Deadlands.pdb
